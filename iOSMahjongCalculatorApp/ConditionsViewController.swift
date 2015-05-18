@@ -16,7 +16,6 @@ class ConditionsViewController: UITableViewController {
     @IBOutlet weak var calculateButton: UIBarButtonItem!
     @IBOutlet weak var RiichiSwitch: UISwitch!
     @IBOutlet weak var DoubleRiichiSwitch: UISwitch!
-    @IBOutlet weak var DealerSwitch: UISwitch!
     
     var winningHand:Hand!
     
@@ -29,8 +28,6 @@ class ConditionsViewController: UITableViewController {
         seatLabel.text = "East"
         RiichiSwitch.enabled = false
         DoubleRiichiSwitch.enabled = false
-        DealerSwitch.enabled = false
-        DealerSwitch.on = true
     }
     
     override func didReceiveMemoryWarning() {
@@ -121,6 +118,8 @@ class ConditionsViewController: UITableViewController {
                 winningHand.conditions.setDoubleRiichi(sender.on, hand: winningHand)
                 RiichiSwitch.setOn(false, animated:true)
                 break
+            case "Tsumo":
+                winningHand.conditions.setTsumo(sender.on)
             default:
                 break
             }
@@ -140,6 +139,7 @@ class ConditionsViewController: UITableViewController {
             case "South":
                 roundLabel.text = "South"
                 winningHand.conditions.setRound(Wind.South)
+                winningHand.conditions.setDealer(false)
                 break
             case "West":
                 roundLabel.text = "West"
@@ -166,26 +166,25 @@ class ConditionsViewController: UITableViewController {
             case "East":
                 seatLabel.text = "East"
                 winningHand.conditions.setSeat(Wind.East)
-                DealerSwitch.setOn(true, animated: true)
+                winningHand.conditions.setDealer(true)
                 break
             case "South":
                 seatLabel.text = "South"
                 winningHand.conditions.setSeat(Wind.South)
-                DealerSwitch.setOn(false, animated: true)
+                winningHand.conditions.setDealer(false)
                 break
             case "West":
                 seatLabel.text = "West"
                 winningHand.conditions.setSeat(Wind.West)
-                DealerSwitch.setOn(false, animated: true)
+                winningHand.conditions.setDealer(false)
                 break
             case "North":
                 seatLabel.text = "North"
                 winningHand.conditions.setSeat(Wind.North)
-                DealerSwitch.setOn(false, animated: true)
+                winningHand.conditions.setDealer(false)
                 break
             default:
                 seatLabel.text = "Null"
-                DealerSwitch.setOn(false, animated: true)
                 break
             }
         }
