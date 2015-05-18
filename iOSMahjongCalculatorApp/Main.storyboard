@@ -1,0 +1,1793 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="gWq-CW-tKd">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--Tiles From Hand-->
+        <scene sceneID="PaW-8v-AGQ">
+            <objects>
+                <viewController id="TVD-dx-g0F" customClass="TilesViewController" customModule="iOSMahjongCalculatorApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WHS-Og-ltD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs1bird.png" id="KAI-ZS-aJo">
+                                <rect key="frame" x="165" y="72" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou1">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="jkv-Id-6uV" appends="YES" id="1U5-A0-LiW"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs2.png" id="vsc-Wj-n9H">
+                                <rect key="frame" x="217" y="72" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou2">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="nE8-8V-pKW" appends="YES" id="Xf5-JO-Fde"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs3.png" id="Oyo-de-uCq">
+                                <rect key="frame" x="269" y="72" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou3">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="fNm-s9-jwN" appends="YES" id="tfN-bd-zkQ"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs4.png" id="AJs-1R-ypI">
+                                <rect key="frame" x="165" y="125" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou4">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="6mo-6Z-vSc" appends="YES" id="XCV-Lt-Uiw"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs5.png" id="Cfc-dC-oTk">
+                                <rect key="frame" x="217" y="125" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou5">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="K9E-TS-0hv" appends="YES" id="E4h-RQ-8Ub"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs6.png" id="5q1-6Z-9Sf">
+                                <rect key="frame" x="269" y="125" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou6">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="hLB-sm-b1f" appends="YES" id="lFv-DF-6m3"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs7.png" id="dU6-9c-sBv">
+                                <rect key="frame" x="165" y="178" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou7">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="88Z-91-N5T" appends="YES" id="JSp-Qt-DDJ"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs8.png" id="HTV-Rz-1cT">
+                                <rect key="frame" x="217" y="178" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou8">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="kfB-Tr-IT4" appends="YES" id="6cJ-bC-2i0"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs9.png" id="U4C-oU-GPo">
+                                <rect key="frame" x="269" y="178" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou9">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="wp2-s6-Sza" appends="YES" id="FBW-6X-RNJ"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt1.png" id="5p3-Ns-dfP">
+                                <rect key="frame" x="9" y="72" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin1">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="nIW-EX-xBU" appends="YES" id="lwQ-pt-y51"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt2.png" id="HPd-zv-RSB">
+                                <rect key="frame" x="61" y="72" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin2">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="sux-74-dvz" appends="YES" id="5Zm-Bn-xhP"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt3.png" id="hKc-ez-pdl">
+                                <rect key="frame" x="113" y="72" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin3">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="b8E-vN-pwc" appends="YES" id="Wue-PT-Llz"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt4.png" id="4b2-U6-Zij">
+                                <rect key="frame" x="9" y="125" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin4">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="kcO-Bb-AAr" appends="YES" id="dfZ-8N-z9i"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt5.png" id="2rj-Z1-ARI">
+                                <rect key="frame" x="61" y="125" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin5">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="pFc-Qa-4l2" appends="YES" id="nsm-ae-mcI"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt6.png" id="Lc0-D8-3BD">
+                                <rect key="frame" x="113" y="125" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin6">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="kcv-9g-jHQ" appends="YES" id="aLa-vU-48l"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt7.png" id="gaQ-0a-GMf">
+                                <rect key="frame" x="9" y="178" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin7">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="LUw-zg-uyu" appends="YES" id="3lL-ll-h3p"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt8.png" id="Lj8-R6-rOf">
+                                <rect key="frame" x="61" y="178" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin8">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="xSs-07-FGb" appends="YES" id="gLk-cR-jvr"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt9.png" id="Alb-iH-CTg">
+                                <rect key="frame" x="113" y="178" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin9">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="pCZ-2n-lmY" appends="YES" id="8aa-LT-hod"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw1.png" id="dyi-gw-hlR">
+                                <rect key="frame" x="9" y="231" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Wan1">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="K0A-R7-s7x" appends="YES" id="jTh-cB-jcV"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw2.png" id="and-8Q-EcR">
+                                <rect key="frame" x="61" y="231" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Wan2">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="BQt-iI-cg5" appends="YES" id="Prf-ij-oTB"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw3.png" id="W2T-Og-66A">
+                                <rect key="frame" x="113" y="231" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Wan3">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="JM8-lF-dZr" appends="YES" id="XpW-AD-Dzu"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw4.png" id="yS3-js-e25">
+                                <rect key="frame" x="9" y="284" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Wan4">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="mSh-ix-Mne" appends="YES" id="7U0-Vu-ejY"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw6.png" id="m2H-dc-NO0">
+                                <rect key="frame" x="113" y="284" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Wan6">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="1gu-bl-HVm" appends="YES" id="jgD-cR-RK0"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw5.png" id="Y3M-25-NgJ">
+                                <rect key="frame" x="61" y="284" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Wan5">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Oto-0I-CQX" appends="YES" id="YGA-UZ-1RU"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJd1.png" id="7GL-EQ-bxY">
+                                <rect key="frame" x="165" y="231" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Red">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Nnp-0c-Aly" appends="YES" id="86V-FR-dPf"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJd2.png" id="hBX-f1-BiL">
+                                <rect key="frame" x="217" y="231" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Green">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="tKu-QO-zzP" appends="YES" id="QIc-m2-VzH"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJf1.png" id="phO-Xp-Lg3">
+                                <rect key="frame" x="165" y="284" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="East">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="dcT-t2-g9V" appends="YES" id="21c-K4-Pku"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJf2.png" id="Jcf-HP-WVX">
+                                <rect key="frame" x="217" y="284" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="South">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Nrq-3j-9eu" appends="YES" id="eGx-Kg-aV6"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJf3.png" id="Skt-Ml-AXi">
+                                <rect key="frame" x="269" y="284" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="West">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="BrT-ZU-hlb" appends="YES" id="IIm-Iy-uye"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw7.png" id="hRz-ly-4i9">
+                                <rect key="frame" x="9" y="337" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Wan7">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="uVb-BU-I7q" appends="YES" id="MnK-mW-Ncb"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw8.png" id="v4t-pt-lcj">
+                                <rect key="frame" x="61" y="337" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Wan8">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="bre-qk-7yi" appends="YES" id="SdI-gA-ytf"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw9.png" id="sO5-U9-wAW">
+                                <rect key="frame" x="113" y="337" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Wan9">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="aia-3y-MuY" appends="YES" id="vV6-N0-quH"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AC7-bZ-Sgi">
+                                <rect key="frame" x="238" y="345" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteTapped:" destination="TVD-dx-g0F" eventType="touchUpInside" id="spA-H9-x0Z"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="CeU-DB-36J">
+                                <rect key="frame" x="9" y="420" width="303" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJd3.png" id="cf4-vj-IhB">
+                                <rect key="frame" x="269" y="231" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="White">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Jmk-Hw-12Y" appends="YES" id="qyB-N3-z2W"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hand:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TjZ-sO-j6c">
+                                <rect key="frame" x="9" y="391" width="47" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="caN-ts-mZt">
+                                <rect key="frame" x="240" y="375" width="43" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearTapped:" destination="TVD-dx-g0F" eventType="touchUpInside" id="wQC-e2-Yme"/>
+                                </connections>
+                            </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJf4.png" id="0YA-Cl-sgy">
+                                <rect key="frame" x="165" y="337" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="North">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="qiW-E9-C3y" appends="YES" id="Wwl-lu-UoX"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tiles From Hand" id="w5a-Gq-yrw">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="3Sr-W7-e7M">
+                            <connections>
+                                <segue destination="jaO-2r-Zlo" kind="push" identifier="NextDora" id="TmF-aI-6oj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="ClearButton" destination="caN-ts-mZt" id="oRg-Bl-jao"/>
+                        <outlet property="DeleteButton" destination="AC7-bZ-Sgi" id="GO1-Bk-7G0"/>
+                        <outlet property="HandImages" destination="CeU-DB-36J" id="5sZ-vY-0bk"/>
+                        <outlet property="NextButton" destination="3Sr-W7-e7M" id="vBs-gP-faw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KHC-54-ogo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="jkv-Id-6uV" userLabel="MJs1bird">
+                    <connections>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="aXm-l5-yzD"/>
+                        <outlet property="delegate" destination="KAI-ZS-aJo" id="m6N-If-ae3"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="nE8-8V-pKW" userLabel="MJs2">
+                    <connections>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="81M-11-2Sx"/>
+                        <outlet property="delegate" destination="vsc-Wj-n9H" id="25m-Lb-D9R"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="fNm-s9-jwN" userLabel="MJs3">
+                    <connections>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="L3y-c6-bCr"/>
+                        <outlet property="delegate" destination="Oyo-de-uCq" id="yNU-KI-Y0o"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="6mo-6Z-vSc" userLabel="MJs4">
+                    <connections>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="8GL-If-kww"/>
+                        <outlet property="delegate" destination="AJs-1R-ypI" id="5HW-GD-hsk"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="K9E-TS-0hv" userLabel="MJs5">
+                    <connections>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="Mbr-UP-Tc0"/>
+                        <outlet property="delegate" destination="Cfc-dC-oTk" id="tCO-lQ-TVq"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="hLB-sm-b1f" userLabel="MJs6">
+                    <connections>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="WKa-41-D1O"/>
+                        <outlet property="delegate" destination="5q1-6Z-9Sf" id="D43-8G-Eh7"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="88Z-91-N5T" userLabel="MJs7">
+                    <connections>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="psg-HF-YGo"/>
+                        <outlet property="delegate" destination="dU6-9c-sBv" id="MHN-hZ-hRm"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="kfB-Tr-IT4" userLabel="MJs8">
+                    <connections>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="zyh-Zq-7wk"/>
+                        <outlet property="delegate" destination="HTV-Rz-1cT" id="3SF-R1-qRq"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="wp2-s6-Sza" userLabel="MJs9">
+                    <connections>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="k8X-Sy-MR0"/>
+                        <outlet property="delegate" destination="U4C-oU-GPo" id="neA-Zw-e5n"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="nIW-EX-xBU" userLabel="MJt1">
+                    <connections>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="2A0-JW-s73"/>
+                        <outlet property="delegate" destination="5p3-Ns-dfP" id="4s6-0x-kFx"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="sux-74-dvz" userLabel="MJt2">
+                    <connections>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="AyR-SP-l63"/>
+                        <outlet property="delegate" destination="HPd-zv-RSB" id="cOf-2o-PRb"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="b8E-vN-pwc" userLabel="MJt3">
+                    <connections>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="oj6-H1-99y"/>
+                        <outlet property="delegate" destination="hKc-ez-pdl" id="R9e-Ne-g9H"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="kcO-Bb-AAr" userLabel="MJt4">
+                    <connections>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="yZs-TZ-Z1Q"/>
+                        <outlet property="delegate" destination="4b2-U6-Zij" id="4Y5-EO-wRC"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="pFc-Qa-4l2" userLabel="MJt5">
+                    <connections>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="Khn-yn-zLG"/>
+                        <outlet property="delegate" destination="2rj-Z1-ARI" id="cpw-aO-AZS"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="kcv-9g-jHQ" userLabel="MJt6">
+                    <connections>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="GAE-mb-THc"/>
+                        <outlet property="delegate" destination="Lc0-D8-3BD" id="5GG-ZB-As0"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="LUw-zg-uyu" userLabel="MJt7">
+                    <connections>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="GRZ-FO-WLc"/>
+                        <outlet property="delegate" destination="gaQ-0a-GMf" id="ERd-EQ-Z75"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="xSs-07-FGb" userLabel="MJt8">
+                    <connections>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="vKt-Iv-9Us"/>
+                        <outlet property="delegate" destination="Lj8-R6-rOf" id="Aj1-bb-GM8"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="pCZ-2n-lmY" userLabel="MJt9">
+                    <connections>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="gdX-JO-L0T"/>
+                        <outlet property="delegate" destination="Alb-iH-CTg" id="9kT-wK-rvW"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="K0A-R7-s7x" userLabel="MJw1">
+                    <connections>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="X4M-Br-6hQ"/>
+                        <outlet property="delegate" destination="dyi-gw-hlR" id="f4u-Uo-7kI"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="BQt-iI-cg5" userLabel="MJw2">
+                    <connections>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="wSQ-Z3-zOA"/>
+                        <outlet property="delegate" destination="and-8Q-EcR" id="7Ba-5R-ZQ2"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="JM8-lF-dZr" userLabel="MJw3">
+                    <connections>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="Gcd-Vi-LPK"/>
+                        <outlet property="delegate" destination="W2T-Og-66A" id="t7N-xG-6N7"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="mSh-ix-Mne" userLabel="MJw4">
+                    <connections>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="ojS-WZ-YwU"/>
+                        <outlet property="delegate" destination="yS3-js-e25" id="tue-VN-drB"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Oto-0I-CQX" userLabel="MJw5">
+                    <connections>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="2WI-5t-BH1"/>
+                        <outlet property="delegate" destination="Y3M-25-NgJ" id="cMi-Vx-wHb"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="1gu-bl-HVm" userLabel="MJw6">
+                    <connections>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="CWG-47-zRW"/>
+                        <outlet property="delegate" destination="m2H-dc-NO0" id="NSh-u2-inZ"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="uVb-BU-I7q" userLabel="MJw7">
+                    <connections>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="oAM-yw-hSJ"/>
+                        <outlet property="delegate" destination="hRz-ly-4i9" id="b9S-LV-pvM"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="bre-qk-7yi" userLabel="MJw8">
+                    <connections>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="Bzu-CB-kVv"/>
+                        <outlet property="delegate" destination="v4t-pt-lcj" id="NeC-74-T3p"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="aia-3y-MuY" userLabel="MJw9">
+                    <connections>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="p3o-Js-RvM"/>
+                        <outlet property="delegate" destination="sO5-U9-wAW" id="mj7-ws-QU3"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Nnp-0c-Aly" userLabel="MJd1">
+                    <connections>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="b8T-bY-TJL"/>
+                        <outlet property="delegate" destination="7GL-EQ-bxY" id="Ntk-Ii-pz3"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="tKu-QO-zzP" userLabel="MJd2">
+                    <connections>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="Ufa-Tk-zQF"/>
+                        <outlet property="delegate" destination="hBX-f1-BiL" id="auk-26-g2E"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Jmk-Hw-12Y" userLabel="MJd3">
+                    <connections>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="vFm-2n-cCE"/>
+                        <outlet property="delegate" destination="cf4-vj-IhB" id="3nx-H7-AXt"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="dcT-t2-g9V" userLabel="MJf1">
+                    <connections>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="FF1-u1-6CU"/>
+                        <outlet property="delegate" destination="phO-Xp-Lg3" id="NUq-SE-fP1"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Nrq-3j-9eu" userLabel="MJf2">
+                    <connections>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="s6m-9a-Rv8"/>
+                        <outlet property="delegate" destination="Jcf-HP-WVX" id="kbe-ky-dcu"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="BrT-ZU-hlb" userLabel="MJf3">
+                    <connections>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="2jN-oj-atF"/>
+                        <outlet property="delegate" destination="Skt-Ml-AXi" id="t3a-67-eVu"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="qiW-E9-C3y" userLabel="MJf4">
+                    <connections>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="DK2-3B-5sm"/>
+                        <outlet property="delegate" destination="0YA-Cl-sgy" id="Zig-Tm-8PL"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="766" y="-1626"/>
+        </scene>
+        <!--Conditions-->
+        <scene sceneID="fvi-XH-Cd3">
+            <objects>
+                <tableViewController id="exY-fZ-tbp" customClass="ConditionsViewController" customModule="iOSMahjongCalculatorApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="UmO-U4-z7s">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                        <sections>
+                            <tableViewSection id="Tse-Mj-ZHf">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="AA7-1G-aKn">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AA7-1G-aKn" id="3kS-IK-wQQ">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meld 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="U1N-jN-A28">
+                                                    <rect key="frame" x="16" y="11" width="53" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meld 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8Ux-ef-z4C">
+                                                    <rect key="frame" x="160" y="11" width="53" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="ZTN-NV-1tf" userLabel="MeldOneSwitch">
+                                                    <rect key="frame" x="90" y="8" width="51" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <accessibility key="accessibilityConfiguration" label="Meld1"/>
+                                                    <connections>
+                                                        <action selector="tapSwitch:" destination="exY-fZ-tbp" eventType="valueChanged" id="UH9-1f-fPx"/>
+                                                    </connections>
+                                                </switch>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="vod-mc-8AU" userLabel="MeldTwoSwitch">
+                                                    <rect key="frame" x="240" y="6" width="51" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <accessibility key="accessibilityConfiguration" label="Meld2"/>
+                                                    <connections>
+                                                        <action selector="tapSwitch:" destination="exY-fZ-tbp" eventType="valueChanged" id="IdS-6s-Aj6"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="lJY-Sx-st0">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lJY-Sx-st0" id="Z1l-T2-BSm">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meld 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EL6-i5-rp4">
+                                                    <rect key="frame" x="16" y="11" width="53" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meld 4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ks6-j4-jTl">
+                                                    <rect key="frame" x="160" y="11" width="53" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="YGV-dv-PrB" userLabel="MeldThreeSwitch">
+                                                    <rect key="frame" x="90" y="6" width="51" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <accessibility key="accessibilityConfiguration" label="Meld3"/>
+                                                    <connections>
+                                                        <action selector="tapSwitch:" destination="exY-fZ-tbp" eventType="valueChanged" id="Cp5-5t-89F"/>
+                                                    </connections>
+                                                </switch>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="oGT-To-eKn" userLabel="MeldFourSwitch">
+                                                    <rect key="frame" x="240" y="6" width="51" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <accessibility key="accessibilityConfiguration" label="Meld4"/>
+                                                    <connections>
+                                                        <action selector="tapSwitch:" destination="exY-fZ-tbp" eventType="valueChanged" id="fgj-Yc-MHz"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="dd3-BB-Sck">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="1eD-ne-372">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1eD-ne-372" id="dKw-N3-oR3">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Dqo-XX-qqW">
+                                                    <rect key="frame" x="90" y="8" width="200" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waits" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h5c-V5-A96">
+                                                    <rect key="frame" x="16" y="12" width="40" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="mv2-z7-oFz">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="ELe-db-Tou">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ELe-db-Tou" id="NN6-5O-9PO">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="dOu-cw-uKU" userLabel="RiichiSwitch">
+                                                    <rect key="frame" x="90" y="6" width="51" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <accessibility key="accessibilityConfiguration" label="Riichi"/>
+                                                    <connections>
+                                                        <action selector="tapSwitch:" destination="exY-fZ-tbp" eventType="valueChanged" id="pwi-gW-D5I"/>
+                                                    </connections>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Riichi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IVs-Z9-5aS">
+                                                    <rect key="frame" x="17" y="11" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Double Riichi" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9ft-WQ-58o">
+                                                    <rect key="frame" x="160" y="0.0" width="70" height="42"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="SZf-Nc-qNW" userLabel="DoubleRiichiSwitch">
+                                                    <rect key="frame" x="240" y="6" width="51" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <accessibility key="accessibilityConfiguration" label="DoubleRiichi"/>
+                                                    <connections>
+                                                        <action selector="tapSwitch:" destination="exY-fZ-tbp" eventType="valueChanged" id="Wbn-gm-61w"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="gOY-vI-is2">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gOY-vI-is2" id="wV0-K8-qJ3">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="DiS-ob-seB" userLabel="IppatsuSwitch">
+                                                    <rect key="frame" x="90" y="6" width="51" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <accessibility key="accessibilityConfiguration" label="Ippatsu"/>
+                                                    <connections>
+                                                        <action selector="tapSwitch:" destination="exY-fZ-tbp" eventType="valueChanged" id="GZg-zV-JcE"/>
+                                                    </connections>
+                                                </switch>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="7vq-uz-uWH" userLabel="DeadWallSwitch">
+                                                    <rect key="frame" x="240" y="6" width="51" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <accessibility key="accessibilityConfiguration" label="DeadWall"/>
+                                                    <connections>
+                                                        <action selector="tapSwitch:" destination="exY-fZ-tbp" eventType="valueChanged" id="Ut0-6M-i73"/>
+                                                    </connections>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dead Wall" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1dW-Vw-aHD">
+                                                    <rect key="frame" x="160" y="11" width="78" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ippatsu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wOT-F9-GL2">
+                                                    <rect key="frame" x="17" y="11" width="58" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Fua-tf-yfH">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fua-tf-yfH" id="bvi-Xj-Vcj">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Tile From Wall" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8z4-R3-vs4">
+                                                    <rect key="frame" x="17" y="0.0" width="75" height="42"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kan Robbed" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VYV-Ca-zPL">
+                                                    <rect key="frame" x="160" y="0.0" width="70" height="42"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="eLi-RD-61c" userLabel="KanRobbedSwitch">
+                                                    <rect key="frame" x="240" y="6" width="51" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <accessibility key="accessibilityConfiguration" label="KanRobbed"/>
+                                                    <connections>
+                                                        <action selector="tapSwitch:" destination="exY-fZ-tbp" eventType="valueChanged" id="lHv-Zq-RQR"/>
+                                                    </connections>
+                                                </switch>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="Oki-NA-5hd" userLabel="LastTileSwitch">
+                                                    <rect key="frame" x="90" y="6" width="51" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <accessibility key="accessibilityConfiguration" label="LastTileFromWall"/>
+                                                    <connections>
+                                                        <action selector="tapSwitch:" destination="exY-fZ-tbp" eventType="valueChanged" id="CKT-qe-Lhu"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Wjg-dc-h2h">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wjg-dc-h2h" id="30E-XR-gPe">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dealer" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gnH-gW-pyT">
+                                                    <rect key="frame" x="160" y="0.0" width="70" height="42"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="7oL-eZ-kPa" userLabel="DealerSwitch">
+                                                    <rect key="frame" x="240" y="6" width="51" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <accessibility key="accessibilityConfiguration" label="Dealers"/>
+                                                    <connections>
+                                                        <action selector="tapSwitch:" destination="exY-fZ-tbp" eventType="valueChanged" id="A3h-b8-SXk"/>
+                                                    </connections>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Discard" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="z70-Ch-qBi">
+                                                    <rect key="frame" x="17" y="0.0" width="62" height="42"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="t7m-Mq-Mx0" userLabel="LastDiscardSwitch">
+                                                    <rect key="frame" x="90" y="6" width="51" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <accessibility key="accessibilityConfiguration" label="LastDiscard"/>
+                                                    <connections>
+                                                        <action selector="tapSwitch:" destination="exY-fZ-tbp" eventType="valueChanged" id="oCM-wo-jXd"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="04A-9e-eNg">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="0gs-fA-m14" detailTextLabel="Taf-jM-2DK" style="IBUITableViewCellStyleValue1" id="hnX-Ca-pqG">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hnX-Ca-pqG" id="QcF-7m-FRz">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Round" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0gs-fA-m14">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Taf-jM-2DK">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="g2u-7J-VXG" kind="push" id="pC5-Jr-Eck"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="QzW-vh-de0">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="40N-Bh-GLJ" detailTextLabel="PQp-3d-8SM" style="IBUITableViewCellStyleValue1" id="Tih-YO-sPi">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tih-YO-sPi" id="IZA-kF-eMy">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Seat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="40N-Bh-GLJ">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PQp-3d-8SM">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="nRP-Be-LYm" kind="push" id="eTw-3z-oB5"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="exY-fZ-tbp" id="ftD-iT-WpT"/>
+                            <outlet property="delegate" destination="exY-fZ-tbp" id="TmF-9a-HWP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Conditions" id="MdK-CS-bHl">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="BoN-32-vGn">
+                            <connections>
+                                <segue destination="Rky-hr-JOa" kind="unwind" identifier="BackDora" unwindAction="cancelToDoraTilesViewController:" id="PaZ-Wv-QxJ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Calculate" id="Hbo-cX-K71">
+                            <connections>
+                                <action selector="calculate" destination="exY-fZ-tbp" id="FvC-2M-9sq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="DealerSwitch" destination="7oL-eZ-kPa" id="h2O-VB-MYl"/>
+                        <outlet property="DoubleRiichiSwitch" destination="SZf-Nc-qNW" id="DJM-MB-GmO"/>
+                        <outlet property="RiichiSwitch" destination="dOu-cw-uKU" id="y8H-dp-SCC"/>
+                        <outlet property="backButton" destination="BoN-32-vGn" id="eKN-yS-AEY"/>
+                        <outlet property="calculateButton" destination="Hbo-cX-K71" id="UBm-IY-bEt"/>
+                        <outlet property="roundLabel" destination="Taf-jM-2DK" id="8fm-s9-B7K"/>
+                        <outlet property="seatLabel" destination="PQp-3d-8SM" id="baK-gr-weV"/>
+                        <segue destination="Rky-hr-JOa" kind="unwind" identifier="Reset" unwindAction="cancelToTilesViewController:" id="6XH-Bk-Vur"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vxz-jN-0Hb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Rky-hr-JOa" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1670" y="-1627"/>
+        </scene>
+        <!--Select Round-->
+        <scene sceneID="DeG-fh-lok">
+            <objects>
+                <tableViewController id="g2u-7J-VXG" customClass="RoundTableViewController" customModule="iOSMahjongCalculatorApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Ijg-59-Prk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RoundCell" textLabel="OpD-UU-48i" style="IBUITableViewCellStyleDefault" id="1fj-nQ-2dw">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1fj-nQ-2dw" id="74j-4a-SMm">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OpD-UU-48i">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="qfk-Td-1Ks" kind="unwind" identifier="SaveSelectedRound" unwindAction="selectedRound:" id="E1P-NR-t2R"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="g2u-7J-VXG" id="Ygm-R8-UrY"/>
+                            <outlet property="delegate" destination="g2u-7J-VXG" id="met-2R-V3C"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Select Round" id="yp8-fy-yxg"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zND-7I-CjU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="qfk-Td-1Ks" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1670" y="-822"/>
+        </scene>
+        <!--Select Seat-->
+        <scene sceneID="qUA-F1-1Ri">
+            <objects>
+                <tableViewController id="nRP-Be-LYm" customClass="SeatTableViewController" customModule="iOSMahjongCalculatorApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="gnh-cp-HTB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SeatCell" textLabel="6KD-LB-XZP" style="IBUITableViewCellStyleDefault" id="f89-nn-U9j">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f89-nn-U9j" id="krl-9n-3Uf">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6KD-LB-XZP">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="yL5-Mh-rbU" kind="unwind" identifier="SaveSelectedSeat" unwindAction="selectedSeat:" id="kR3-Hs-vU7"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="nRP-Be-LYm" id="wKh-NC-dpb"/>
+                            <outlet property="delegate" destination="nRP-Be-LYm" id="CGO-VH-Bcg"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Select Seat" id="EUL-hr-WBv"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WyS-yC-1HQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="yL5-Mh-rbU" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2096" y="-822"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dVq-r4-0xr">
+            <objects>
+                <navigationController id="gWq-CW-tKd" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jUY-sl-nMv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="TVD-dx-g0F" kind="relationship" relationship="rootViewController" id="SzZ-XX-qNJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V20-pU-sfs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280" y="-1626"/>
+        </scene>
+        <!--Dora Tiles-->
+        <scene sceneID="VO1-aP-Iwx">
+            <objects>
+                <viewController id="jaO-2r-Zlo" customClass="DoraTilesViewController" customModule="iOSMahjongCalculatorApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KqE-FA-P9Y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs1bird.png" id="dCW-hA-dXJ">
+                                <rect key="frame" x="165" y="72" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou1">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="5KZ-Nq-m8R" appends="YES" id="7gM-ew-ABN"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs2.png" id="eHF-Tv-9LP">
+                                <rect key="frame" x="217" y="72" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou2">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="AFF-hZ-2QV" appends="YES" id="nlg-c1-Ugb"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs3.png" id="ege-F0-y2C">
+                                <rect key="frame" x="269" y="72" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou3">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="FjB-hB-Evf" appends="YES" id="GnI-Kw-W0I"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs4.png" id="2db-yT-nC7">
+                                <rect key="frame" x="165" y="125" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou4">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Hs2-4y-tMu" appends="YES" id="sja-rp-tXR"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs5.png" id="3pS-RL-lP7">
+                                <rect key="frame" x="217" y="125" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou5">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="2gi-t7-Qdc" appends="YES" id="lvS-Ot-dN5"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs6.png" id="tQB-Yn-5vT">
+                                <rect key="frame" x="269" y="125" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou6">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="1C2-rM-rzy" appends="YES" id="WkA-zp-vrM"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs7.png" id="rgt-h0-RG3">
+                                <rect key="frame" x="165" y="178" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou7">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="crs-hG-3Yg" appends="YES" id="ax9-wm-Vd7"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs8.png" id="ei2-hh-Fhh">
+                                <rect key="frame" x="217" y="178" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou8">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="GpD-2S-1Za" appends="YES" id="7Xb-h6-fM4"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs9.png" id="OiO-Lw-fCd">
+                                <rect key="frame" x="269" y="178" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou9">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="18o-Zy-1fJ" appends="YES" id="Tea-Wj-VHy"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt1.png" id="Ccd-lg-fk3">
+                                <rect key="frame" x="9" y="72" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin1">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="CG8-Qu-a2t" appends="YES" id="dOI-TO-Gzo"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt2.png" id="IoU-IX-QzH">
+                                <rect key="frame" x="61" y="72" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin2">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="INd-WA-66d" appends="YES" id="Lm4-NV-hIO"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt3.png" id="zWJ-Qn-uxK">
+                                <rect key="frame" x="113" y="72" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin3">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="SFb-Y7-4he" appends="YES" id="WJl-wl-Q63"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt4.png" id="Vvz-Ke-TN3">
+                                <rect key="frame" x="9" y="125" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin4">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="2vw-1W-iEx" appends="YES" id="ewn-f5-J19"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt5.png" id="lAZ-xI-cH8">
+                                <rect key="frame" x="61" y="125" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin5">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="jbP-mJ-mpc" appends="YES" id="EQw-yQ-2BQ"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt6.png" id="l1C-OE-87t">
+                                <rect key="frame" x="113" y="125" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin6">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="gFS-zd-egs" appends="YES" id="7Rr-2B-Aaf"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt7.png" id="EJT-pH-KgS">
+                                <rect key="frame" x="9" y="178" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin7">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="1nG-dj-97u" appends="YES" id="2eo-tw-x54"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt8.png" id="4yA-3D-rFr">
+                                <rect key="frame" x="61" y="178" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin8">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="5K4-DH-Bc4" appends="YES" id="hdA-fh-wUd"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw1.png" id="e2u-j1-mci">
+                                <rect key="frame" x="9" y="231" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Wan1">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="b0c-js-mg2" appends="YES" id="vDn-XM-GOR"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw2.png" id="aup-4p-YXq">
+                                <rect key="frame" x="61" y="231" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Wan2">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="YTw-Rp-h67" appends="YES" id="NzW-Pf-j5t"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw3.png" id="Iwj-1t-aJD">
+                                <rect key="frame" x="113" y="231" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Wan3">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ec0-LH-gQY" appends="YES" id="5kT-Ee-iKJ"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw4.png" id="gbm-N7-xP1">
+                                <rect key="frame" x="9" y="284" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Wan4">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="uqq-xI-Edf" appends="YES" id="b4c-Ps-GbP"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw5.png" id="IYB-xY-oX2">
+                                <rect key="frame" x="61" y="284" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Wan5">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ex0-Rz-pgO" appends="YES" id="a9N-be-fM9"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw6.png" id="S28-3K-4Km">
+                                <rect key="frame" x="113" y="284" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Wan6">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="jQS-Lb-UWr" appends="YES" id="Z9H-rb-yW9"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw7.png" id="KQ0-k8-Dsn">
+                                <rect key="frame" x="9" y="337" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Wan7">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="wXE-MV-iK8" appends="YES" id="rLo-Fv-S9j"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw8.png" id="xzL-Du-f7w">
+                                <rect key="frame" x="61" y="337" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Wan8">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="04E-Jr-nPl" appends="YES" id="oJX-x6-OtL"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw9.png" id="03U-De-A0U">
+                                <rect key="frame" x="113" y="337" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Wan9">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="flV-ZU-JQV" appends="YES" id="RDd-pM-zzu"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJd1.png" id="hBT-U2-5QU">
+                                <rect key="frame" x="165" y="231" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Red">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="FOo-Rn-Cn5" appends="YES" id="JRh-vT-qFn"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJd2.png" id="OCi-zb-bi2">
+                                <rect key="frame" x="217" y="231" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Green">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="dcp-aL-7O8" appends="YES" id="w6P-f2-y1w"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJd3.png" id="VuE-Fy-ecs">
+                                <rect key="frame" x="269" y="231" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="White">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="3ht-c4-IK7" appends="YES" id="dwL-OR-r7F"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJf1.png" id="xfN-aX-Qq9">
+                                <rect key="frame" x="165" y="284" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="East">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="P6E-P9-iys" appends="YES" id="RSZ-dT-UUX"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJf2.png" id="jt9-qx-5d2">
+                                <rect key="frame" x="217" y="284" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="South">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="OW6-Z8-O4g" appends="YES" id="xYT-4Q-sts"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJf3.png" id="mg6-Bb-t0d">
+                                <rect key="frame" x="269" y="284" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="West">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="LH3-MO-Exr" appends="YES" id="g5d-Mx-lCg"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJf4.png" id="sRc-2D-Dk1">
+                                <rect key="frame" x="165" y="337" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="North">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="oWV-Bc-zkI" appends="YES" id="M6T-Sc-jBg"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tn0-Rg-n3d">
+                                <rect key="frame" x="238" y="345" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteTapped:" destination="jaO-2r-Zlo" eventType="touchUpInside" id="Jh8-Fm-plm"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ibh-pK-C8M">
+                                <rect key="frame" x="9" y="420" width="303" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dora Tiles:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2OP-VW-pQA">
+                                <rect key="frame" x="9" y="391" width="82" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5tE-m0-WJc">
+                                <rect key="frame" x="240" y="375" width="43" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearTapped:" destination="jaO-2r-Zlo" eventType="touchUpInside" id="UET-Mp-fj2"/>
+                                </connections>
+                            </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt9.png" id="nQG-WU-RWE">
+                                <rect key="frame" x="113" y="178" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin9">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="gj5-px-ptB" appends="YES" id="tWe-mq-Hai"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Dora Tiles" id="PIC-e6-G6L">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="ZaL-U1-X8K">
+                            <connections>
+                                <segue destination="miy-xc-TAu" kind="unwind" identifier="BackTiles" unwindAction="cancelToTilesViewController:" id="zyL-Lv-nt2"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="iSk-k9-jJp">
+                            <connections>
+                                <segue destination="exY-fZ-tbp" kind="push" identifier="NextConditions" id="q7u-2f-fCI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="BackButton" destination="ZaL-U1-X8K" id="JZX-mM-aAN"/>
+                        <outlet property="ClearButton" destination="5tE-m0-WJc" id="s0F-C9-fT4"/>
+                        <outlet property="DeleteButton" destination="tn0-Rg-n3d" id="oSE-cr-rqF"/>
+                        <outlet property="HandImages" destination="ibh-pK-C8M" id="Xgp-R2-Trh"/>
+                        <outlet property="NextButton" destination="iSk-k9-jJp" id="o9D-4k-WAQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JEs-gk-mXb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="miy-xc-TAu" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="5KZ-Nq-m8R" userLabel="MJs1bird">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="OmE-Lc-CeC"/>
+                        <outlet property="delegate" destination="dCW-hA-dXJ" id="H9w-GP-t74"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="AFF-hZ-2QV" userLabel="MJs2">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="xpW-BZ-Uzz"/>
+                        <outlet property="delegate" destination="eHF-Tv-9LP" id="dIC-Ei-O3N"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="FjB-hB-Evf" userLabel="MJs3">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="HNu-Yd-arM"/>
+                        <outlet property="delegate" destination="ege-F0-y2C" id="Qgy-vU-y8O"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Hs2-4y-tMu" userLabel="MJs4">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="Elv-OC-ivs"/>
+                        <outlet property="delegate" destination="2db-yT-nC7" id="4Mw-De-PTG"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="2gi-t7-Qdc" userLabel="MJs5">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="MZ3-Il-rYq"/>
+                        <outlet property="delegate" destination="3pS-RL-lP7" id="gbX-fc-HRh"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="1C2-rM-rzy" userLabel="MJs6">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="Dds-Ic-lcg"/>
+                        <outlet property="delegate" destination="tQB-Yn-5vT" id="A51-2J-Mu3"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="crs-hG-3Yg" userLabel="MJs7">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="ZCW-x1-pyv"/>
+                        <outlet property="delegate" destination="rgt-h0-RG3" id="RsK-0I-5Sh"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="GpD-2S-1Za" userLabel="MJs8">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="W9a-MK-HMv"/>
+                        <outlet property="delegate" destination="ei2-hh-Fhh" id="TvA-TH-CkD"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="18o-Zy-1fJ" userLabel="MJs9">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="M7D-ot-2Ze"/>
+                        <outlet property="delegate" destination="OiO-Lw-fCd" id="oSu-On-4fA"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="CG8-Qu-a2t" userLabel="MJt1">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="d97-Zw-uh7"/>
+                        <outlet property="delegate" destination="Ccd-lg-fk3" id="Omk-M9-g0I"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="INd-WA-66d" userLabel="MJt2">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="zOX-Rd-tef"/>
+                        <outlet property="delegate" destination="IoU-IX-QzH" id="vvT-cz-s2V"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="SFb-Y7-4he" userLabel="MJt3">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="kQ0-1w-Phg"/>
+                        <outlet property="delegate" destination="zWJ-Qn-uxK" id="jRK-j9-SJB"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="2vw-1W-iEx" userLabel="MJt4">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="8R5-NT-LIi"/>
+                        <outlet property="delegate" destination="Vvz-Ke-TN3" id="Lr5-uE-F2B"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="jbP-mJ-mpc" userLabel="MJt5">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="5ou-TQ-X2h"/>
+                        <outlet property="delegate" destination="lAZ-xI-cH8" id="qMF-Wg-75n"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="gFS-zd-egs" userLabel="MJt6">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="bQ2-hu-qfZ"/>
+                        <outlet property="delegate" destination="l1C-OE-87t" id="3rC-dS-XSV"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="1nG-dj-97u" userLabel="MJt7">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="A3K-gP-mzF"/>
+                        <outlet property="delegate" destination="EJT-pH-KgS" id="4MZ-mY-hCb"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="5K4-DH-Bc4" userLabel="MJt8">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="2AN-RL-dbI"/>
+                        <outlet property="delegate" destination="4yA-3D-rFr" id="LSk-JX-zqm"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="gj5-px-ptB" userLabel="MJt9">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="sX4-FW-1vK"/>
+                        <outlet property="delegate" destination="nQG-WU-RWE" id="JR4-WI-pWZ"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="b0c-js-mg2" userLabel="MJw1">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="pub-bx-mob"/>
+                        <outlet property="delegate" destination="e2u-j1-mci" id="ScE-Op-tES"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="YTw-Rp-h67" userLabel="MJw2">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="Bd8-Jm-0af"/>
+                        <outlet property="delegate" destination="aup-4p-YXq" id="j8O-qk-ADU"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="ec0-LH-gQY" userLabel="MJw3">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="dOE-sN-U0c"/>
+                        <outlet property="delegate" destination="Iwj-1t-aJD" id="KSl-LV-IxK"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="uqq-xI-Edf" userLabel="MJw4">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="yKX-Sc-1FE"/>
+                        <outlet property="delegate" destination="gbm-N7-xP1" id="pxn-IB-jYG"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="ex0-Rz-pgO" userLabel="MJw5">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="jFE-LF-PT3"/>
+                        <outlet property="delegate" destination="IYB-xY-oX2" id="m1B-zW-03k"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="jQS-Lb-UWr" userLabel="MJw6">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="RKP-mL-5vB"/>
+                        <outlet property="delegate" destination="S28-3K-4Km" id="47i-dU-O8q"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="wXE-MV-iK8" userLabel="MJw7">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="9vk-ea-UVU"/>
+                        <outlet property="delegate" destination="KQ0-k8-Dsn" id="G1r-vY-CaX"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="04E-Jr-nPl" userLabel="MJw8">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="JDJ-BN-EQW"/>
+                        <outlet property="delegate" destination="xzL-Du-f7w" id="jtZ-aP-5aj"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="flV-ZU-JQV" userLabel="MJw9">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="dic-S3-Lzb"/>
+                        <outlet property="delegate" destination="03U-De-A0U" id="auc-Pt-oCu"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="FOo-Rn-Cn5" userLabel="MJd1">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="7jO-Kl-NOj"/>
+                        <outlet property="delegate" destination="hBT-U2-5QU" id="4Az-zO-8UL"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="dcp-aL-7O8" userLabel="MJd2">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="ZtY-JI-g6f"/>
+                        <outlet property="delegate" destination="OCi-zb-bi2" id="HlH-ec-Bgv"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="3ht-c4-IK7" userLabel="MJd3">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="474-z9-ME3"/>
+                        <outlet property="delegate" destination="VuE-Fy-ecs" id="hjT-n7-9SG"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="P6E-P9-iys" userLabel="MJf1">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="bsm-Ba-JWQ"/>
+                        <outlet property="delegate" destination="xfN-aX-Qq9" id="r47-Vh-6Hi"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="OW6-Z8-O4g" userLabel="MJf2">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="Kah-Uo-FTQ"/>
+                        <outlet property="delegate" destination="jt9-qx-5d2" id="9z2-nY-v0A"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="LH3-MO-Exr" userLabel="MJf3">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="IkK-Ql-mXo"/>
+                        <outlet property="delegate" destination="mg6-Bb-t0d" id="bZU-lK-zJ9"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="oWV-Bc-zkI" userLabel="MJf4">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="cyw-ZY-RBf"/>
+                        <outlet property="delegate" destination="sRc-2D-Dk1" id="UZi-9x-L0l"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1207" y="-1626"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MJd1.png" width="44" height="53"/>
+        <image name="MJd2.png" width="44" height="53"/>
+        <image name="MJd3.png" width="44" height="53"/>
+        <image name="MJf1.png" width="44" height="53"/>
+        <image name="MJf2.png" width="44" height="53"/>
+        <image name="MJf3.png" width="44" height="53"/>
+        <image name="MJf4.png" width="44" height="53"/>
+        <image name="MJs1bird.png" width="44" height="53"/>
+        <image name="MJs2.png" width="44" height="53"/>
+        <image name="MJs3.png" width="44" height="53"/>
+        <image name="MJs4.png" width="44" height="53"/>
+        <image name="MJs5.png" width="44" height="53"/>
+        <image name="MJs6.png" width="44" height="53"/>
+        <image name="MJs7.png" width="44" height="53"/>
+        <image name="MJs8.png" width="44" height="53"/>
+        <image name="MJs9.png" width="44" height="53"/>
+        <image name="MJt1.png" width="44" height="53"/>
+        <image name="MJt2.png" width="44" height="53"/>
+        <image name="MJt3.png" width="44" height="53"/>
+        <image name="MJt4.png" width="44" height="53"/>
+        <image name="MJt5.png" width="44" height="53"/>
+        <image name="MJt6.png" width="44" height="53"/>
+        <image name="MJt7.png" width="44" height="53"/>
+        <image name="MJt8.png" width="44" height="53"/>
+        <image name="MJt9.png" width="44" height="53"/>
+        <image name="MJw1.png" width="44" height="53"/>
+        <image name="MJw2.png" width="44" height="53"/>
+        <image name="MJw3.png" width="44" height="53"/>
+        <image name="MJw4.png" width="44" height="53"/>
+        <image name="MJw5.png" width="44" height="53"/>
+        <image name="MJw6.png" width="44" height="53"/>
+        <image name="MJw7.png" width="44" height="53"/>
+        <image name="MJw8.png" width="44" height="53"/>
+        <image name="MJw9.png" width="44" height="53"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

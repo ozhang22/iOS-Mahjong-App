@@ -1,0 +1,217 @@
+//
+//  Hand.swift
+//  MyNewProject
+//
+//  Created by Oliver Zhang on 12/13/14.
+//  Copyright (c) 2014 Oliver Zhang. All rights reserved.
+//
+
+import Foundation
+
+public class Hand {
+    
+    var tiles:[Tile]
+    var melds:[Meld]
+    var pair:Pair!
+    var han:Han
+    var fu:Fu
+    var conditions:Conditions
+    var basicPoints:Double
+    
+    init() {
+        tiles = []
+        han = Han(count: 0)
+        fu = Fu()
+        conditions = Conditions()
+        basicPoints = 0
+        melds = []
+    }
+    
+    func addTile(tile:Tile) {
+        if (currentTileCount(tile) < 4) {
+            if tiles.count < 14 {
+                tiles.append(tile)
+                sortTiles()
+            }
+            if tiles.count == 14 && pair == nil {
+                validateHand()
+            }
+        }
+    }
+    
+    func removeTile() {
+        if tiles.count > 0 {
+            tiles.removeLast()
+        }
+        sortTiles()
+        invalidateHand()
+    }
+    
+    func removeAllTiles() {
+        tiles.removeAll(keepCapacity: true)
+        invalidateHand()
+    }
+    
+    func containsTile(tile:Tile) -> Bool {
+        for t in tiles {
+            if tile.isEqual(t) { return true }
+        }
+        return false
+    }
+    
+    func currentTileCount(tile:Tile) -> Int {
+        var count:Int = 0
+        for var i:Int = 0; i < tiles.count; i++ {
+            if (tiles[i].isEqual(tile)) {
+                count++
+            }
+        }
+        return count
+    }
+    
+    func validateHand() {
+        
+        var tempTiles:[Tile] = []
+        var tempMelds:[Meld] = []
+        var validPairTiles:[Tile] = []
+        
+        for ii in 0...12 {
+            
+            tempTiles.removeAll(keepCapacity: true)
+            tempMelds.removeAll(keepCapacity: true)
+            
+            let tempPair = Pair(tile1: tiles[ii], tile2: tiles[ii+1])
+            if !tempPair.isValidPair() {
+                continue
+            }
+            
+            validPairTiles.append(tempPair.tile1)
+            
+            for var jj:Int = 0; jj < tiles.count; jj++ {
+                if jj != ii && jj != ii+1 {
+                    tempTiles.append(tiles[jj])
+                }
+            }
+            
+            for kk in 0...3 {
+                tempMelds.append(Meld(tile1: tempTiles[3*kk],
+                    tile2: tempTiles[3*kk + 1], tile3: tempTiles[3*kk + 2]))
+            }
+            
+            if !tempMelds[0].isValid() { continue }
+            if !tempMelds[1].isValid() { continue }
+            if !tempMelds[2].isValid() { continue }
+            if !tempMelds[3].isValid() { continue }
+            
+            melds = tempMelds
+            pair = tempPair
+            return
+        }
+        
+        if validPairTiles.count == 4 {
+            // TODO:
+        } else if validPairTiles.count == 7 {
+            // TOOD:
+        }
+    }
+    
+    func invalidateHand() {
+        melds = [];
+        pair = nil;
+    }
+    
+    func isClosed() -> Bool {
+        for m in melds {
+            if !(m.isClosed()) { return false }
+        }
+        return true
+    }
+    
+    func isValid() -> Bool {
+        if tiles.count < 14 {
+            return false
+        }
+        if pair == nil {
+            return false
+        }
+        
+        for meld in melds {
+            if !meld.isValid() {
+                return false
+            }
+        }
+        
+        return pair.isValidPair()
+    }
+    
+    func calculateScore() -> Score {
+        han.calculateHan(self)
+        fu.calculateFu(self)
+        calculateBasicPoints(han, fu: fu)
+        
+        return Score(winningHand: self, basicPoints: basicPoints)
+    }
+    
+    func calculateBasicPoints(han:Han, fu:Fu) {
+        let hanTotal = han.count
+        let fuTotal = fu.count
+        var points:Double
+        switch hanTotal {
+        case 0:
+            points = 0
+        case 1, 2:
+            points = fuTotal*pow(2, 2+hanTotal)
+        case 3:
+            if fuTotal > 70 {
+                points = 2000
+            } else {
+                points = fuTotal*pow(2, 2+hanTotal)
+            }
+        case 4:
+            if fuTotal > 40 {
+                points = 2000
+            } else {
+                points = fuTotal*pow(2, 2+hanTotal)
+            }
+        case 5:
+            points = 2000
+        case 6, 7:
+            points = 3000
+        case 8, 9, 10:
+            points = 4000
+        case 11, 12:
+            points = 6000
+        default:
+            points = 8000
+        }
+        basicPoints = points
+    }
+    
+    func sortTiles() {
+        for var i:Int = 1; i < tiles.count; i++ {
+            var value:Tile = tiles[i]
+            var newIndex:Int = binarySearch(value.getRawValue(), left: 0, right: i)
+            for var j:Int = i; j > newIndex; j-- {
+                tiles[j] = tiles [j-1]
+            }
+            tiles[newIndex] = value
+        }
+    }
+    
+    func binarySearch(value:Int, left:Int, right:Int) -> Int {
+        if (right < left) { return left }
+        let mid:Int = (left + right) / 2
+        if (value <= tiles[mid].getRawValue()) {
+            return binarySearch(value, left: left, right: mid-1)
+        } else {
+            return binarySearch(value, left: mid+1, right: right)
+        }
+    }
+    
+    func clearConditions() {
+        for i in 0...3 {
+            melds[i].setClosed(false)
+        }
+        conditions.clearConditions()
+    }
+}
