@@ -83,7 +83,7 @@ public class Conditions {
 
     func setRiichi(riichi:Bool, hand:Hand) {
         if riichi {
-            if (hand.isClosed() || hand.han.sevenPairs(hand)) {
+            if (hand.isClosed() || hand.sevenPairs()) {
                 self.riichi = riichi
             }
             if (self.riichi && doubleRiichi) {
@@ -149,7 +149,7 @@ public class Conditions {
     
     func setDoubleRiichi(riichi:Bool, hand:Hand) {
         if riichi {
-            if (hand.isClosed() || hand.han.sevenPairs(hand)) {
+            if (hand.isClosed() || hand.sevenPairs()) {
                 doubleRiichi = riichi
             }
             if (self.riichi && doubleRiichi) {

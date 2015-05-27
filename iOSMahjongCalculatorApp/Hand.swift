@@ -13,15 +13,15 @@ public class Hand {
     var tiles:[Tile]
     var melds:[Meld]
     var pair:Pair!
-    var han:Han
-    var fu:Fu
+    var han:Double
+    var fu:Double
     var conditions:Conditions
     var basicPoints:Double
     
     init() {
         tiles = []
-        han = Han(count: 0)
-        fu = Fu()
+        han = 0
+        fu = 0
         conditions = Conditions()
         basicPoints = 0
         melds = []
@@ -107,12 +107,7 @@ public class Hand {
             pair = tempPair
             return
         }
-        
-        if validPairTiles.count == 4 {
-            // TODO:
-        } else if validPairTiles.count == 7 {
-            // TOOD:
-        }
+
     }
     
     func invalidateHand() {
@@ -144,34 +139,49 @@ public class Hand {
         return pair.isValidPair()
     }
     
+    func sevenPairs() -> Bool {
+        for meld in melds {
+            if meld.isValid() { return false }
+        }
+        
+        var pairs:[Pair]
+        
+        for i in 0...(tiles.count/2 - 1) {
+            var pair = Pair(tile1: tiles[2*i], tile2: tiles[2*i + 1])
+            if !(pair.isValidPair()) { return false }
+        }
+        return true
+    }
+    
     func calculateScore() -> Score {
-        han.calculateHan(self)
-        fu.calculateFu(self)
-        calculateBasicPoints(han, fu: fu)
+        let hanHelper = Han(wh: self)
+        let fuHelper = Fu(wh: self)
+        han = hanHelper.calculateHan()
+        fu = fuHelper.calculateFu()
+        calculateBasicPoints()
         
         return Score(winningHand: self, basicPoints: basicPoints)
     }
     
-    func calculateBasicPoints(han:Han, fu:Fu) {
-        let hanTotal = han.count
-        let fuTotal = fu.count
+    func calculateBasicPoints() {
         var points:Double
-        switch hanTotal {
+        
+        switch han {
         case 0:
             points = 0
         case 1, 2:
-            points = fuTotal*pow(2, 2+hanTotal)
+            points = fu*pow(2, 2+han)
         case 3:
-            if fuTotal > 70 {
+            if fu > 70 {
                 points = 2000
             } else {
-                points = fuTotal*pow(2, 2+hanTotal)
+                points = fu*pow(2, 2+han)
             }
         case 4:
-            if fuTotal > 40 {
+            if fu > 40 {
                 points = 2000
             } else {
-                points = fuTotal*pow(2, 2+hanTotal)
+                points = fu*pow(2, 2+han)
             }
         case 5:
             points = 2000
@@ -184,6 +194,7 @@ public class Hand {
         default:
             points = 8000
         }
+        
         basicPoints = points
     }
     

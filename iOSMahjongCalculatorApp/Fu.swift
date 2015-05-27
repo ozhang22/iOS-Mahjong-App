@@ -11,13 +11,15 @@ import Foundation
 public class Fu {
     
     var count:Double
+    var wh:Hand
 
-    init() {
+    init(wh:Hand) {
         self.count = 0
+        self.wh = wh
     }
     
-    func calculateFu(wh:Hand) {
-        count = 0
+    func calculateFu() -> Double {
+        self.count = 0
         
         func calculateClosedHand() {
             if !(wh.conditions.isTsumo()) {
@@ -74,7 +76,9 @@ public class Fu {
         calculateFuWaits()
         calculateFuTsumo()
         count = roundFu(count)
-        if wh.han.sevenPairs(wh) { count = 25 }
+        if wh.sevenPairs() { count = 25 }
+        
+        return count
     }
 
 }

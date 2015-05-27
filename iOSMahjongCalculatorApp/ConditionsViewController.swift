@@ -139,7 +139,6 @@ class ConditionsViewController: UITableViewController {
             case "South":
                 roundLabel.text = "South"
                 winningHand.conditions.setRound(Wind.South)
-                winningHand.conditions.setDealer(false)
                 break
             case "West":
                 roundLabel.text = "West"
@@ -195,7 +194,7 @@ class ConditionsViewController: UITableViewController {
     @IBAction func calculate() {
         let score = winningHand.calculateScore().distributePoints()
         let alertController = UIAlertController(title: "You win!",
-            message: "Han: \(winningHand.han.count), Fu: \(winningHand.fu.count) \n\n" +
+            message: "Han: \(winningHand.han), Fu: \(winningHand.fu) \n\n" +
             "Winner: \(score.winner) \nPlayer 2: \(score.other1) \n" +
             "Player 3: \(score.other2) \nPlayer 4: \(score.other3) \n", preferredStyle: .Alert)
         

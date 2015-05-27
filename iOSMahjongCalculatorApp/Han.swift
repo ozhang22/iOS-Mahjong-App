@@ -11,22 +11,25 @@ import Foundation
 public class Han {
     
     var count:Double
+    var wh:Hand
     
-    init(count:Double) {
-        self.count = count
+    init(wh:Hand) {
+        self.count = 0
+        self.wh = wh
     }
     
-    func calculateHan(wh:Hand) {
-        count = 0
-        calculateHanSequence(wh)
-        calculateHanTriplets(wh)
-        calculateHanTerminals(wh)
-        calculateHanSuit(wh)
-        if sevenPairs(wh) { count += 2 }
-        calculateHanLuck(wh)
+    func calculateHan() -> Double {
+        self.count = 0
+        calculateHanSequence()
+        calculateHanTriplets()
+        calculateHanTerminals()
+        calculateHanSuit()
+        if wh.sevenPairs() { count += 2 }
+        calculateHanLuck()
+        return self.count
     }
     
-    func calculateHanLuck(wh:Hand) {
+    func calculateHanLuck() {
         
         func calculateDora() {
             if count == 0 { return }
@@ -65,7 +68,7 @@ public class Han {
         calculateDora()
     }
     
-    func calculateHanSequence(wh:Hand) {
+    func calculateHanSequence() {
         var melds:[Meld] = []
         for meld in wh.melds {
             if (meld.isSequence()) {
@@ -153,7 +156,7 @@ public class Han {
         colourStraight()
     }
     
-    func calculateHanTriplets(wh:Hand) {
+    func calculateHanTriplets() {
         var melds:[Meld] = []
         for meld in wh.melds {
             if (meld.isTriplet()) {
@@ -182,7 +185,7 @@ public class Han {
         
     }
     
-    func calculateHanTerminals(wh:Hand) {
+    func calculateHanTerminals() {
         func allTerminal() -> Bool {
             for meld in wh.melds {
                 if !(meld.tile1.isTerminal() && meld.tile2.isTerminal() &&
@@ -246,7 +249,7 @@ public class Han {
         terminalOrHonorInEachSet()
     }
     
-    func calculateHanSuit(wh:Hand) {
+    func calculateHanSuit() {
         var acc = Suit.Wind
         var i = 0
         while ((acc == Suit.Wind) || (acc == Suit.Dragon)) {
@@ -268,17 +271,4 @@ public class Han {
         count += 5
     }
     
-    func sevenPairs(wh:Hand) -> Bool {
-        for meld in wh.melds {
-            if meld.isValid() { return false }
-        }
-        
-        var pairs:[Pair]
-        
-        for i in 0...(wh.tiles.count/2 - 1) {
-            var pair = Pair(tile1: wh.tiles[2*i], tile2: wh.tiles[2*i + 1])
-            if !(pair.isValidPair()) { return false }
-        }
-        return true
-    }
 }
