@@ -106,7 +106,6 @@ class iOSMahjongCalculatorTests: XCTestCase {
         winningHand.melds[0].setClosed(true)
         winningHand.melds[2].setClosed(true)
         winningHand.melds[3].setClosed(true)
-        winningHand.conditions.setDealer(true)
         winningHand.conditions.addDoraTile(Tile(value: Value.Four, suit: Suit.Wan))
         
         XCTAssertEqual(winningHand.calculateScore().basicPoints, 960, "fail")

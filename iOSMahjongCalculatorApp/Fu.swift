@@ -27,6 +27,7 @@ public class Fu {
                     if !(meld.isClosed()) { return }
                 }
                 count = count + 10
+                println("closed hand fu +10")
             }
         }
         
@@ -39,12 +40,14 @@ public class Fu {
                     if (meld.isKan()) { acc = acc*4 }
                     if (meld.tile1.isTerminalOrHonor()) { acc = acc*2 }
                     count = count + acc
+                    println("triplet fu + \(acc)")
                 }
             }
             if (wh.pair.tile1.suit == Suit.Dragon) ||
                 (wh.pair.tile1.value.rawValue == wh.conditions.seat.rawValue) ||
                 (wh.pair.tile1.value.rawValue == wh.conditions.round.rawValue) {
-                count = count + 2
+                    count = count + 2
+                    println("wind/dragon fu +2")
             }
         }
         
@@ -53,14 +56,20 @@ public class Fu {
             else {
                 for meld in wh.melds {
                     if (meld.isSequence()) && (((meld.tile2.wait) ||
-                        (meld.tile1.value == Value.One) || (meld.tile3.value == Value.Nine)))
-                    { count = count + 2; return }
+                        (meld.tile1.value == Value.One) || (meld.tile3.value == Value.Nine))) {
+                            count = count + 2
+                            println("wait fu +2")
+                            return
+                    }
                 }
             }
         }
         
         func calculateFuTsumo() {
-            if (wh.conditions.isTsumo()) { count = count + 2 }
+            if (wh.conditions.isTsumo()) {
+                count = count + 2
+                println("tsumo fu +2")
+            }
         }
         
         func roundFu(n:Double) -> Double {
@@ -76,7 +85,10 @@ public class Fu {
         calculateFuWaits()
         calculateFuTsumo()
         count = roundFu(count)
-        if wh.sevenPairs() { count = 25 }
+        if wh.sevenPairs() {
+            count = 25
+            println("sevenPairs fu =25")
+        }
         
         return count
     }

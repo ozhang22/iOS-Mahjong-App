@@ -14,7 +14,6 @@ public enum Wind: Int {
 
 public class Conditions {
     
-    private var dealer:Bool
     var seat:Wind
     var round:Wind
     private var tsumo:Bool
@@ -28,7 +27,6 @@ public class Conditions {
     var doraTiles:[Tile]
     
     init() {
-        dealer = false
         seat = Wind.East
         round = Wind.East
         riichi = false
@@ -43,7 +41,6 @@ public class Conditions {
     }
     
     func clearConditions() {
-        dealer = false
         seat = Wind.East
         round = Wind.East
         riichi = false
@@ -56,13 +53,8 @@ public class Conditions {
         doubleRiichi = false
     }
     
-    func setDealer(dealer:Bool) {
-        self.dealer = dealer
-        setSeat(Wind.East)
-    }
-    
     func isDealer() -> Bool {
-        return dealer
+        return self.seat.rawValue == Wind.East.rawValue
     }
     
     func setSeat(wind:Wind) {

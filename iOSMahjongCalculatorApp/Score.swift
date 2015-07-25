@@ -21,16 +21,33 @@ public class Score {
     func distributePoints() -> (winner:Double, other1:Double, other2:Double, other3:Double) {
         if winningHand.conditions.isDealer() {
             if winningHand.conditions.isTsumo() {
-                return (basicPoints*6, basicPoints*(-2), basicPoints*(-2), basicPoints*(-2))
+                return (roundPoints(basicPoints*6), roundPoints(basicPoints*(-2)),
+                    roundPoints(basicPoints*(-2)), roundPoints(basicPoints*(-2)))
             } else  {
-                return (basicPoints*6, basicPoints*(-6), 0, 0)
+                return (roundPoints(basicPoints*6), roundPoints(basicPoints*(-6)), 0, 0)
             }
         } else {
             if winningHand.conditions.isTsumo() {
-                return (basicPoints*4, basicPoints*(-2), basicPoints*(-1), basicPoints*(-1))
+                return (roundPoints(basicPoints*4), roundPoints(basicPoints*(-2)),
+                    roundPoints(basicPoints*(-1)), roundPoints(basicPoints*(-1)))
             } else  {
-                return (basicPoints*4, basicPoints*(-4), 0, 0)
+                return (roundPoints(basicPoints*4), roundPoints(basicPoints*(-4)), 0, 0)
             }
+        }
+    }
+
+    func roundPoints(count:Double) -> Double {
+        if count >= 0 {
+            if round(count/100)*100 < count/100*100 {
+                return round((count+100)/100)*100
+            }
+            return round(count/100)*100
+        }
+        else {
+            if round(count/100)*100 > count/100*100 {
+                return round((count-100)/100)*100
+            }
+            return round(count/100)*100
         }
     }
 }

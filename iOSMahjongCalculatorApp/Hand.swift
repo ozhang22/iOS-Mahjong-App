@@ -73,8 +73,8 @@ public class Hand {
         
         var tempTiles:[Tile] = []
         var tempMelds:[Meld] = []
-        var validPairTiles:[Tile] = []
         
+        // 123 456 789 101112
         for ii in 0...12 {
             
             tempTiles.removeAll(keepCapacity: true)
@@ -84,8 +84,6 @@ public class Hand {
             if !tempPair.isValidPair() {
                 continue
             }
-            
-            validPairTiles.append(tempPair.tile1)
             
             for var jj:Int = 0; jj < tiles.count; jj++ {
                 if jj != ii && jj != ii+1 {
@@ -97,6 +95,150 @@ public class Hand {
                 tempMelds.append(Meld(tile1: tempTiles[3*kk],
                     tile2: tempTiles[3*kk + 1], tile3: tempTiles[3*kk + 2]))
             }
+            
+            if !tempMelds[0].isValid() { continue }
+            if !tempMelds[1].isValid() { continue }
+            if !tempMelds[2].isValid() { continue }
+            if !tempMelds[3].isValid() { continue }
+            
+            melds = tempMelds
+            pair = tempPair
+            return
+        }
+        
+        // 024 135 678 91011
+        for ii in 0...12 {
+            
+            tempTiles.removeAll(keepCapacity: true)
+            tempMelds.removeAll(keepCapacity: true)
+            
+            let tempPair = Pair(tile1: tiles[ii], tile2: tiles[ii+1])
+            if !tempPair.isValidPair() {
+                continue
+            }
+            
+            for var jj:Int = 0; jj < tiles.count; jj++ {
+                if jj != ii && jj != ii+1 {
+                    tempTiles.append(tiles[jj])
+                }
+            }
+            
+            tempMelds.append(Meld(tile1: tempTiles[0], tile2: tempTiles[2],
+                tile3: tempTiles[4]))
+            tempMelds.append(Meld(tile1: tempTiles[1], tile2: tempTiles[3],
+                tile3: tempTiles[5]))
+            tempMelds.append(Meld(tile1: tempTiles[6], tile2: tempTiles[7],
+                tile3: tempTiles[8]))
+            tempMelds.append(Meld(tile1: tempTiles[9], tile2: tempTiles[10],
+                tile3: tempTiles[11]))
+            
+            if !tempMelds[0].isValid() { continue }
+            if !tempMelds[1].isValid() { continue }
+            if !tempMelds[2].isValid() { continue }
+            if !tempMelds[3].isValid() { continue }
+            
+            melds = tempMelds
+            pair = tempPair
+            return
+        }
+        
+        // 123 456 7911 81012
+        for ii in 0...12 {
+            
+            tempTiles.removeAll(keepCapacity: true)
+            tempMelds.removeAll(keepCapacity: true)
+            
+            let tempPair = Pair(tile1: tiles[ii], tile2: tiles[ii+1])
+            if !tempPair.isValidPair() {
+                continue
+            }
+            
+            for var jj:Int = 0; jj < tiles.count; jj++ {
+                if jj != ii && jj != ii+1 {
+                    tempTiles.append(tiles[jj])
+                }
+            }
+            
+            tempMelds.append(Meld(tile1: tempTiles[0], tile2: tempTiles[1],
+                tile3: tempTiles[2]))
+            tempMelds.append(Meld(tile1: tempTiles[3], tile2: tempTiles[4],
+                tile3: tempTiles[5]))
+            tempMelds.append(Meld(tile1: tempTiles[6], tile2: tempTiles[8],
+                tile3: tempTiles[10]))
+            tempMelds.append(Meld(tile1: tempTiles[7], tile2: tempTiles[9],
+                tile3: tempTiles[11]))
+            
+            if !tempMelds[0].isValid() { continue }
+            if !tempMelds[1].isValid() { continue }
+            if !tempMelds[2].isValid() { continue }
+            if !tempMelds[3].isValid() { continue }
+            
+            melds = tempMelds
+            pair = tempPair
+            return
+        }
+        
+        // 135 246 7911 81012
+        for ii in 0...12 {
+            
+            tempTiles.removeAll(keepCapacity: true)
+            tempMelds.removeAll(keepCapacity: true)
+            
+            let tempPair = Pair(tile1: tiles[ii], tile2: tiles[ii+1])
+            if !tempPair.isValidPair() {
+                continue
+            }
+            
+            for var jj:Int = 0; jj < tiles.count; jj++ {
+                if jj != ii && jj != ii+1 {
+                    tempTiles.append(tiles[jj])
+                }
+            }
+            
+            tempMelds.append(Meld(tile1: tempTiles[0], tile2: tempTiles[2],
+                tile3: tempTiles[4]))
+            tempMelds.append(Meld(tile1: tempTiles[1], tile2: tempTiles[3],
+                tile3: tempTiles[5]))
+            tempMelds.append(Meld(tile1: tempTiles[6], tile2: tempTiles[8],
+                tile3: tempTiles[10]))
+            tempMelds.append(Meld(tile1: tempTiles[7], tile2: tempTiles[9],
+                tile3: tempTiles[11]))
+            
+            if !tempMelds[0].isValid() { continue }
+            if !tempMelds[1].isValid() { continue }
+            if !tempMelds[2].isValid() { continue }
+            if !tempMelds[3].isValid() { continue }
+            
+            melds = tempMelds
+            pair = tempPair
+            return
+        }
+        
+        // 123 468 579 101112
+        for ii in 0...12 {
+            
+            tempTiles.removeAll(keepCapacity: true)
+            tempMelds.removeAll(keepCapacity: true)
+            
+            let tempPair = Pair(tile1: tiles[ii], tile2: tiles[ii+1])
+            if !tempPair.isValidPair() {
+                continue
+            }
+            
+            for var jj:Int = 0; jj < tiles.count; jj++ {
+                if jj != ii && jj != ii+1 {
+                    tempTiles.append(tiles[jj])
+                }
+            }
+            
+            tempMelds.append(Meld(tile1: tempTiles[0], tile2: tempTiles[1],
+                tile3: tempTiles[2]))
+            tempMelds.append(Meld(tile1: tempTiles[3], tile2: tempTiles[5],
+                tile3: tempTiles[7]))
+            tempMelds.append(Meld(tile1: tempTiles[4], tile2: tempTiles[6],
+                tile3: tempTiles[8]))
+            tempMelds.append(Meld(tile1: tempTiles[9], tile2: tempTiles[10],
+                tile3: tempTiles[11]))
             
             if !tempMelds[0].isValid() { continue }
             if !tempMelds[1].isValid() { continue }
@@ -165,6 +307,8 @@ public class Hand {
     
     func calculateBasicPoints() {
         var points:Double
+        println("han: \(han)")
+        println("fu: \(fu)")
         
         switch han {
         case 0:
@@ -172,13 +316,13 @@ public class Hand {
         case 1, 2:
             points = fu*pow(2, 2+han)
         case 3:
-            if fu > 70 {
+            if fu >= 70 {
                 points = 2000
             } else {
                 points = fu*pow(2, 2+han)
             }
         case 4:
-            if fu > 40 {
+            if fu >= 40 {
                 points = 2000
             } else {
                 points = fu*pow(2, 2+han)

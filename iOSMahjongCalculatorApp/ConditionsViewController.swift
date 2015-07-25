@@ -165,22 +165,18 @@ class ConditionsViewController: UITableViewController {
             case "East":
                 seatLabel.text = "East"
                 winningHand.conditions.setSeat(Wind.East)
-                winningHand.conditions.setDealer(true)
                 break
             case "South":
                 seatLabel.text = "South"
                 winningHand.conditions.setSeat(Wind.South)
-                winningHand.conditions.setDealer(false)
                 break
             case "West":
                 seatLabel.text = "West"
                 winningHand.conditions.setSeat(Wind.West)
-                winningHand.conditions.setDealer(false)
                 break
             case "North":
                 seatLabel.text = "North"
                 winningHand.conditions.setSeat(Wind.North)
-                winningHand.conditions.setDealer(false)
                 break
             default:
                 seatLabel.text = "Null"
