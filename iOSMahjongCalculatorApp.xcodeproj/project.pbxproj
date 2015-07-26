@@ -19,7 +19,6 @@
 		9E087F5D1B099CCF00A8C77D /* Meld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E087F561B099CCF00A8C77D /* Meld.swift */; };
 		9E087F5E1B099CCF00A8C77D /* Pair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E087F571B099CCF00A8C77D /* Pair.swift */; };
 		9E087F5F1B099CCF00A8C77D /* RoundTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E087F581B099CCF00A8C77D /* RoundTableViewController.swift */; };
-		9E087F601B099CCF00A8C77D /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E087F591B099CCF00A8C77D /* Score.swift */; };
 		9E087F611B099CCF00A8C77D /* SeatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E087F5A1B099CCF00A8C77D /* SeatTableViewController.swift */; };
 		9E087F621B099CCF00A8C77D /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E087F5B1B099CCF00A8C77D /* Tile.swift */; };
 		9E087F631B099CCF00A8C77D /* TilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E087F5C1B099CCF00A8C77D /* TilesViewController.swift */; };
@@ -35,7 +34,6 @@
 		9E087F751B099E2200A8C77D /* Meld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E087F561B099CCF00A8C77D /* Meld.swift */; };
 		9E087F761B099E2200A8C77D /* Pair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E087F571B099CCF00A8C77D /* Pair.swift */; };
 		9E087F771B099E2200A8C77D /* RoundTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E087F581B099CCF00A8C77D /* RoundTableViewController.swift */; };
-		9E087F781B099E2200A8C77D /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E087F591B099CCF00A8C77D /* Score.swift */; };
 		9E087F791B099E2200A8C77D /* SeatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E087F5A1B099CCF00A8C77D /* SeatTableViewController.swift */; };
 		9E087F7A1B099E2200A8C77D /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E087F5B1B099CCF00A8C77D /* Tile.swift */; };
 		9E087F7B1B099E2200A8C77D /* TilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E087F5C1B099CCF00A8C77D /* TilesViewController.swift */; };
@@ -103,7 +101,6 @@
 		9E087F561B099CCF00A8C77D /* Meld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meld.swift; sourceTree = "<group>"; };
 		9E087F571B099CCF00A8C77D /* Pair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pair.swift; sourceTree = "<group>"; };
 		9E087F581B099CCF00A8C77D /* RoundTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundTableViewController.swift; sourceTree = "<group>"; };
-		9E087F591B099CCF00A8C77D /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		9E087F5A1B099CCF00A8C77D /* SeatTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeatTableViewController.swift; sourceTree = "<group>"; };
 		9E087F5B1B099CCF00A8C77D /* Tile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		9E087F5C1B099CCF00A8C77D /* TilesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TilesViewController.swift; sourceTree = "<group>"; };
@@ -197,7 +194,6 @@
 				9E087F561B099CCF00A8C77D /* Meld.swift */,
 				9E087F571B099CCF00A8C77D /* Pair.swift */,
 				9E087F581B099CCF00A8C77D /* RoundTableViewController.swift */,
-				9E087F591B099CCF00A8C77D /* Score.swift */,
 				9E087F5A1B099CCF00A8C77D /* SeatTableViewController.swift */,
 				9E087F5B1B099CCF00A8C77D /* Tile.swift */,
 				9E087F5C1B099CCF00A8C77D /* TilesViewController.swift */,
@@ -416,7 +412,6 @@
 				9E087F5E1B099CCF00A8C77D /* Pair.swift in Sources */,
 				9E087F531B099CAF00A8C77D /* Hand.swift in Sources */,
 				9E087F431B099C9B00A8C77D /* AppDelegate.swift in Sources */,
-				9E087F601B099CCF00A8C77D /* Score.swift in Sources */,
 				9E087F5F1B099CCF00A8C77D /* RoundTableViewController.swift in Sources */,
 				9E087F621B099CCF00A8C77D /* Tile.swift in Sources */,
 				9E087F451B099CA700A8C77D /* Conditions.swift in Sources */,
@@ -428,7 +423,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E087F781B099E2200A8C77D /* Score.swift in Sources */,
 				9E087F6C1B099E1700A8C77D /* AppDelegate.swift in Sources */,
 				9E087F701B099E1E00A8C77D /* Data.swift in Sources */,
 				9E087F7A1B099E2200A8C77D /* Tile.swift in Sources */,

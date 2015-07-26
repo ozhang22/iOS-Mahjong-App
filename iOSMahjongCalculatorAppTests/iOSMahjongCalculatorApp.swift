@@ -54,7 +54,7 @@ class iOSMahjongCalculatorTests: XCTestCase {
         winningHand.melds[0].setClosed(true)
         winningHand.conditions.addDoraTile(Tile(value: Value.Nine, suit: Suit.Sou))
         
-        XCTAssertEqual(winningHand.calculateScore().basicPoints, 480, "fail")
+        XCTAssertEqual(winningHand.basicPoints, 480, "fail")
     }
     
     func testFlush() {
@@ -82,7 +82,7 @@ class iOSMahjongCalculatorTests: XCTestCase {
         winningHand.conditions.addDoraTile(Tile(value: Value.Seven, suit: Suit.Wan))
         winningHand.conditions.addDoraTile(Tile(value: Value.Red, suit: Suit.Dragon))
         
-        XCTAssertEqual(winningHand.calculateScore().basicPoints, 3000, "fail")
+        XCTAssertEqual(winningHand.basicPoints, 3000, "fail")
     }
     
     func testDoubleSequence() {
@@ -108,7 +108,7 @@ class iOSMahjongCalculatorTests: XCTestCase {
         winningHand.melds[3].setClosed(true)
         winningHand.conditions.addDoraTile(Tile(value: Value.Four, suit: Suit.Wan))
         
-        XCTAssertEqual(winningHand.calculateScore().basicPoints, 960, "fail")
+        XCTAssertEqual(winningHand.basicPoints, 960, "fail")
     }
     
     func testInvalidTriplets() {
@@ -135,7 +135,7 @@ class iOSMahjongCalculatorTests: XCTestCase {
         winningHand.conditions.setSeat(Wind.South)
         winningHand.conditions.addDoraTile(Tile(value: Value.Three, suit: Suit.Wan))
         
-        XCTAssertEqual(winningHand.calculateScore().basicPoints, 0, "fail")
+        XCTAssertEqual(winningHand.basicPoints, 0, "fail")
     }
     
     func testclosedTripletsTwoKan() {
@@ -165,7 +165,7 @@ class iOSMahjongCalculatorTests: XCTestCase {
         winningHand.conditions.addDoraTile(Tile(value: Value.Three, suit: Suit.Wan))
         winningHand.conditions.addDoraTile(Tile(value: Value.Five, suit: Suit.Wan))
         
-        XCTAssertEqual(winningHand.calculateScore().basicPoints, 4000, "fail")
+        XCTAssertEqual(winningHand.basicPoints, 4000, "fail")
     }
     
     func testThreeColourStraightandNonTerminal() {
@@ -191,7 +191,7 @@ class iOSMahjongCalculatorTests: XCTestCase {
         winningHand.conditions.setRiichi(true, hand: winningHand)
         winningHand.conditions.addDoraTile(Tile(value: Value.North, suit: Suit.Wind))
         
-        XCTAssertEqual(winningHand.calculateScore().basicPoints, 480, "fail")
+        XCTAssertEqual(winningHand.basicPoints, 480, "fail")
     }
     
     func testNotStraightNoHan() {
@@ -214,7 +214,7 @@ class iOSMahjongCalculatorTests: XCTestCase {
         winningHand.tiles[13].changeWait()
         winningHand.conditions.addDoraTile(Tile(value: Value.North, suit: Suit.Wind))
         
-        XCTAssertEqual(winningHand.calculateScore().basicPoints, 0, "fail")
+        XCTAssertEqual(winningHand.basicPoints, 0, "fail")
     }
     
     func testAllTerminal() {
@@ -240,7 +240,7 @@ class iOSMahjongCalculatorTests: XCTestCase {
         winningHand.conditions.setTsumo(true)
         winningHand.conditions.addDoraTile(Tile(value: Value.South, suit: Suit.Wind))
         
-        XCTAssertEqual(winningHand.calculateScore().basicPoints, 640, "fail")
+        XCTAssertEqual(winningHand.basicPoints, 640, "fail")
     }
     
     func testSevenPairs() {
@@ -265,7 +265,7 @@ class iOSMahjongCalculatorTests: XCTestCase {
         winningHand.conditions.setTsumo(true)
         winningHand.conditions.addDoraTile(Tile(value: Value.South, suit: Suit.Wind))
         
-        XCTAssertEqual(winningHand.calculateScore().basicPoints, 800, "fail")
+        XCTAssertEqual(winningHand.basicPoints, 800, "fail")
     }
 
 }

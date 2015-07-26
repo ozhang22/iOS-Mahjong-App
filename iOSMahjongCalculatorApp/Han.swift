@@ -35,8 +35,12 @@ public class Han {
     func calculateHanLuck() {
         
         func calculateDora() {
-            if count == 0 { return }
+            if count == 0 {
+                return
+            }
+            
             var tilesToCheck:[Tile] = []
+            
             for tile in wh.conditions.doraTiles {
                 if (tile.value.rawValue == 9) {
                     let tile = Tile(value: Value(rawValue: 1)!, suit: tile.suit)
@@ -52,6 +56,7 @@ public class Han {
                     tilesToCheck.append(tile)
                 }
             }
+            
             for tileTC in tilesToCheck {
                 for tileWH in wh.tiles {
                     if tileTC.isEqual(tileWH) {
@@ -96,7 +101,6 @@ public class Han {
         }
         
         calculateDora()
-        
     }
     
     func calculateHanSequence() {
@@ -105,6 +109,10 @@ public class Han {
             if (meld.isSequence()) {
                 melds.append(meld)
             }
+        }
+        
+        if melds.count < 3 {
+            return
         }
         
         func allSequence() {
@@ -199,7 +207,6 @@ public class Han {
             }
         }
         
-        if melds.count < 3 { return }
         allSequence()
         doubleSequence()
         straight()
@@ -209,11 +216,11 @@ public class Han {
     func calculateHanTriplets() {
         var melds:[Meld] = []
         for meld in wh.melds {
-            if (meld.isTriplet()) {
+            if meld.isTriplet() {
                 melds.append(meld)
             }
         }
-        if (melds.count <= 2) {
+        if melds.count <= 2 {
             return
         }
         
@@ -239,9 +246,9 @@ public class Han {
             count += 2
             println(">3 closed triplets/kan han +2")
         }
-        if (value1Acc >= 2 || value2Acc >= 2) {
+        if value1Acc >= 2 || value2Acc >= 2 {
             count += 2
-            println("3 triplets same value han +2")
+            println(">3 triplets same value han +2")
         }
         
     }
@@ -254,10 +261,7 @@ public class Han {
                         return false
                 }
             }
-            if !((wh.pair.tile1.isTerminal()) || (wh.pair.tile2.isTerminal())) {
-                return false
-            }
-            return true
+            return wh.pair.tile1.isTerminal()
         }
         
         func allNonTerminalOrHonor() -> Bool {
@@ -267,10 +271,7 @@ public class Han {
                         return false
                 }
             }
-            if (wh.pair.tile1.isTerminalOrHonor()) || (wh.pair.tile2.isTerminalOrHonor()) {
-                return false
-            }
-            return true
+            return !wh.pair.tile1.isTerminalOrHonor()
         }
         
         func honourTriplets() {
@@ -278,22 +279,20 @@ public class Han {
             
             for meld in wh.melds {
                 if (meld.isTriplet()) &&
-                ((meld.tile1.isCorrectWind(wh.conditions.seat)) ||
-                (meld.tile1.isCorrectWind(wh.conditions.round))) {
+                    ((meld.tile1.isCorrectWind(wh.conditions.seat, wind2: wh.conditions.round))) {
                     count++
                     println("same wind as seat/round triplet han +1")
                 }
-                if meld.isTriplet() && (meld.tile1.suit == Suit.Dragon) {
+                
+                if meld.isTriplet() && (meld.tile1.isDragon()) {
                     count++
                     println("dragon triplet han +1")
                     dragonAcc++
                 }
             }
-            if (dragonAcc == 2) && ((wh.pair.tile1.suit == Suit.Dragon) ||
-                (wh.pair.tile1.isCorrectWind(wh.conditions.seat)) ||
-                (wh.pair.tile1.isCorrectWind(wh.conditions.round))) {
-                    count += 2
-                    println("little dragons han +2")
+            if (dragonAcc == 2) && ((wh.pair.tile1.isDragon())) {
+                count += 2
+                println("little dragons han +2")
             }
         }
         

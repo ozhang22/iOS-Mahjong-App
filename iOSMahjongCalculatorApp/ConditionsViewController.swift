@@ -188,7 +188,7 @@ class ConditionsViewController: UITableViewController {
     
     // Calculates points of the winning hand when calculate button is pressed
     @IBAction func calculate() {
-        let score = winningHand.calculateScore().distributePoints()
+        let score = winningHand.calculateScore()
         let alertController = UIAlertController(title: "You win!",
             message: "Han: \(winningHand.han), Fu: \(winningHand.fu) \n\n" +
             "Winner: \(score.winner) \nPlayer 2: \(score.other1) \n" +

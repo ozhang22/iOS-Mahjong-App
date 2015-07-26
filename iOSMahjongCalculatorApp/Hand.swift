@@ -54,7 +54,9 @@ public class Hand {
     
     func containsTile(tile:Tile) -> Bool {
         for t in tiles {
-            if tile.isEqual(t) { return true }
+            if tile.isEqual(t) {
+                return true
+            }
         }
         return false
     }
@@ -74,15 +76,12 @@ public class Hand {
         var tempTiles:[Tile] = []
         var tempMelds:[Meld] = []
         
-        // 123 456 789 101112
-        for ii in 0...12 {
-            
-            tempTiles.removeAll(keepCapacity: true)
-            tempMelds.removeAll(keepCapacity: true)
+        // 012 345 678 91011
+        check: for ii in 0...12 {
             
             let tempPair = Pair(tile1: tiles[ii], tile2: tiles[ii+1])
             if !tempPair.isValidPair() {
-                continue
+                continue check
             }
             
             for var jj:Int = 0; jj < tiles.count; jj++ {
@@ -94,12 +93,13 @@ public class Hand {
             for kk in 0...3 {
                 tempMelds.append(Meld(tile1: tempTiles[3*kk],
                     tile2: tempTiles[3*kk + 1], tile3: tempTiles[3*kk + 2]))
+                
+                if !tempMelds[kk].isValid() {
+                    tempTiles.removeAll(keepCapacity: true)
+                    tempMelds.removeAll(keepCapacity: true)
+                    continue check
+                }
             }
-            
-            if !tempMelds[0].isValid() { continue }
-            if !tempMelds[1].isValid() { continue }
-            if !tempMelds[2].isValid() { continue }
-            if !tempMelds[3].isValid() { continue }
             
             melds = tempMelds
             pair = tempPair
@@ -107,14 +107,11 @@ public class Hand {
         }
         
         // 024 135 678 91011
-        for ii in 0...12 {
-            
-            tempTiles.removeAll(keepCapacity: true)
-            tempMelds.removeAll(keepCapacity: true)
+        check: for ii in 0...12 {
             
             let tempPair = Pair(tile1: tiles[ii], tile2: tiles[ii+1])
             if !tempPair.isValidPair() {
-                continue
+                continue check
             }
             
             for var jj:Int = 0; jj < tiles.count; jj++ {
@@ -132,25 +129,25 @@ public class Hand {
             tempMelds.append(Meld(tile1: tempTiles[9], tile2: tempTiles[10],
                 tile3: tempTiles[11]))
             
-            if !tempMelds[0].isValid() { continue }
-            if !tempMelds[1].isValid() { continue }
-            if !tempMelds[2].isValid() { continue }
-            if !tempMelds[3].isValid() { continue }
+            for kk in 0...3 {
+                if !tempMelds[kk].isValid() {
+                    tempTiles.removeAll(keepCapacity: true)
+                    tempMelds.removeAll(keepCapacity: true)
+                    continue check
+                }
+            }
             
             melds = tempMelds
             pair = tempPair
             return
         }
         
-        // 123 456 7911 81012
-        for ii in 0...12 {
-            
-            tempTiles.removeAll(keepCapacity: true)
-            tempMelds.removeAll(keepCapacity: true)
+        // 012 345 6810 7911
+        check: for ii in 0...12 {
             
             let tempPair = Pair(tile1: tiles[ii], tile2: tiles[ii+1])
             if !tempPair.isValidPair() {
-                continue
+                continue check
             }
             
             for var jj:Int = 0; jj < tiles.count; jj++ {
@@ -168,25 +165,25 @@ public class Hand {
             tempMelds.append(Meld(tile1: tempTiles[7], tile2: tempTiles[9],
                 tile3: tempTiles[11]))
             
-            if !tempMelds[0].isValid() { continue }
-            if !tempMelds[1].isValid() { continue }
-            if !tempMelds[2].isValid() { continue }
-            if !tempMelds[3].isValid() { continue }
+            for kk in 0...3 {
+                if !tempMelds[kk].isValid() {
+                    tempTiles.removeAll(keepCapacity: true)
+                    tempMelds.removeAll(keepCapacity: true)
+                    continue check
+                }
+            }
             
             melds = tempMelds
             pair = tempPair
             return
         }
         
-        // 135 246 7911 81012
-        for ii in 0...12 {
-            
-            tempTiles.removeAll(keepCapacity: true)
-            tempMelds.removeAll(keepCapacity: true)
+        // 024 135 678 91011
+        check: for ii in 0...12 {
             
             let tempPair = Pair(tile1: tiles[ii], tile2: tiles[ii+1])
             if !tempPair.isValidPair() {
-                continue
+                continue check
             }
             
             for var jj:Int = 0; jj < tiles.count; jj++ {
@@ -204,25 +201,25 @@ public class Hand {
             tempMelds.append(Meld(tile1: tempTiles[7], tile2: tempTiles[9],
                 tile3: tempTiles[11]))
             
-            if !tempMelds[0].isValid() { continue }
-            if !tempMelds[1].isValid() { continue }
-            if !tempMelds[2].isValid() { continue }
-            if !tempMelds[3].isValid() { continue }
+            for kk in 0...3 {
+                if !tempMelds[kk].isValid() {
+                    tempTiles.removeAll(keepCapacity: true)
+                    tempMelds.removeAll(keepCapacity: true)
+                    continue check
+                }
+            }
             
             melds = tempMelds
             pair = tempPair
             return
         }
         
-        // 123 468 579 101112
-        for ii in 0...12 {
-            
-            tempTiles.removeAll(keepCapacity: true)
-            tempMelds.removeAll(keepCapacity: true)
+        // 012 357 468 91011
+        check: for ii in 0...12 {
             
             let tempPair = Pair(tile1: tiles[ii], tile2: tiles[ii+1])
             if !tempPair.isValidPair() {
-                continue
+                continue check
             }
             
             for var jj:Int = 0; jj < tiles.count; jj++ {
@@ -240,16 +237,18 @@ public class Hand {
             tempMelds.append(Meld(tile1: tempTiles[9], tile2: tempTiles[10],
                 tile3: tempTiles[11]))
             
-            if !tempMelds[0].isValid() { continue }
-            if !tempMelds[1].isValid() { continue }
-            if !tempMelds[2].isValid() { continue }
-            if !tempMelds[3].isValid() { continue }
+            for kk in 0...3 {
+                if !tempMelds[kk].isValid() {
+                    tempTiles.removeAll(keepCapacity: true)
+                    tempMelds.removeAll(keepCapacity: true)
+                    continue check
+                }
+            }
             
             melds = tempMelds
             pair = tempPair
             return
         }
-
     }
     
     func invalidateHand() {
@@ -259,16 +258,15 @@ public class Hand {
     
     func isClosed() -> Bool {
         for m in melds {
-            if !(m.isClosed()) { return false }
+            if !(m.isClosed()) {
+                return false
+            }
         }
         return true
     }
     
     func isValid() -> Bool {
-        if tiles.count < 14 {
-            return false
-        }
-        if pair == nil {
+        if tiles.count < 14 || pair == nil {
             return false
         }
         
@@ -282,27 +280,48 @@ public class Hand {
     }
     
     func sevenPairs() -> Bool {
-        for meld in melds {
-            if meld.isValid() { return false }
+        if tiles.count < 14 || pair == nil {
+            return false
         }
         
-        var pairs:[Pair]
+        for meld in melds {
+            if meld.isValid() {
+                return false
+            }
+        }
         
         for i in 0...(tiles.count/2 - 1) {
-            var pair = Pair(tile1: tiles[2*i], tile2: tiles[2*i + 1])
-            if !(pair.isValidPair()) { return false }
+            let pair = Pair(tile1: tiles[2*i], tile2: tiles[2*i + 1])
+            if !(pair.isValidPair()) {
+                return false
+            }
         }
+        
         return true
     }
     
-    func calculateScore() -> Score {
+    func calculateScore() -> (winner:Double, other1:Double, other2:Double, other3:Double) {
         let hanHelper = Han(wh: self)
         let fuHelper = Fu(wh: self)
         han = hanHelper.calculateHan()
         fu = fuHelper.calculateFu()
         calculateBasicPoints()
         
-        return Score(winningHand: self, basicPoints: basicPoints)
+        if conditions.isDealer() {
+            if conditions.isTsumo() {
+                return (roundPoints(basicPoints*6), roundPoints(basicPoints*(-2)),
+                    roundPoints(basicPoints*(-2)), roundPoints(basicPoints*(-2)))
+            } else  {
+                return (roundPoints(basicPoints*6), roundPoints(basicPoints*(-6)), 0, 0)
+            }
+        } else {
+            if conditions.isTsumo() {
+                return (roundPoints(basicPoints*4), roundPoints(basicPoints*(-2)),
+                    roundPoints(basicPoints*(-1)), roundPoints(basicPoints*(-1)))
+            } else  {
+                return (roundPoints(basicPoints*4), roundPoints(basicPoints*(-4)), 0, 0)
+            }
+        }
     }
     
     func calculateBasicPoints() {
@@ -342,6 +361,21 @@ public class Hand {
         basicPoints = points
     }
     
+    func roundPoints(count:Double) -> Double {
+        if count >= 0 {
+            if round(count/100)*100 < count/100*100 {
+                return round((count+100)/100)*100
+            }
+            return round(count/100)*100
+        }
+        else {
+            if round(count/100)*100 > count/100*100 {
+                return round((count-100)/100)*100
+            }
+            return round(count/100)*100
+        }
+    }
+    
     func sortTiles() {
         for var i:Int = 1; i < tiles.count; i++ {
             var value:Tile = tiles[i]
@@ -354,8 +388,12 @@ public class Hand {
     }
     
     func binarySearch(value:Int, left:Int, right:Int) -> Int {
-        if (right < left) { return left }
+        if (right < left) {
+            return left
+        }
+        
         let mid:Int = (left + right) / 2
+        
         if (value <= tiles[mid].getRawValue()) {
             return binarySearch(value, left: left, right: mid-1)
         } else {

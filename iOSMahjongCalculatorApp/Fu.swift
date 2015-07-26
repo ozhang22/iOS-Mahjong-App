@@ -43,16 +43,18 @@ public class Fu {
                     println("triplet fu + \(acc)")
                 }
             }
-            if (wh.pair.tile1.suit == Suit.Dragon) ||
-                (wh.pair.tile1.value.rawValue == wh.conditions.seat.rawValue) ||
-                (wh.pair.tile1.value.rawValue == wh.conditions.round.rawValue) {
+            if (wh.pair.tile1.isDragon()) ||
+                (wh.pair.tile1.isCorrectWind(wh.conditions.seat, wind2: wh.conditions.round)) {
                     count = count + 2
                     println("wind/dragon fu +2")
             }
         }
         
         func calculateFuWaits() {
-            if (wh.pair.tile1.wait || wh.pair.tile2.wait) { count = count + 2 }
+            if (wh.pair.tile1.wait || wh.pair.tile2.wait) {
+                println("wait fu +2")
+                count = count + 2
+            }
             else {
                 for meld in wh.melds {
                     if (meld.isSequence()) && (((meld.tile2.wait) ||
@@ -72,24 +74,24 @@ public class Fu {
             }
         }
         
-        func roundFu(n:Double) -> Double {
+        func roundFu() {
             if round(count/10)*10 < count/10*10 {
-                return round((count+10)/10)*10
+                count = round((count+10)/10)*10
             }
-            return round(count/10)*10
+            count = round(count/10)*10
         }
         
         count = 20
+        if wh.sevenPairs() {
+            count = 25
+            println("sevenPairs fu =25")
+            return count
+        }
         calculateClosedHand()
         calculateFuMelds()
         calculateFuWaits()
         calculateFuTsumo()
-        count = roundFu(count)
-        if wh.sevenPairs() {
-            count = 25
-            println("sevenPairs fu =25")
-        }
-        
+        roundFu()
         return count
     }
 

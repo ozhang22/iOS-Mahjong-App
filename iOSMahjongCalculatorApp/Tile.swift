@@ -39,19 +39,23 @@ public class Tile {
     }
     
     func isTerminal() -> Bool {
-        return (value.rawValue == 1) || (value.rawValue == 9)
+        return value == Value.One || value == Value.Nine
     }
     
     func isHonor() -> Bool {
-        return suit.rawValue > 3
+        return suit == Suit.Wind || suit == Suit.Dragon
     }
     
     func isTerminalOrHonor() -> Bool {
         return isTerminal() || isHonor() 
     }
     
-    func isCorrectWind(wind:Wind) -> Bool {
-        return suit.rawValue == wind.rawValue
+    func isDragon() -> Bool {
+        return suit == Suit.Dragon
+    }
+    
+    func isCorrectWind(wind1:Wind, wind2:Wind) -> Bool {
+        return suit.rawValue == wind1.rawValue || suit.rawValue == wind2.rawValue
     }
     
     func changeWait() {
