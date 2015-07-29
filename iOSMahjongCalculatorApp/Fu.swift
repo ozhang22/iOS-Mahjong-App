@@ -20,32 +20,38 @@ public class Fu {
     
     func calculateFu() -> Double {
         self.count = 0
+        var pinfu:Bool = false
         
         func calculateClosedHand() {
             if !(wh.conditions.isTsumo()) {
                 for meld in wh.melds {
-                    if !(meld.isClosed()) { return }
+                    if !(meld.isClosed()) {
+                        return
+                    }
                 }
                 count = count + 10
+                pinfu = false
                 println("closed hand fu +10")
             }
         }
         
         func calculateFuMelds() {
             for meld in wh.melds {
-                if (meld.isTriplet()) {
+                if (meld.isTriplet() && !meld.tile1.wait) {
                     var acc:Double = 2
                     
                     if (meld.isClosed()) { acc = acc*2 }
                     if (meld.isKan()) { acc = acc*4 }
                     if (meld.tile1.isTerminalOrHonor()) { acc = acc*2 }
                     count = count + acc
+                    pinfu = false
                     println("triplet fu + \(acc)")
                 }
             }
             if (wh.pair.tile1.isDragon()) ||
                 (wh.pair.tile1.isCorrectWind(wh.conditions.seat, wind2: wh.conditions.round)) {
                     count = count + 2
+                    pinfu = false
                     println("wind/dragon fu +2")
             }
         }
@@ -54,12 +60,15 @@ public class Fu {
             if (wh.pair.tile1.wait || wh.pair.tile2.wait) {
                 println("wait fu +2")
                 count = count + 2
+                pinfu = false
             }
             else {
                 for meld in wh.melds {
-                    if (meld.isSequence()) && (((meld.tile2.wait) ||
-                        (meld.tile1.value == Value.One) || (meld.tile3.value == Value.Nine))) {
+                    if (meld.isSequence()) && ((meld.tile2.wait) ||
+                        ((meld.tile1.value == Value.Seven) && (meld.tile1.wait)) ||
+                        ((meld.tile3.value == Value.Three) && (meld.tile3.wait))) {
                             count = count + 2
+                            pinfu = false
                             println("wait fu +2")
                             return
                     }
@@ -70,6 +79,7 @@ public class Fu {
         func calculateFuTsumo() {
             if (wh.conditions.isTsumo()) {
                 count = count + 2
+                pinfu = true
                 println("tsumo fu +2")
             }
         }
@@ -87,11 +97,18 @@ public class Fu {
             println("sevenPairs fu =25")
             return count
         }
+        
+        calculateFuTsumo()
         calculateClosedHand()
         calculateFuMelds()
         calculateFuWaits()
-        calculateFuTsumo()
-        roundFu()
+        
+        if pinfu {
+            count = 20
+        } else {
+            roundFu()
+        }
+        
         return count
     }
 

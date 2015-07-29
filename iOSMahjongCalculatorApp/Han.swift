@@ -42,14 +42,14 @@ public class Han {
             var tilesToCheck:[Tile] = []
             
             for tile in wh.conditions.doraTiles {
-                if (tile.value.rawValue == 9) {
-                    let tile = Tile(value: Value(rawValue: 1)!, suit: tile.suit)
+                if (tile.value == Value.Nine) {
+                    let tile = Tile(value: Value.One, suit: tile.suit)
                     tilesToCheck.append(tile)
-                } else if (tile.value.rawValue == 13) {
-                    let tile = Tile(value: Value(rawValue: 10)!, suit: tile.suit)
+                } else if (tile.value == Value.North) {
+                    let tile = Tile(value: Value.East, suit: tile.suit)
                     tilesToCheck.append(tile)
-                } else if (tile.value.rawValue == 16) {
-                    let tile = Tile(value: Value(rawValue: 14)!, suit: tile.suit)
+                } else if (tile.value == Value.White) {
+                    let tile = Tile(value: Value.Red, suit: tile.suit)
                     tilesToCheck.append(tile)
                 } else {
                     let tile = Tile(value: Value(rawValue: tile.value.rawValue + 1)!, suit: tile.suit)
@@ -116,7 +116,7 @@ public class Han {
         }
         
         func allSequence() {
-            if (wh.isClosed() && (melds.count == 4)) {
+            if (wh.isClosed() && (melds.count == 4) && (wh.fu == 20)) {
                 count++
                 println("allSequence han +1")
             }
@@ -143,13 +143,11 @@ public class Han {
             }
             
             for i in 0...(melds.count - 2){
-                for j in i+1...(melds.count - 1) {
-                    if wh.melds[i].isEqual(wh.melds[j]) {
-                        count++
-                        println("singleDoubleSequence han +1")
-                        doubleDoubleSequence(i,j)
-                        return
-                    }
+                if wh.melds[i].isEqual(wh.melds[i+1]) {
+                    count++
+                    println("singleDoubleSequence han +1")
+                    doubleDoubleSequence(i,i+1)
+                    return
                 }
             }
         }
@@ -188,13 +186,11 @@ public class Han {
             var meldAcc4 = 0
             
             for meld in melds {
-                if (meld.tile1.value == meldAcc1.tile1.value &&
-                    meld.tile1.suit != meldAcc1.tile1.suit) {
-                        ++meldAcc3
+                if (meld.tile1.isEqualValueOnly(meldAcc1.tile1)) {
+                    ++meldAcc3
                 }
-                if (meld.tile1.value == meldAcc2.tile1.value &&
-                    meld.tile1.suit != meldAcc2.tile1.suit){
-                        ++meldAcc4
+                if (meld.tile1.isEqualValueOnly(meldAcc2.tile1)) {
+                    ++meldAcc4
                 }
             }
             if (meldAcc3 >= 2 || meldAcc4 >= 2) {
@@ -234,8 +230,8 @@ public class Han {
         for meld in melds {
             if (meld.isKan()) { ++kanAcc }
             if (meld.isClosed()) { ++closedAcc }
-            if (meld.tile1.isEqual(tile1) && meld.tile1.suit != tile1.suit) { ++value1Acc }
-            if (meld.tile1.isEqual(tile2) && meld.tile2.suit != tile2.suit) { ++value2Acc }
+            if (meld.tile1.isEqualValueOnly(tile1)) { ++value1Acc }
+            if (meld.tile1.isEqualValueOnly(tile2)) { ++value2Acc }
         }
         
         if kanAcc >= 3 {
@@ -276,7 +272,7 @@ public class Han {
         
         func honourTriplets() {
             var dragonAcc:Double = 0
-            
+
             for meld in wh.melds {
                 if (meld.isTriplet()) &&
                     ((meld.tile1.isCorrectWind(wh.conditions.seat, wind2: wh.conditions.round))) {
@@ -339,12 +335,7 @@ public class Han {
     }
     
     func calculateHanSuit() {
-        var acc = Suit.Wind
-        var i = 0
-        while ((acc == Suit.Wind) || (acc == Suit.Dragon)) {
-            acc = wh.tiles[i].suit
-            i++
-        }
+        var acc = wh.tiles[0].suit
         for tile in wh.tiles {
             if !(tile.suit == acc) && !(tile.isHonor()) {
                 return
@@ -362,7 +353,7 @@ public class Han {
             }
         }
         count += 5
-        println("pure flush han +2")
+        println("pure flush han +5")
     }
     
 }

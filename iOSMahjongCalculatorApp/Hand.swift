@@ -11,6 +11,7 @@ import Foundation
 public class Hand {
     
     var tiles:[Tile]
+    private var insertedTiles:[Tile]
     var melds:[Meld]
     var pair:Pair!
     var han:Double
@@ -20,6 +21,7 @@ public class Hand {
     
     init() {
         tiles = []
+        insertedTiles = []
         han = 0
         fu = 0
         conditions = Conditions()
@@ -31,6 +33,7 @@ public class Hand {
         if (currentTileCount(tile) < 4) {
             if tiles.count < 14 {
                 tiles.append(tile)
+                insertedTiles.append(tile)
                 sortTiles()
             }
             if tiles.count == 14 && pair == nil {
@@ -41,7 +44,13 @@ public class Hand {
     
     func removeTile() {
         if tiles.count > 0 {
-            tiles.removeLast()
+            let toRemove:Tile = insertedTiles.removeLast()
+            for (var ii:Int = 0; ii < tiles.count; ii++) {
+                if tiles[ii].isEqual(toRemove) {
+                    tiles.removeAtIndex(ii)
+                    return
+                }
+            }
         }
         sortTiles()
         invalidateHand()
@@ -301,10 +310,10 @@ public class Hand {
     }
     
     func calculateScore() -> (winner:Double, other1:Double, other2:Double, other3:Double) {
-        let hanHelper = Han(wh: self)
         let fuHelper = Fu(wh: self)
-        han = hanHelper.calculateHan()
+        let hanHelper = Han(wh: self)
         fu = fuHelper.calculateFu()
+        han = hanHelper.calculateHan()
         calculateBasicPoints()
         
         if conditions.isDealer() {

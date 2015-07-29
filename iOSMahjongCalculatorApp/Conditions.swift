@@ -25,6 +25,7 @@ public class Conditions {
     private var robKan:Bool
     private var doubleRiichi:Bool
     var doraTiles:[Tile]
+    private var insertedTiles:[Tile]
     
     init() {
         seat = Wind.East
@@ -38,6 +39,7 @@ public class Conditions {
         robKan = false
         doubleRiichi = false
         doraTiles = []
+        insertedTiles = []
     }
     
     func clearConditions() {
@@ -54,7 +56,7 @@ public class Conditions {
     }
     
     func isDealer() -> Bool {
-        return self.seat.rawValue == Wind.East.rawValue
+        return self.seat == Wind.East
     }
     
     func setSeat(wind:Wind) {
@@ -160,14 +162,21 @@ public class Conditions {
         if (currentTileCount(tile) < 4) {
             if doraTiles.count < 10 {
                 doraTiles.append(tile)
+                insertedTiles.append(tile)
+                sortTiles()
             }
-        sortTiles()
         }
     }
     
     func removeDoraTile() {
         if doraTiles.count > 0 {
-            doraTiles.removeLast()
+            let toRemove:Tile = insertedTiles.removeLast()
+            for (var ii:Int = 0; ii < doraTiles.count; ii++) {
+                if doraTiles[ii].isEqual(toRemove) {
+                    doraTiles.removeAtIndex(ii)
+                    return
+                }
+            }
         }
         sortTiles()
     }
@@ -202,7 +211,9 @@ public class Conditions {
     }
     
     func bSearch(value:Int, left:Int, right:Int) -> Int {
-        if (right < left) { return left }
+        if (right < left) {
+            return left
+        }
         let mid:Int = (left + right) / 2
         if (value <= doraTiles[mid].getRawValue()) {
             return bSearch(value, left: left, right: mid-1)

@@ -88,9 +88,11 @@ class DoraTilesViewController: UIViewController {
     
     // Adds images of all dora tiles at the bottom of the screen
     func updateHandImage() {
-        clearAllSubViews()
-        for var i:Int = 0; i < winningHand.conditions.doraTiles.count; i++ {
-            updateHandImageAtIndex(i)
+        if winningHand.conditions.doraTiles.count > 0 {
+            clearAllSubViews()
+            for var i:Int = 0; i < winningHand.conditions.doraTiles.count; i++ {
+                updateHandImageAtIndex(i)
+            }
         }
     }
     
@@ -101,7 +103,7 @@ class DoraTilesViewController: UIViewController {
         let yOffset = 60
         
         let tile = winningHand.conditions.doraTiles[index]
-        let key = "\(tile.suit.rawValue) " + "\(tile.value.rawValue)"
+        let key = "\(tile.getRawValue())"
         if let image = imageDictionary[key] {
             let newImage = rescaleImage(image!)
             let imageView = UIImageView(image: newImage)

@@ -39,6 +39,7 @@ class TilesViewController: UIViewController, UIGestureRecognizerDelegate {
             if winningHand.isValid() {
                 let doraController = segue.destinationViewController as! DoraTilesViewController
                 doraController.winningHand = winningHand
+                //doraController.updateHandImage()
             } else {
                 let alertController = UIAlertController(title: "Invalid hand", message:
                     "Please input a valid hand.", preferredStyle: .Alert)
@@ -101,7 +102,7 @@ class TilesViewController: UIViewController, UIGestureRecognizerDelegate {
         let redYOffset:Double = 2
         
         let tile = winningHand.tiles[index]
-        let key = "\(tile.suit.rawValue) " + "\(tile.value.rawValue)"
+        let key = "\(tile.getRawValue())"
         if let image = imageDictionary[key] {
             let newImage = rescaleImage(image!, width: 35, height: 45)
             let imageView = UIImageView(image: newImage)

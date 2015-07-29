@@ -38,6 +38,14 @@ public class Tile {
         return getRawValue() == other.getRawValue()
     }
     
+    func isEqualValueOnly(other:Tile) -> Bool {
+        return value == other.value && suit != other.suit
+    }
+    
+    func isSameSuit(other:Tile) -> Bool {
+        return suit == other.suit
+    }
+    
     func isTerminal() -> Bool {
         return value == Value.One || value == Value.Nine
     }
@@ -55,7 +63,7 @@ public class Tile {
     }
     
     func isCorrectWind(wind1:Wind, wind2:Wind) -> Bool {
-        return suit.rawValue == wind1.rawValue || suit.rawValue == wind2.rawValue
+        return (value.rawValue == wind1.rawValue) || (value.rawValue == wind2.rawValue)
     }
     
     func changeWait() {

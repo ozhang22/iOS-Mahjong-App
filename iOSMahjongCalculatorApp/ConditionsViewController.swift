@@ -45,6 +45,7 @@ class ConditionsViewController: UITableViewController {
         else if segue.identifier == "Reset" {
             let tilesController = segue.destinationViewController as! TilesViewController
             tilesController.winningHand.removeAllTiles()
+            tilesController.winningHand.conditions.removeAllDoraTiles()
             tilesController.updateHandImage()
         }
     }
@@ -189,11 +190,20 @@ class ConditionsViewController: UITableViewController {
     // Calculates points of the winning hand when calculate button is pressed
     @IBAction func calculate() {
         let score = winningHand.calculateScore()
-        let alertController = UIAlertController(title: "You win!",
-            message: "Han: \(winningHand.han), Fu: \(winningHand.fu) \n\n" +
-            "Winner: \(score.winner) \nPlayer 2: \(score.other1) \n" +
-            "Player 3: \(score.other2) \nPlayer 4: \(score.other3) \n", preferredStyle: .Alert)
+        var alertController:UIAlertController
         
+        if winningHand.han == 0 {
+            alertController = UIAlertController(title: "Chombo!",
+                message: "Invalid hand: Player must pay chombo penalty.",
+                preferredStyle: .Alert)
+        } else {
+            alertController = UIAlertController(title: "You win!",
+                message: "Han: \(winningHand.han), Fu: \(winningHand.fu) \n\n" +
+                    "Winner: \(score.winner) \nPlayer 2: \(score.other1) \n" +
+                "Player 3: \(score.other2) \nPlayer 4: \(score.other3) \n",
+                preferredStyle: .Alert)
+        }
+            
         let cancelAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
         alertController.addAction(cancelAction)
         
