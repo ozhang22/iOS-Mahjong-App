@@ -15,6 +15,7 @@ class TilesViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var NextButton: UIBarButtonItem!
     @IBOutlet weak var HandImages: UIImageView!
     
+    
     var winningHand:Hand!
     var values = lookUp
     var images = imageDictionary

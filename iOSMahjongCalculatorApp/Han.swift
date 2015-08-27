@@ -20,14 +20,16 @@ public class Han {
     
     func calculateHan() -> Double {
         self.count = 0
+        if wh.sevenPairs() {
+            self.count += 2
+            println("seven pairs han +2")
+            calculateOtherSevenPairs()
+            return self.count
+        }
         calculateHanSequence()
         calculateHanTriplets()
         calculateHanTerminals()
         calculateHanSuit()
-        if wh.sevenPairs() {
-            count += 2
-            println("seven pairs han +2")
-        }
         calculateHanLuck()
         return self.count
     }
@@ -48,8 +50,8 @@ public class Han {
                 } else if (tile.value == Value.North) {
                     let tile = Tile(value: Value.East, suit: tile.suit)
                     tilesToCheck.append(tile)
-                } else if (tile.value == Value.White) {
-                    let tile = Tile(value: Value.Red, suit: tile.suit)
+                } else if (tile.value == Value.Red) {
+                    let tile = Tile(value: Value.White, suit: tile.suit)
                     tilesToCheck.append(tile)
                 } else {
                     let tile = Tile(value: Value(rawValue: tile.value.rawValue + 1)!, suit: tile.suit)
@@ -116,7 +118,7 @@ public class Han {
         }
         
         func allSequence() {
-            if (wh.isClosed() && (melds.count == 4) && (wh.fu == 20)) {
+            if (wh.isClosed() && (melds.count == 4)) {
                 count++
                 println("allSequence han +1")
             }
@@ -247,13 +249,17 @@ public class Han {
             println(">3 triplets same value han +2")
         }
         
+        if melds.count == 4 {
+            count += 2
+            println("all triplets han +2")
+        }
     }
     
     func calculateHanTerminals() {
-        func allTerminal() -> Bool {
+        func allTerminalAndHonor() -> Bool {
             for meld in wh.melds {
-                if !(meld.tile1.isTerminal() && meld.tile2.isTerminal() &&
-                    meld.tile3.isTerminal()) {
+                if !(meld.tile1.isTerminalOrHonor() && meld.tile2.isTerminalOrHonor() &&
+                    meld.tile3.isTerminalOrHonor()) {
                         return false
                 }
             }
@@ -275,9 +281,15 @@ public class Han {
 
             for meld in wh.melds {
                 if (meld.isTriplet()) &&
-                    ((meld.tile1.isCorrectWind(wh.conditions.seat, wind2: wh.conditions.round))) {
+                    ((meld.tile1.isCorrectWind(wh.conditions.seat))) {
                     count++
-                    println("same wind as seat/round triplet han +1")
+                    println("same wind as seat triplet han +1")
+                }
+                
+                if (meld.isTriplet()) &&
+                    ((meld.tile1.isCorrectWind(wh.conditions.round))) {
+                        count++
+                        println("same wind as round triplet han +1")
                 }
                 
                 if meld.isTriplet() && (meld.tile1.isDragon()) {
@@ -322,7 +334,7 @@ public class Han {
             }
         }
         
-        if allTerminal() {
+        if allTerminalAndHonor() {
             count += 2
             println("all hand of terminals han +2")
         }
@@ -356,4 +368,31 @@ public class Han {
         println("pure flush han +5")
     }
     
+    func calculateOtherSevenPairs() {
+        func sevenPairsAllTerminalAndHonor() {
+            for tile in wh.tiles {
+                if !(tile.isTerminalOrHonor()) {
+                    return
+                }
+            }
+            
+            self.count += 2
+        }
+        
+        func sevenPairsAllNonTerminalOrHonor() {
+            for tile in wh.tiles {
+                if (tile.isTerminalOrHonor()) {
+                    return
+                }
+            }
+            
+            self.count += 1
+            
+        }
+        
+        calculateHanSuit()
+        calculateHanLuck()
+        sevenPairsAllTerminalAndHonor()
+        sevenPairsAllNonTerminalOrHonor()
+    }
 }

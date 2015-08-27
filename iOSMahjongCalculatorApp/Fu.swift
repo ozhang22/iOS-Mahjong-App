@@ -49,7 +49,8 @@ public class Fu {
                 }
             }
             if (wh.pair.tile1.isDragon()) ||
-                (wh.pair.tile1.isCorrectWind(wh.conditions.seat, wind2: wh.conditions.round)) {
+                (wh.pair.tile1.isCorrectWind(wh.conditions.seat)) ||
+                (wh.pair.tile1.isCorrectWind(wh.conditions.round)) {
                     count = count + 2
                     pinfu = false
                     println("wind/dragon fu +2")
@@ -93,9 +94,8 @@ public class Fu {
         
         count = 20
         if wh.sevenPairs() {
-            count = 25
             println("sevenPairs fu =25")
-            return count
+            return 25
         }
         
         calculateFuTsumo()

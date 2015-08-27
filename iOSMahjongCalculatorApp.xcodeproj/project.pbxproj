@@ -37,9 +37,9 @@
 		9E087F791B099E2200A8C77D /* SeatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E087F5A1B099CCF00A8C77D /* SeatTableViewController.swift */; };
 		9E087F7A1B099E2200A8C77D /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E087F5B1B099CCF00A8C77D /* Tile.swift */; };
 		9E087F7B1B099E2200A8C77D /* TilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E087F5C1B099CCF00A8C77D /* TilesViewController.swift */; };
-		9E087FA21B09A63600A8C77D /* MJd1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E087F7F1B09A63600A8C77D /* MJd1.png */; };
+		9E087FA21B09A63600A8C77D /* MJd3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E087F7F1B09A63600A8C77D /* MJd3.png */; };
 		9E087FA31B09A63600A8C77D /* MJd2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E087F801B09A63600A8C77D /* MJd2.png */; };
-		9E087FA41B09A63600A8C77D /* MJd3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E087F811B09A63600A8C77D /* MJd3.png */; };
+		9E087FA41B09A63600A8C77D /* MJd1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E087F811B09A63600A8C77D /* MJd1.png */; };
 		9E087FA51B09A63600A8C77D /* MJf1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E087F821B09A63600A8C77D /* MJf1.png */; };
 		9E087FA61B09A63600A8C77D /* MJf2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E087F831B09A63600A8C77D /* MJf2.png */; };
 		9E087FA71B09A63600A8C77D /* MJf3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E087F841B09A63600A8C77D /* MJf3.png */; };
@@ -105,9 +105,9 @@
 		9E087F5B1B099CCF00A8C77D /* Tile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		9E087F5C1B099CCF00A8C77D /* TilesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TilesViewController.swift; sourceTree = "<group>"; };
 		9E087F661B099CFD00A8C77D /* iOSMahjongCalculatorApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOSMahjongCalculatorApp.swift; sourceTree = "<group>"; };
-		9E087F7F1B09A63600A8C77D /* MJd1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MJd1.png; sourceTree = "<group>"; };
+		9E087F7F1B09A63600A8C77D /* MJd3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MJd3.png; sourceTree = "<group>"; };
 		9E087F801B09A63600A8C77D /* MJd2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MJd2.png; sourceTree = "<group>"; };
-		9E087F811B09A63600A8C77D /* MJd3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MJd3.png; sourceTree = "<group>"; };
+		9E087F811B09A63600A8C77D /* MJd1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MJd1.png; sourceTree = "<group>"; };
 		9E087F821B09A63600A8C77D /* MJf1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MJf1.png; sourceTree = "<group>"; };
 		9E087F831B09A63600A8C77D /* MJf2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MJf2.png; sourceTree = "<group>"; };
 		9E087F841B09A63600A8C77D /* MJf3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MJf3.png; sourceTree = "<group>"; };
@@ -230,9 +230,9 @@
 		9E087F7E1B09A62300A8C77D /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				9E087F7F1B09A63600A8C77D /* MJd1.png */,
+				9E087F811B09A63600A8C77D /* MJd1.png */,
 				9E087F801B09A63600A8C77D /* MJd2.png */,
-				9E087F811B09A63600A8C77D /* MJd3.png */,
+				9E087F7F1B09A63600A8C77D /* MJd3.png */,
 				9E087F821B09A63600A8C77D /* MJf1.png */,
 				9E087F831B09A63600A8C77D /* MJf2.png */,
 				9E087F841B09A63600A8C77D /* MJf3.png */,
@@ -352,7 +352,7 @@
 				9E087FBB1B09A63600A8C77D /* MJw1.png in Resources */,
 				9E087FA61B09A63600A8C77D /* MJf2.png in Resources */,
 				9E087FA31B09A63600A8C77D /* MJd2.png in Resources */,
-				9E087FA41B09A63600A8C77D /* MJd3.png in Resources */,
+				9E087FA41B09A63600A8C77D /* MJd1.png in Resources */,
 				9E087FB71B09A63600A8C77D /* MJt6.png in Resources */,
 				9E087FB51B09A63600A8C77D /* MJt4.png in Resources */,
 				9E087FBD1B09A63600A8C77D /* MJw3.png in Resources */,
@@ -370,7 +370,7 @@
 				9E087FB11B09A63600A8C77D /* MJs9.png in Resources */,
 				9E087FAC1B09A63600A8C77D /* MJs4.png in Resources */,
 				9E087FBA1B09A63600A8C77D /* MJt9.png in Resources */,
-				9E087FA21B09A63600A8C77D /* MJd1.png in Resources */,
+				9E087FA21B09A63600A8C77D /* MJd3.png in Resources */,
 				9E087FAF1B09A63600A8C77D /* MJs7.png in Resources */,
 				9E087FB61B09A63600A8C77D /* MJt5.png in Resources */,
 				9E087FB01B09A63600A8C77D /* MJs8.png in Resources */,

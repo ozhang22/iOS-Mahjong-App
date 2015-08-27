@@ -16,6 +16,10 @@ class ConditionsViewController: UITableViewController {
     @IBOutlet weak var calculateButton: UIBarButtonItem!
     @IBOutlet weak var RiichiSwitch: UISwitch!
     @IBOutlet weak var DoubleRiichiSwitch: UISwitch!
+    @IBOutlet weak var Meld1Switch: UISwitch!
+    @IBOutlet weak var Meld2Switch: UISwitch!
+    @IBOutlet weak var Meld3Switch: UISwitch!
+    @IBOutlet weak var Meld4Switch: UISwitch!
     
     var winningHand:Hand!
     
@@ -28,6 +32,17 @@ class ConditionsViewController: UITableViewController {
         seatLabel.text = "East"
         RiichiSwitch.enabled = false
         DoubleRiichiSwitch.enabled = false
+        
+        if winningHand.sevenPairs() {
+            Meld1Switch.enabled = false
+            Meld1Switch.setOn(false, animated: false)
+            Meld2Switch.enabled = false
+            Meld2Switch.setOn(false, animated: false)
+            Meld3Switch.enabled = false
+            Meld3Switch.setOn(false, animated: false)
+            Meld4Switch.enabled = false
+            Meld4Switch.setOn(false, animated: false)
+        }
     }
     
     override func didReceiveMemoryWarning() {

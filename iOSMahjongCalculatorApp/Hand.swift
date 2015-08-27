@@ -275,6 +275,10 @@ public class Hand {
     }
     
     func isValid() -> Bool {
+        if sevenPairs() {
+            return true
+        }
+        
         if tiles.count < 14 || pair == nil {
             return false
         }
@@ -289,14 +293,9 @@ public class Hand {
     }
     
     func sevenPairs() -> Bool {
-        if tiles.count < 14 || pair == nil {
-            return false
-        }
         
-        for meld in melds {
-            if meld.isValid() {
-                return false
-            }
+        if tiles.count < 14 {
+            return false
         }
         
         for i in 0...(tiles.count/2 - 1) {
@@ -411,8 +410,10 @@ public class Hand {
     }
     
     func clearConditions() {
-        for i in 0...3 {
-            melds[i].setClosed(false)
+        if !sevenPairs() {
+            for i in 0...3 {
+                melds[i].setClosed(false)
+            }
         }
         conditions.clearConditions()
     }

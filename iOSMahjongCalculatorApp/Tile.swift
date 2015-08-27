@@ -9,13 +9,13 @@
 import Foundation
 
 public enum Suit: Int {
-    case Pin = 1, Sou, Wan, Wind, Dragon
+    case Wan = 1, Pin, Sou, Wind, Dragon
 }
 
 public enum Value: Int {
     case One = 1, Two, Three, Four, Five, Six, Seven, Eight, Nine
     case East = 10, South, West, North
-    case Red = 14, Green, White
+    case White = 14, Green, Red
 }
 
 public class Tile {
@@ -62,8 +62,8 @@ public class Tile {
         return suit == Suit.Dragon
     }
     
-    func isCorrectWind(wind1:Wind, wind2:Wind) -> Bool {
-        return (value.rawValue == wind1.rawValue) || (value.rawValue == wind2.rawValue)
+    func isCorrectWind(wind1:Wind) -> Bool {
+        return (value.rawValue == wind1.rawValue)
     }
     
     func changeWait() {

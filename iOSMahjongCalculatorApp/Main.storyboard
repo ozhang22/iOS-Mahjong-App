@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="gWq-CW-tKd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="gWq-CW-tKd">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -12,206 +12,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs1bird.png" id="KAI-ZS-aJo">
-                                <rect key="frame" x="165" y="72" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Sou1">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="jkv-Id-6uV" appends="YES" id="1U5-A0-LiW"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs2.png" id="vsc-Wj-n9H">
-                                <rect key="frame" x="217" y="72" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Sou2">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="nE8-8V-pKW" appends="YES" id="Xf5-JO-Fde"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs3.png" id="Oyo-de-uCq">
-                                <rect key="frame" x="269" y="72" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Sou3">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="fNm-s9-jwN" appends="YES" id="tfN-bd-zkQ"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs4.png" id="AJs-1R-ypI">
-                                <rect key="frame" x="165" y="125" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Sou4">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="6mo-6Z-vSc" appends="YES" id="XCV-Lt-Uiw"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs5.png" id="Cfc-dC-oTk">
-                                <rect key="frame" x="217" y="125" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Sou5">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="K9E-TS-0hv" appends="YES" id="E4h-RQ-8Ub"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs6.png" id="5q1-6Z-9Sf">
-                                <rect key="frame" x="269" y="125" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Sou6">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="hLB-sm-b1f" appends="YES" id="lFv-DF-6m3"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs7.png" id="dU6-9c-sBv">
-                                <rect key="frame" x="165" y="178" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Sou7">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="88Z-91-N5T" appends="YES" id="JSp-Qt-DDJ"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs8.png" id="HTV-Rz-1cT">
-                                <rect key="frame" x="217" y="178" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Sou8">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="kfB-Tr-IT4" appends="YES" id="6cJ-bC-2i0"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs9.png" id="U4C-oU-GPo">
-                                <rect key="frame" x="269" y="178" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Sou9">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="wp2-s6-Sza" appends="YES" id="FBW-6X-RNJ"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt1.png" id="5p3-Ns-dfP">
-                                <rect key="frame" x="9" y="72" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Pin1">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="nIW-EX-xBU" appends="YES" id="lwQ-pt-y51"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt2.png" id="HPd-zv-RSB">
-                                <rect key="frame" x="61" y="72" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Pin2">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="sux-74-dvz" appends="YES" id="5Zm-Bn-xhP"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt3.png" id="hKc-ez-pdl">
-                                <rect key="frame" x="113" y="72" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Pin3">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="b8E-vN-pwc" appends="YES" id="Wue-PT-Llz"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt4.png" id="4b2-U6-Zij">
-                                <rect key="frame" x="9" y="125" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Pin4">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="kcO-Bb-AAr" appends="YES" id="dfZ-8N-z9i"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt5.png" id="2rj-Z1-ARI">
-                                <rect key="frame" x="61" y="125" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Pin5">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="pFc-Qa-4l2" appends="YES" id="nsm-ae-mcI"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt6.png" id="Lc0-D8-3BD">
-                                <rect key="frame" x="113" y="125" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Pin6">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="kcv-9g-jHQ" appends="YES" id="aLa-vU-48l"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt7.png" id="gaQ-0a-GMf">
-                                <rect key="frame" x="9" y="178" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Pin7">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="LUw-zg-uyu" appends="YES" id="3lL-ll-h3p"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt8.png" id="Lj8-R6-rOf">
-                                <rect key="frame" x="61" y="178" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Pin8">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="xSs-07-FGb" appends="YES" id="gLk-cR-jvr"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt9.png" id="Alb-iH-CTg">
-                                <rect key="frame" x="113" y="178" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Pin9">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="pCZ-2n-lmY" appends="YES" id="8aa-LT-hod"/>
-                                </connections>
-                            </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw1.png" id="dyi-gw-hlR">
-                                <rect key="frame" x="9" y="231" width="35" height="45"/>
+                                <rect key="frame" x="9" y="72" width="35" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Wan1">
                                     <bool key="isElement" value="YES"/>
@@ -222,7 +24,7 @@
                                 </connections>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw2.png" id="and-8Q-EcR">
-                                <rect key="frame" x="61" y="231" width="35" height="45"/>
+                                <rect key="frame" x="61" y="72" width="35" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Wan2">
                                     <bool key="isElement" value="YES"/>
@@ -233,7 +35,7 @@
                                 </connections>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw3.png" id="W2T-Og-66A">
-                                <rect key="frame" x="113" y="231" width="35" height="45"/>
+                                <rect key="frame" x="113" y="72" width="35" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Wan3">
                                     <bool key="isElement" value="YES"/>
@@ -244,7 +46,7 @@
                                 </connections>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw4.png" id="yS3-js-e25">
-                                <rect key="frame" x="9" y="284" width="35" height="45"/>
+                                <rect key="frame" x="9" y="125" width="35" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Wan4">
                                     <bool key="isElement" value="YES"/>
@@ -254,19 +56,8 @@
                                     <outletCollection property="gestureRecognizers" destination="mSh-ix-Mne" appends="YES" id="7U0-Vu-ejY"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw6.png" id="m2H-dc-NO0">
-                                <rect key="frame" x="113" y="284" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Wan6">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="1gu-bl-HVm" appends="YES" id="jgD-cR-RK0"/>
-                                </connections>
-                            </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw5.png" id="Y3M-25-NgJ">
-                                <rect key="frame" x="61" y="284" width="35" height="45"/>
+                                <rect key="frame" x="61" y="125" width="35" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Wan5">
                                     <bool key="isElement" value="YES"/>
@@ -276,10 +67,252 @@
                                     <outletCollection property="gestureRecognizers" destination="Oto-0I-CQX" appends="YES" id="YGA-UZ-1RU"/>
                                 </connections>
                             </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw6.png" id="m2H-dc-NO0">
+                                <rect key="frame" x="113" y="125" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Wan6">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="1gu-bl-HVm" appends="YES" id="jgD-cR-RK0"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw7.png" id="hRz-ly-4i9">
+                                <rect key="frame" x="9" y="178" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Wan7">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="uVb-BU-I7q" appends="YES" id="MnK-mW-Ncb"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw8.png" id="v4t-pt-lcj">
+                                <rect key="frame" x="61" y="178" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Wan8">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="bre-qk-7yi" appends="YES" id="SdI-gA-ytf"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw9.png" id="sO5-U9-wAW">
+                                <rect key="frame" x="113" y="178" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Wan9">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="aia-3y-MuY" appends="YES" id="vV6-N0-quH"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt1.png" id="5p3-Ns-dfP">
+                                <rect key="frame" x="165" y="72" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin1">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="nIW-EX-xBU" appends="YES" id="lwQ-pt-y51"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt2.png" id="HPd-zv-RSB">
+                                <rect key="frame" x="217" y="72" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin2">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="sux-74-dvz" appends="YES" id="5Zm-Bn-xhP"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt3.png" id="hKc-ez-pdl">
+                                <rect key="frame" x="269" y="72" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin3">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="b8E-vN-pwc" appends="YES" id="Wue-PT-Llz"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt4.png" id="4b2-U6-Zij">
+                                <rect key="frame" x="165" y="125" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin4">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="kcO-Bb-AAr" appends="YES" id="dfZ-8N-z9i"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt5.png" id="2rj-Z1-ARI">
+                                <rect key="frame" x="217" y="125" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin5">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="pFc-Qa-4l2" appends="YES" id="nsm-ae-mcI"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt6.png" id="Lc0-D8-3BD">
+                                <rect key="frame" x="269" y="125" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin6">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="kcv-9g-jHQ" appends="YES" id="aLa-vU-48l"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt7.png" id="gaQ-0a-GMf">
+                                <rect key="frame" x="165" y="178" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin7">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="LUw-zg-uyu" appends="YES" id="3lL-ll-h3p"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt8.png" id="Lj8-R6-rOf">
+                                <rect key="frame" x="217" y="178" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin8">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="xSs-07-FGb" appends="YES" id="gLk-cR-jvr"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt9.png" id="Alb-iH-CTg">
+                                <rect key="frame" x="269" y="178" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin9">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="pCZ-2n-lmY" appends="YES" id="8aa-LT-hod"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs1bird.png" id="KAI-ZS-aJo">
+                                <rect key="frame" x="9" y="231" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou1">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="jkv-Id-6uV" appends="YES" id="1U5-A0-LiW"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs2.png" id="vsc-Wj-n9H">
+                                <rect key="frame" x="61" y="231" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou2">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="nE8-8V-pKW" appends="YES" id="Xf5-JO-Fde"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs3.png" id="Oyo-de-uCq">
+                                <rect key="frame" x="113" y="231" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou3">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="fNm-s9-jwN" appends="YES" id="tfN-bd-zkQ"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs4.png" id="AJs-1R-ypI">
+                                <rect key="frame" x="9" y="284" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou4">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="6mo-6Z-vSc" appends="YES" id="XCV-Lt-Uiw"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs5.png" id="Cfc-dC-oTk">
+                                <rect key="frame" x="61" y="284" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou5">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="K9E-TS-0hv" appends="YES" id="E4h-RQ-8Ub"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs6.png" id="5q1-6Z-9Sf">
+                                <rect key="frame" x="113" y="284" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou6">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="hLB-sm-b1f" appends="YES" id="lFv-DF-6m3"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs7.png" id="dU6-9c-sBv">
+                                <rect key="frame" x="9" y="338" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou7">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="88Z-91-N5T" appends="YES" id="JSp-Qt-DDJ"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs8.png" id="HTV-Rz-1cT">
+                                <rect key="frame" x="61" y="338" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou8">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="kfB-Tr-IT4" appends="YES" id="6cJ-bC-2i0"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs9.png" id="U4C-oU-GPo">
+                                <rect key="frame" x="113" y="337" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou9">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="wp2-s6-Sza" appends="YES" id="FBW-6X-RNJ"/>
+                                </connections>
+                            </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJd1.png" id="7GL-EQ-bxY">
                                 <rect key="frame" x="165" y="231" width="35" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Red">
+                                <accessibility key="accessibilityConfiguration" label="White">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
@@ -298,15 +331,15 @@
                                     <outletCollection property="gestureRecognizers" destination="tKu-QO-zzP" appends="YES" id="QIc-m2-VzH"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJf1.png" id="phO-Xp-Lg3">
-                                <rect key="frame" x="165" y="284" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJd3.png" id="cf4-vj-IhB">
+                                <rect key="frame" x="269" y="231" width="35" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="East">
+                                <accessibility key="accessibilityConfiguration" label="Red">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="dcT-t2-g9V" appends="YES" id="21c-K4-Pku"/>
+                                    <outletCollection property="gestureRecognizers" destination="Jmk-Hw-12Y" appends="YES" id="qyB-N3-z2W"/>
                                 </connections>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJf2.png" id="Jcf-HP-WVX">
@@ -331,37 +364,15 @@
                                     <outletCollection property="gestureRecognizers" destination="BrT-ZU-hlb" appends="YES" id="IIm-Iy-uye"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw7.png" id="hRz-ly-4i9">
-                                <rect key="frame" x="9" y="337" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJf4.png" id="0YA-Cl-sgy">
+                                <rect key="frame" x="165" y="337" width="35" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Wan7">
+                                <accessibility key="accessibilityConfiguration" label="North">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="uVb-BU-I7q" appends="YES" id="MnK-mW-Ncb"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw8.png" id="v4t-pt-lcj">
-                                <rect key="frame" x="61" y="337" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Wan8">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="bre-qk-7yi" appends="YES" id="SdI-gA-ytf"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw9.png" id="sO5-U9-wAW">
-                                <rect key="frame" x="113" y="337" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Wan9">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="aia-3y-MuY" appends="YES" id="vV6-N0-quH"/>
+                                    <outletCollection property="gestureRecognizers" destination="qiW-E9-C3y" appends="YES" id="Wwl-lu-UoX"/>
                                 </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AC7-bZ-Sgi">
@@ -378,17 +389,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="CeU-DB-36J">
                                 <rect key="frame" x="9" y="420" width="303" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJd3.png" id="cf4-vj-IhB">
-                                <rect key="frame" x="269" y="231" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="White">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Jmk-Hw-12Y" appends="YES" id="qyB-N3-z2W"/>
-                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hand:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TjZ-sO-j6c">
                                 <rect key="frame" x="9" y="391" width="47" height="21"/>
@@ -408,15 +408,15 @@
                                     <action selector="clearTapped:" destination="TVD-dx-g0F" eventType="touchUpInside" id="wQC-e2-Yme"/>
                                 </connections>
                             </button>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJf4.png" id="0YA-Cl-sgy">
-                                <rect key="frame" x="165" y="337" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJf1.png" id="phO-Xp-Lg3">
+                                <rect key="frame" x="165" y="284" width="35" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="North">
+                                <accessibility key="accessibilityConfiguration" label="East">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="qiW-E9-C3y" appends="YES" id="Wwl-lu-UoX"/>
+                                    <outletCollection property="gestureRecognizers" destination="dcT-t2-g9V" appends="YES" id="21c-K4-Pku"/>
                                 </connections>
                             </imageView>
                         </subviews>
@@ -602,10 +602,10 @@
                         <outlet property="delegate" destination="sO5-U9-wAW" id="mj7-ws-QU3"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="Nnp-0c-Aly" userLabel="MJd1">
+                <tapGestureRecognizer id="Jmk-Hw-12Y" userLabel="MJd1">
                     <connections>
-                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="b8T-bY-TJL"/>
-                        <outlet property="delegate" destination="7GL-EQ-bxY" id="Ntk-Ii-pz3"/>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="vFm-2n-cCE"/>
+                        <outlet property="delegate" destination="cf4-vj-IhB" id="3nx-H7-AXt"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="tKu-QO-zzP" userLabel="MJd2">
@@ -614,10 +614,10 @@
                         <outlet property="delegate" destination="hBX-f1-BiL" id="auk-26-g2E"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="Jmk-Hw-12Y" userLabel="MJd3">
+                <tapGestureRecognizer id="Nnp-0c-Aly" userLabel="MJd3">
                     <connections>
-                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="vFm-2n-cCE"/>
-                        <outlet property="delegate" destination="cf4-vj-IhB" id="3nx-H7-AXt"/>
+                        <action selector="tileTapped:" destination="TVD-dx-g0F" id="b8T-bY-TJL"/>
+                        <outlet property="delegate" destination="7GL-EQ-bxY" id="Ntk-Ii-pz3"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="dcT-t2-g9V" userLabel="MJf1">
@@ -982,6 +982,10 @@
                     </navigationItem>
                     <connections>
                         <outlet property="DoubleRiichiSwitch" destination="SZf-Nc-qNW" id="DJM-MB-GmO"/>
+                        <outlet property="Meld1Switch" destination="ZTN-NV-1tf" id="enK-jo-DgR"/>
+                        <outlet property="Meld2Switch" destination="vod-mc-8AU" id="YCh-oV-O5a"/>
+                        <outlet property="Meld3Switch" destination="YGV-dv-PrB" id="VFj-Og-8Y9"/>
+                        <outlet property="Meld4Switch" destination="oGT-To-eKn" id="riC-FE-Udp"/>
                         <outlet property="RiichiSwitch" destination="dOu-cw-uKU" id="y8H-dp-SCC"/>
                         <outlet property="backButton" destination="BoN-32-vGn" id="eKN-yS-AEY"/>
                         <outlet property="calculateButton" destination="Hbo-cX-K71" id="UBm-IY-bEt"/>
@@ -1005,7 +1009,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RoundCell" textLabel="OpD-UU-48i" style="IBUITableViewCellStyleDefault" id="1fj-nQ-2dw">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1fj-nQ-2dw" id="74j-4a-SMm">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -1046,7 +1050,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SeatCell" textLabel="6KD-LB-XZP" style="IBUITableViewCellStyleDefault" id="f89-nn-U9j">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f89-nn-U9j" id="krl-9n-3Uf">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -1101,195 +1105,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs1bird.png" id="dCW-hA-dXJ">
-                                <rect key="frame" x="165" y="72" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Sou1">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="5KZ-Nq-m8R" appends="YES" id="7gM-ew-ABN"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs2.png" id="eHF-Tv-9LP">
-                                <rect key="frame" x="217" y="72" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Sou2">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="AFF-hZ-2QV" appends="YES" id="nlg-c1-Ugb"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs3.png" id="ege-F0-y2C">
-                                <rect key="frame" x="269" y="72" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Sou3">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="FjB-hB-Evf" appends="YES" id="GnI-Kw-W0I"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs4.png" id="2db-yT-nC7">
-                                <rect key="frame" x="165" y="125" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Sou4">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Hs2-4y-tMu" appends="YES" id="sja-rp-tXR"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs5.png" id="3pS-RL-lP7">
-                                <rect key="frame" x="217" y="125" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Sou5">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="2gi-t7-Qdc" appends="YES" id="lvS-Ot-dN5"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs6.png" id="tQB-Yn-5vT">
-                                <rect key="frame" x="269" y="125" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Sou6">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="1C2-rM-rzy" appends="YES" id="WkA-zp-vrM"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs7.png" id="rgt-h0-RG3">
-                                <rect key="frame" x="165" y="178" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Sou7">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="crs-hG-3Yg" appends="YES" id="ax9-wm-Vd7"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs8.png" id="ei2-hh-Fhh">
-                                <rect key="frame" x="217" y="178" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Sou8">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="GpD-2S-1Za" appends="YES" id="7Xb-h6-fM4"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs9.png" id="OiO-Lw-fCd">
-                                <rect key="frame" x="269" y="178" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Sou9">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="18o-Zy-1fJ" appends="YES" id="Tea-Wj-VHy"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt1.png" id="Ccd-lg-fk3">
-                                <rect key="frame" x="9" y="72" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Pin1">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="CG8-Qu-a2t" appends="YES" id="dOI-TO-Gzo"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt2.png" id="IoU-IX-QzH">
-                                <rect key="frame" x="61" y="72" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Pin2">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="INd-WA-66d" appends="YES" id="Lm4-NV-hIO"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt3.png" id="zWJ-Qn-uxK">
-                                <rect key="frame" x="113" y="72" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Pin3">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="SFb-Y7-4he" appends="YES" id="WJl-wl-Q63"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt4.png" id="Vvz-Ke-TN3">
-                                <rect key="frame" x="9" y="125" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Pin4">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="2vw-1W-iEx" appends="YES" id="ewn-f5-J19"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt5.png" id="lAZ-xI-cH8">
-                                <rect key="frame" x="61" y="125" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Pin5">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="jbP-mJ-mpc" appends="YES" id="EQw-yQ-2BQ"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt6.png" id="l1C-OE-87t">
-                                <rect key="frame" x="113" y="125" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Pin6">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="gFS-zd-egs" appends="YES" id="7Rr-2B-Aaf"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt7.png" id="EJT-pH-KgS">
-                                <rect key="frame" x="9" y="178" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Pin7">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="1nG-dj-97u" appends="YES" id="2eo-tw-x54"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt8.png" id="4yA-3D-rFr">
-                                <rect key="frame" x="61" y="178" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Pin8">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="5K4-DH-Bc4" appends="YES" id="hdA-fh-wUd"/>
-                                </connections>
-                            </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw1.png" id="e2u-j1-mci">
-                                <rect key="frame" x="9" y="231" width="35" height="45"/>
+                                <rect key="frame" x="9" y="72" width="35" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Wan1">
                                     <bool key="isElement" value="YES"/>
@@ -1300,7 +1117,7 @@
                                 </connections>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw2.png" id="aup-4p-YXq">
-                                <rect key="frame" x="61" y="231" width="35" height="45"/>
+                                <rect key="frame" x="61" y="72" width="35" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Wan2">
                                     <bool key="isElement" value="YES"/>
@@ -1311,7 +1128,7 @@
                                 </connections>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw3.png" id="Iwj-1t-aJD">
-                                <rect key="frame" x="113" y="231" width="35" height="45"/>
+                                <rect key="frame" x="113" y="72" width="35" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Wan3">
                                     <bool key="isElement" value="YES"/>
@@ -1322,7 +1139,7 @@
                                 </connections>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw4.png" id="gbm-N7-xP1">
-                                <rect key="frame" x="9" y="284" width="35" height="45"/>
+                                <rect key="frame" x="9" y="125" width="35" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Wan4">
                                     <bool key="isElement" value="YES"/>
@@ -1333,7 +1150,7 @@
                                 </connections>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw5.png" id="IYB-xY-oX2">
-                                <rect key="frame" x="61" y="284" width="35" height="45"/>
+                                <rect key="frame" x="61" y="125" width="35" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Wan5">
                                     <bool key="isElement" value="YES"/>
@@ -1344,7 +1161,7 @@
                                 </connections>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw6.png" id="S28-3K-4Km">
-                                <rect key="frame" x="113" y="284" width="35" height="45"/>
+                                <rect key="frame" x="113" y="125" width="35" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Wan6">
                                     <bool key="isElement" value="YES"/>
@@ -1355,7 +1172,7 @@
                                 </connections>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw7.png" id="KQ0-k8-Dsn">
-                                <rect key="frame" x="9" y="337" width="35" height="45"/>
+                                <rect key="frame" x="9" y="178" width="35" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Wan7">
                                     <bool key="isElement" value="YES"/>
@@ -1366,7 +1183,7 @@
                                 </connections>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw8.png" id="xzL-Du-f7w">
-                                <rect key="frame" x="61" y="337" width="35" height="45"/>
+                                <rect key="frame" x="61" y="178" width="35" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Wan8">
                                     <bool key="isElement" value="YES"/>
@@ -1377,7 +1194,7 @@
                                 </connections>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw9.png" id="03U-De-A0U">
-                                <rect key="frame" x="113" y="337" width="35" height="45"/>
+                                <rect key="frame" x="113" y="178" width="35" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Wan9">
                                     <bool key="isElement" value="YES"/>
@@ -1387,10 +1204,208 @@
                                     <outletCollection property="gestureRecognizers" destination="flV-ZU-JQV" appends="YES" id="RDd-pM-zzu"/>
                                 </connections>
                             </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt1.png" id="Ccd-lg-fk3">
+                                <rect key="frame" x="165" y="72" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin1">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="CG8-Qu-a2t" appends="YES" id="dOI-TO-Gzo"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt2.png" id="IoU-IX-QzH">
+                                <rect key="frame" x="217" y="72" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin2">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="INd-WA-66d" appends="YES" id="Lm4-NV-hIO"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt3.png" id="zWJ-Qn-uxK">
+                                <rect key="frame" x="269" y="72" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin3">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="SFb-Y7-4he" appends="YES" id="WJl-wl-Q63"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt4.png" id="Vvz-Ke-TN3">
+                                <rect key="frame" x="165" y="125" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin4">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="2vw-1W-iEx" appends="YES" id="ewn-f5-J19"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt5.png" id="lAZ-xI-cH8">
+                                <rect key="frame" x="217" y="125" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin5">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="jbP-mJ-mpc" appends="YES" id="EQw-yQ-2BQ"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt6.png" id="l1C-OE-87t">
+                                <rect key="frame" x="269" y="125" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin6">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="gFS-zd-egs" appends="YES" id="7Rr-2B-Aaf"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt7.png" id="EJT-pH-KgS">
+                                <rect key="frame" x="165" y="178" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin7">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="1nG-dj-97u" appends="YES" id="2eo-tw-x54"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt8.png" id="4yA-3D-rFr">
+                                <rect key="frame" x="217" y="178" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin8">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="5K4-DH-Bc4" appends="YES" id="hdA-fh-wUd"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt9.png" id="nQG-WU-RWE">
+                                <rect key="frame" x="269" y="178" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Pin9">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="gj5-px-ptB" appends="YES" id="tWe-mq-Hai"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs1bird.png" id="dCW-hA-dXJ">
+                                <rect key="frame" x="9" y="231" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou1">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="5KZ-Nq-m8R" appends="YES" id="7gM-ew-ABN"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs2.png" id="eHF-Tv-9LP">
+                                <rect key="frame" x="61" y="231" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou2">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="AFF-hZ-2QV" appends="YES" id="nlg-c1-Ugb"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs3.png" id="ege-F0-y2C">
+                                <rect key="frame" x="113" y="231" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou3">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="FjB-hB-Evf" appends="YES" id="GnI-Kw-W0I"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs4.png" id="2db-yT-nC7">
+                                <rect key="frame" x="9" y="284" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou4">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Hs2-4y-tMu" appends="YES" id="sja-rp-tXR"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs5.png" id="3pS-RL-lP7">
+                                <rect key="frame" x="61" y="284" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou5">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="2gi-t7-Qdc" appends="YES" id="lvS-Ot-dN5"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs6.png" id="tQB-Yn-5vT">
+                                <rect key="frame" x="113" y="284" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou6">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="1C2-rM-rzy" appends="YES" id="WkA-zp-vrM"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs7.png" id="rgt-h0-RG3">
+                                <rect key="frame" x="9" y="337" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou7">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="crs-hG-3Yg" appends="YES" id="ax9-wm-Vd7"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs8.png" id="ei2-hh-Fhh">
+                                <rect key="frame" x="61" y="338" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou8">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="GpD-2S-1Za" appends="YES" id="7Xb-h6-fM4"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs9.png" id="OiO-Lw-fCd">
+                                <rect key="frame" x="113" y="338" width="35" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Sou9">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="18o-Zy-1fJ" appends="YES" id="Tea-Wj-VHy"/>
+                                </connections>
+                            </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJd1.png" id="hBT-U2-5QU">
                                 <rect key="frame" x="165" y="231" width="35" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Red">
+                                <accessibility key="accessibilityConfiguration" label="White">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
@@ -1412,7 +1427,7 @@
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJd3.png" id="VuE-Fy-ecs">
                                 <rect key="frame" x="269" y="231" width="35" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="White">
+                                <accessibility key="accessibilityConfiguration" label="Red">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
@@ -1497,17 +1512,6 @@
                                     <action selector="clearTapped:" destination="jaO-2r-Zlo" eventType="touchUpInside" id="UET-Mp-fj2"/>
                                 </connections>
                             </button>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt9.png" id="nQG-WU-RWE">
-                                <rect key="frame" x="113" y="178" width="35" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Pin9">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="gj5-px-ptB" appends="YES" id="tWe-mq-Hai"/>
-                                </connections>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1695,10 +1699,10 @@
                         <outlet property="delegate" destination="03U-De-A0U" id="auc-Pt-oCu"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="FOo-Rn-Cn5" userLabel="MJd1">
+                <tapGestureRecognizer id="3ht-c4-IK7" userLabel="MJd1">
                     <connections>
-                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="7jO-Kl-NOj"/>
-                        <outlet property="delegate" destination="hBT-U2-5QU" id="4Az-zO-8UL"/>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="474-z9-ME3"/>
+                        <outlet property="delegate" destination="VuE-Fy-ecs" id="hjT-n7-9SG"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="dcp-aL-7O8" userLabel="MJd2">
@@ -1707,10 +1711,10 @@
                         <outlet property="delegate" destination="OCi-zb-bi2" id="HlH-ec-Bgv"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="3ht-c4-IK7" userLabel="MJd3">
+                <tapGestureRecognizer id="FOo-Rn-Cn5" userLabel="MJd3">
                     <connections>
-                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="474-z9-ME3"/>
-                        <outlet property="delegate" destination="VuE-Fy-ecs" id="hjT-n7-9SG"/>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="7jO-Kl-NOj"/>
+                        <outlet property="delegate" destination="hBT-U2-5QU" id="4Az-zO-8UL"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="P6E-P9-iys" userLabel="MJf1">
