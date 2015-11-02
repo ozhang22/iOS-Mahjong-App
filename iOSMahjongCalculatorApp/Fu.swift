@@ -37,7 +37,7 @@ public class Fu {
         
         func calculateFuMelds() {
             for meld in wh.melds {
-                if (meld.isTriplet() && !meld.tile1.wait) {
+                if (meld.isTriplet()) {
                     var acc:Double = 2
                     
                     if (meld.isClosed()) { acc = acc*2 }
@@ -94,7 +94,7 @@ public class Fu {
         
         count = 20
         if wh.sevenPairs() {
-            println("sevenPairs fu =25")
+            println("sevenPairs fu = 25")
             return 25
         }
         

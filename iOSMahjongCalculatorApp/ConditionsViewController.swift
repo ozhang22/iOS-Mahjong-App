@@ -212,10 +212,11 @@ class ConditionsViewController: UITableViewController {
                 message: "Invalid hand: Player must pay chombo penalty.",
                 preferredStyle: .Alert)
         } else {
-            alertController = UIAlertController(title: "You win!",
-                message: "Han: \(winningHand.han), Fu: \(winningHand.fu) \n\n" +
+            alertController = UIAlertController(
+                title: "Han: \(winningHand.han), Fu: \(winningHand.fu)",
+                message: "\(winningHand.displayDictionary()) \n" +
                     "Winner: \(score.winner) \nPlayer 2: \(score.other1) \n" +
-                "Player 3: \(score.other2) \nPlayer 4: \(score.other3) \n",
+                    "Player 3: \(score.other2) \nPlayer 4: \(score.other3) \n",
                 preferredStyle: .Alert)
         }
             

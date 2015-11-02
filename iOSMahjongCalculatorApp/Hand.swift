@@ -18,6 +18,7 @@ public class Hand {
     var fu:Double
     var conditions:Conditions
     var basicPoints:Double
+    var dictionary:[String:Double]
     
     init() {
         tiles = []
@@ -27,6 +28,7 @@ public class Hand {
         conditions = Conditions()
         basicPoints = 0
         melds = []
+        dictionary = [:]
     }
     
     func addTile(tile:Tile) {
@@ -275,12 +277,13 @@ public class Hand {
     }
     
     func isValid() -> Bool {
-        if sevenPairs() {
-            return true
+
+        if tiles.count < 14 {
+            return false
         }
         
-        if tiles.count < 14 || pair == nil {
-            return false
+        if sevenPairs() {
+            return true
         }
         
         for meld in melds {
@@ -289,7 +292,7 @@ public class Hand {
             }
         }
         
-        return pair.isValidPair()
+        return pair != nil && pair.isValidPair()
     }
     
     func sevenPairs() -> Bool {
@@ -309,6 +312,7 @@ public class Hand {
     }
     
     func calculateScore() -> (winner:Double, other1:Double, other2:Double, other3:Double) {
+        dictionary = [:]
         let fuHelper = Fu(wh: self)
         let hanHelper = Han(wh: self)
         fu = fuHelper.calculateFu()
@@ -382,6 +386,14 @@ public class Hand {
             }
             return round(count/100)*100
         }
+    }
+    
+    func displayDictionary() -> String {
+        var message:String = ""
+        for (key, value) in dictionary {
+            message += "\(key): \(value)\n"
+        }
+        return message
     }
     
     func sortTiles() {

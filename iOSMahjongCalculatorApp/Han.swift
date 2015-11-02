@@ -22,8 +22,8 @@ public class Han {
         self.count = 0
         if wh.sevenPairs() {
             self.count += 2
-            println("seven pairs han +2")
-            calculateOtherSevenPairs()
+            wh.dictionary["Seven pairs"] = 2
+            calculateOtherHanSevenPairs()
             return self.count
         }
         calculateHanSequence()
@@ -59,47 +59,52 @@ public class Han {
                 }
             }
             
+            var i:Double = 0
             for tileTC in tilesToCheck {
                 for tileWH in wh.tiles {
                     if tileTC.isEqual(tileWH) {
-                        count++
-                        println("dora han +1")
+                        i++
                     }
                 }
+            }
+            
+            if i > 0 {
+                count += i
+                wh.dictionary["Dora"] = i
             }
         }
         
         if wh.conditions.isRiichi() {
             count++
-            println("riichi han +1")
+            wh.dictionary["Riichi"] = 1
         }
         if wh.conditions.isIppatsu() {
             count++
-            println("ippatsu han +1")
+            wh.dictionary["Ippatsu"] = 1
         }
         if wh.conditions.isLastTileFromWall() {
             count++
-            println("last tile from wall han +1")
+            wh.dictionary["Last tile from the wall"] = 1
         }
         if wh.conditions.isLastDiscard() {
             count++
-            println("last discard han +1")
+            wh.dictionary["Last discard"] = 1
         }
         if wh.conditions.isDeadWallDraw() {
             count++
-            println("dead wall draw han +1")
+            wh.dictionary["Dead wall draw"] = 1
         }
         if wh.conditions.isRobKan() {
             count++
-            println("rob Kan han +1")
+            wh.dictionary["Kan robbed"] = 1
         }
         if wh.conditions.isDoubleRiichi() {
             count++
-            println("double riichi han +1")
+            wh.dictionary["Double riichi"] = 1
         }
         if wh.isClosed() && wh.conditions.isTsumo() {
             count++
-            println("closed tsumo han +1")
+            wh.dictionary["Closed tsumo"] = 1
         }
         
         calculateDora()
@@ -120,7 +125,7 @@ public class Han {
         func allSequence() {
             if (wh.isClosed() && (melds.count == 4)) {
                 count++
-                println("allSequence han +1")
+                wh.dictionary["All sequence"] = 1
             }
         }
         
@@ -128,6 +133,7 @@ public class Han {
             
             func doubleDoubleSequence(i:Int, j:Int) {
                 if melds.count < 4 {
+                    wh.dictionary["One set of identical sequences"] = 1
                     return
                 }
                 
@@ -140,14 +146,19 @@ public class Han {
                 
                 if otherMelds[0].isEqual(otherMelds[1]) {
                     count += 2
-                    println("doubleDoubleSequence han +2")
+                    wh.dictionary["Two sets of identical sequences"] = 3
+                } else {
+                    wh.dictionary["One set of identical sequences"] = 1
                 }
             }
             
+            if !wh.isClosed() {
+                return
+            }
+            
             for i in 0...(melds.count - 2){
-                if wh.melds[i].isEqual(wh.melds[i+1]) {
+                if melds[i].isEqual(melds[i+1]) {
                     count++
-                    println("singleDoubleSequence han +1")
                     doubleDoubleSequence(i,i+1)
                     return
                 }
@@ -170,14 +181,14 @@ public class Han {
                     wanAcc++
                 }
             }
+            
             if (pinAcc == 9 || souAcc == 9 || wanAcc == 9) {
-                count++
-                println("straight han +1")
+                var i:Double = 1
                 if wh.isClosed() {
-                    count++
-                    println("closed straight han +1")
+                    i++
                 }
-                
+                count += i
+                wh.dictionary["Straight"] = i
             }
         }
         
@@ -196,12 +207,12 @@ public class Han {
                 }
             }
             if (meldAcc3 >= 2 || meldAcc4 >= 2) {
-                count++
-                println("colour straight han +1")
+                var i:Double = 1
                 if wh.isClosed() {
-                    count++
-                    println("closed colour straight han +1")
+                    i++
                 }
+                count += i
+                wh.dictionary["Three colour straight"] = i
             }
         }
         
@@ -238,20 +249,19 @@ public class Han {
         
         if kanAcc >= 3 {
             count += 2
-            println(">3 kans han +2")
+            wh.dictionary["Three kans"] = 2
         }
         if closedAcc >= 3 {
             count += 2
-            println(">3 closed triplets/kan han +2")
+            wh.dictionary["Three closed triplets or kans"] = 2
         }
         if value1Acc >= 2 || value2Acc >= 2 {
             count += 2
-            println(">3 triplets same value han +2")
+            wh.dictionary["Three colour triplets or kans"] = 2
         }
-        
         if melds.count == 4 {
             count += 2
-            println("all triplets han +2")
+            wh.dictionary["All triplets or kans"] = 2
         }
     }
     
@@ -277,30 +287,32 @@ public class Han {
         }
         
         func honourTriplets() {
+            var honour:Double = 0
             var dragonAcc:Double = 0
 
             for meld in wh.melds {
                 if (meld.isTriplet()) &&
                     ((meld.tile1.isCorrectWind(wh.conditions.seat))) {
-                    count++
-                    println("same wind as seat triplet han +1")
+                    honour++
                 }
-                
                 if (meld.isTriplet()) &&
                     ((meld.tile1.isCorrectWind(wh.conditions.round))) {
-                        count++
-                        println("same wind as round triplet han +1")
+                        honour++
                 }
-                
                 if meld.isTriplet() && (meld.tile1.isDragon()) {
-                    count++
-                    println("dragon triplet han +1")
+                    honour++
                     dragonAcc++
                 }
             }
+            
+            if honour > 0 {
+                count += honour
+                wh.dictionary["Honour tiles"] = honour
+            }
+            
             if (dragonAcc == 2) && ((wh.pair.tile1.isDragon())) {
                 count += 2
-                println("little dragons han +2")
+                wh.dictionary["Little dragons"] = 2
             }
         }
         
@@ -313,34 +325,37 @@ public class Han {
                     return
                 }
             }
+            var i:Double = 0
             if wh.isClosed() {
-                count++
-                println("all sets have terminals or honours closed han +1")
+                i++
             }
             for meld in wh.melds {
                 if !(meld.tile1.isTerminal() || meld.tile3.isTerminal()) {
-                    count++
-                    println("sets have mixed terminals and honours han +1")
+                    i++
+                    count += i
+                    wh.dictionary["Terminal or honor in each set"] = i
                     return
                 }
             }
             if !(wh.pair.tile1.isTerminal()) {
-                count++
-                println("sets have mixed terminals and honours han +1")
+                i++
+                count += i
+                wh.dictionary["Terminal or honor in each set"] = i
             }
             else {
-                count += 2
-                println("all sets have terminals han +2")
+                i += 2
+                count += i
+                wh.dictionary["Terminal in each set"] = i
             }
         }
         
         if allTerminalAndHonor() {
             count += 2
-            println("all hand of terminals han +2")
+            wh.dictionary["All terminals and honours"] = 2
         }
         if allNonTerminalOrHonor() {
             count++
-            println("no terminals or honours han +1")
+            wh.dictionary["All simples"] = 1
         }
         honourTriplets()
         terminalOrHonorInEachSet()
@@ -353,22 +368,25 @@ public class Han {
                 return
             }
         }
+        var i:Double = 0
         if (wh.isClosed()) {
-            count++
-            println("mixed/pure closed flush han +1")
+            i++
         }
         for tile in wh.tiles {
             if !(tile.suit == acc) {
-                count += 2
-                println("mixed flush han +2")
+                i += 2
+                count += i
+                wh.dictionary["Half-flush"] = i
                 return
             }
         }
-        count += 5
-        println("pure flush han +5")
+        
+        i += 5
+        count += i
+        wh.dictionary["Flush"] = i
     }
     
-    func calculateOtherSevenPairs() {
+    func calculateOtherHanSevenPairs() {
         func sevenPairsAllTerminalAndHonor() {
             for tile in wh.tiles {
                 if !(tile.isTerminalOrHonor()) {
@@ -377,6 +395,7 @@ public class Han {
             }
             
             self.count += 2
+            wh.dictionary["All terminals and honours"] = 2
         }
         
         func sevenPairsAllNonTerminalOrHonor() {
@@ -387,7 +406,7 @@ public class Han {
             }
             
             self.count += 1
-            
+            wh.dictionary["All simples"] = 1
         }
         
         calculateHanSuit()
