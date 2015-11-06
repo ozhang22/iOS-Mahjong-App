@@ -97,17 +97,22 @@ class TilesViewController: UIViewController, UIGestureRecognizerDelegate {
     // Adds an image of a tile at a specific location, based on the number
     // of tiles in the hand
     func updateHandImageAtIndex(index:Int) {
-        let xOffset = 40
-        let yOffset = 60
-        let redXOffset:Double = 0.4
-        let redYOffset:Double = 2
+        let screenSize: CGRect = UIScreen.mainScreen().bounds
+        let screenWidth:Double = Double(screenSize.width)
+        let screenHeight:Double = Double(screenSize.height)
+        print("\(screenWidth) x \(screenHeight)")
+        
+        let xOffset:Double = screenWidth/7.11
+        let yOffset:Double = screenHeight/9
+        let redXOffset:Double = screenWidth/1600
+        let redYOffset:Double = screenHeight/400
         
         let tile = winningHand.tiles[index]
         let key = "\(tile.getRawValue())"
         if let image = imageDictionary[key] {
-            let newImage = rescaleImage(image!, width: 35, height: 45)
+            let newImage = rescaleImage(image!, width: screenWidth/9.14, height: screenHeight/12.62)
             let imageView = UIImageView(image: newImage)
-            imageView.center = CGPoint(x: (25 + xOffset*(index%7)), y: (30 + yOffset*(index/7)))
+            imageView.center = CGPoint(x: (screenWidth/14.72 + xOffset*(Double(index%7))), y: (screenHeight/16.22 + yOffset*(Double(index/7))))
             imageView.userInteractionEnabled = true
             
             let recognizer = UITapGestureRecognizer(target: self, action:Selector("handTileTapped:"))
@@ -120,7 +125,7 @@ class TilesViewController: UIViewController, UIGestureRecognizerDelegate {
             if tile.wait {
                 let redDot = UIImage(named: "RedDot.png")
                 let redView = UIImageView(image: redDot)
-                redView.frame = CGRect(x:Double(9.5 + redXOffset*Double(index%7)), y:Double(redYOffset*Double(index/7) - 15),
+                redView.frame = CGRect(x:Double(screenWidth/29 + redXOffset*Double(index%7)), y:Double(redYOffset*Double(index/7) - screenHeight/37.87),
                     width: 12, height: 12)
                 
                 imageView.addSubview(redView)
@@ -137,7 +142,7 @@ class TilesViewController: UIViewController, UIGestureRecognizerDelegate {
     
     // Helper function to rescale image to correct size.
     // Adapted from: https://gist.github.com/hcatlin/180e81cd961573e3c54d
-    func rescaleImage(image: UIImage, width: Int, height: Int) -> UIImage {
+    func rescaleImage(image: UIImage, width: Double, height: Double) -> UIImage {
         var newSize:CGSize = CGSize(width: width, height: height)
         let rect = CGRectMake(0,0, newSize.width, newSize.height)
         UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
