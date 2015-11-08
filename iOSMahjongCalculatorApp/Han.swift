@@ -266,26 +266,32 @@ public class Han {
     }
     
     func calculateHanTerminals() {
-        func allTerminalAndHonor() -> Bool {
+        func allTerminalAndHonor() {
             for meld in wh.melds {
                 if !(meld.tile1.isTerminalOrHonor() && meld.tile2.isTerminalOrHonor() &&
                     meld.tile3.isTerminalOrHonor()) {
-                        return false
+                        return
                 }
             }
-            return wh.pair.tile1.isTerminal()
+            if wh.pair.tile1.isTerminal() {
+                count += 2
+                wh.dictionary["All terminals and honours"] = 2
+            }
         }
         
-        func allNonTerminalOrHonor() -> Bool {
+        func allNonTerminalOrHonor() {
             for meld in wh.melds {
                 if (meld.tile1.isTerminalOrHonor() || meld.tile2.isTerminalOrHonor() ||
                     meld.tile3.isTerminalOrHonor()) {
-                        return false
+                        return
                 }
             }
-            return !wh.pair.tile1.isTerminalOrHonor()
+            if !wh.pair.tile1.isTerminalOrHonor() {
+                count++
+                wh.dictionary["All simples"] = 1
+            }
         }
-        
+
         func honourTriplets() {
             var honour:Double = 0
             var dragonAcc:Double = 0
@@ -304,18 +310,18 @@ public class Han {
                     dragonAcc++
                 }
             }
-            
+
             if honour > 0 {
                 count += honour
                 wh.dictionary["Honour tiles"] = honour
             }
-            
+
             if (dragonAcc == 2) && ((wh.pair.tile1.isDragon())) {
                 count += 2
                 wh.dictionary["Little dragons"] = 2
             }
         }
-        
+
         func terminalOrHonorInEachSet() {
             if !(wh.pair.tile1.isTerminalOrHonor()) {
                 return
@@ -325,6 +331,7 @@ public class Han {
                     return
                 }
             }
+            
             var i:Double = 0
             if wh.isClosed() {
                 i++
@@ -349,14 +356,8 @@ public class Han {
             }
         }
         
-        if allTerminalAndHonor() {
-            count += 2
-            wh.dictionary["All terminals and honours"] = 2
-        }
-        if allNonTerminalOrHonor() {
-            count++
-            wh.dictionary["All simples"] = 1
-        }
+        allTerminalAndHonor()
+        allNonTerminalOrHonor()
         honourTriplets()
         terminalOrHonorInEachSet()
     }
@@ -368,10 +369,12 @@ public class Han {
                 return
             }
         }
+        
         var i:Double = 0
         if (wh.isClosed()) {
             i++
         }
+        
         for tile in wh.tiles {
             if !(tile.suit == acc) {
                 i += 2
@@ -394,7 +397,7 @@ public class Han {
                 }
             }
             
-            self.count += 2
+            count += 2
             wh.dictionary["All terminals and honours"] = 2
         }
         
@@ -405,7 +408,7 @@ public class Han {
                 }
             }
             
-            self.count += 1
+            count += 1
             wh.dictionary["All simples"] = 1
         }
         
