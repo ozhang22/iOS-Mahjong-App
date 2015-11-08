@@ -46,9 +46,9 @@ public class Meld {
     }
     
     func isSequence() -> Bool {
-        return (tile1.suit == tile2.suit) && (tile1.suit == tile3.suit)
-        && (tile2.suit == tile3.suit) && (tile1.value.rawValue + 1 == tile2.value.rawValue)
-        && (tile2.value.rawValue + 1 == tile3.value.rawValue)
+        return tile1.isSameSuit(tile2) && tile1.isSameSuit(tile3)
+        && tile2.isSameSuit(tile3) && tile1.isOneValueGreaterThan(tile2)
+        && tile2.isOneValueGreaterThan(tile3)
     }
     
     func isValid() -> Bool {

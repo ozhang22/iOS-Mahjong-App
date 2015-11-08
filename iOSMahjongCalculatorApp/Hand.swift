@@ -313,10 +313,8 @@ public class Hand {
     
     func calculateScore() -> (winner:Double, other1:Double, other2:Double, other3:Double) {
         dictionary = [:]
-        let fuHelper = Fu(wh: self)
-        let hanHelper = Han(wh: self)
-        fu = fuHelper.calculateFu()
-        han = hanHelper.calculateHan()
+        fu = Fu(wh: self).calculateFu()
+        han = Han(wh: self).calculateHan()
         calculateBasicPoints()
         
         if conditions.isDealer() {
@@ -398,12 +396,12 @@ public class Hand {
     
     func sortTiles() {
         for var i:Int = 1; i < tiles.count; i++ {
-            var value:Tile = tiles[i]
-            var newIndex:Int = binarySearch(value.getRawValue(), left: 0, right: i)
+            var tileToSort:Tile = tiles[i]
+            var newIndex:Int = binarySearch(tileToSort.getRawValue(), left: 0, right: i)
             for var j:Int = i; j > newIndex; j-- {
                 tiles[j] = tiles [j-1]
             }
-            tiles[newIndex] = value
+            tiles[newIndex] = tileToSort
         }
     }
     

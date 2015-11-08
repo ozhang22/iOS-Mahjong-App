@@ -42,6 +42,10 @@ public class Tile {
         return value == other.value && suit != other.suit
     }
     
+    func isOneValueGreaterThan(other:Tile) -> Bool {
+        return value.rawValue + 1 == other.value.rawValue
+    }
+    
     func isSameSuit(other:Tile) -> Bool {
         return suit == other.suit
     }
