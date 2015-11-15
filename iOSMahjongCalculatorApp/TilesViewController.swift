@@ -10,7 +10,6 @@ import UIKit
 
 class TilesViewController: UIViewController, UIGestureRecognizerDelegate {
 
-    @IBOutlet weak var DeleteButton: UIButton!
     @IBOutlet weak var ClearButton: UIButton!
     @IBOutlet weak var NextButton: UIBarButtonItem!
     @IBOutlet weak var HandImages: UIImageView!
@@ -69,12 +68,6 @@ class TilesViewController: UIViewController, UIGestureRecognizerDelegate {
         }
     }
 
-    // When delete button is tapped, delete the last dora tile from hand
-    @IBAction func deleteTapped(button:UIButton) {
-        winningHand.removeTile()
-        updateHandImage()
-    }
-
     // When clear button is tapped, remove all dora tiles from hand
     @IBAction func clearTapped(button:UIButton) {
         winningHand.removeAllTiles()
@@ -128,7 +121,7 @@ class TilesViewController: UIViewController, UIGestureRecognizerDelegate {
                 imageView.center = CGPoint(x: xImageCenter, y: yImageCenter)
                 imageView.userInteractionEnabled = true
 
-                // Add tap handler to listen for waits
+                // Add tap handler to listen for deletes
                 let recognizer = UITapGestureRecognizer(target: self, action:Selector("handTileTapped:"))
                 recognizer.delegate = self
                 imageView.addGestureRecognizer(recognizer)
@@ -174,11 +167,11 @@ class TilesViewController: UIViewController, UIGestureRecognizerDelegate {
         return newImage
     }
 
-    // Changes the wait of the tile, which affects the points of the hand
+    // Deletes hand tile when tapped on
     func handTileTapped(sender: UITapGestureRecognizer) {
         if let message:String = sender.view?.accessibilityLabel {
             if let index:Int = message.toInt() {
-                winningHand.tiles[index].changeWait()
+                winningHand.removeTile(index)
                 updateHandImage()
             }
         }

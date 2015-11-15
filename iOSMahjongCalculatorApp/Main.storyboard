@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="gWq-CW-tKd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="gWq-CW-tKd">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -339,32 +339,12 @@
                                     <outletCollection property="gestureRecognizers" destination="BrT-ZU-hlb" appends="YES" id="IIm-Iy-uye"/>
                                 </connections>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AC7-bZ-Sgi">
-                                <rect key="frame" x="236" y="345" width="47" height="32"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="Undo">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="deleteTapped:" destination="TVD-dx-g0F" eventType="touchUpInside" id="spA-H9-x0Z"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hand:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TjZ-sO-j6c">
                                 <rect key="frame" x="9" y="391" width="42" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caN-ts-mZt">
-                                <rect key="frame" x="233" y="385" width="52" height="32"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="Clear">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="clearTapped:" destination="TVD-dx-g0F" eventType="touchUpInside" id="wQC-e2-Yme"/>
-                                </connections>
-                            </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJf1.png" translatesAutoresizingMaskIntoConstraints="NO" id="phO-Xp-Lg3">
                                 <rect key="frame" x="165" y="284" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="East">
@@ -388,6 +368,16 @@
                                     <outletCollection property="gestureRecognizers" destination="qiW-E9-C3y" appends="YES" id="Wwl-lu-UoX"/>
                                 </connections>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caN-ts-mZt">
+                                <rect key="frame" x="246" y="345" width="39" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearTapped:" destination="TVD-dx-g0F" eventType="touchUpInside" id="wQC-e2-Yme"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <accessibility key="accessibilityConfiguration">
@@ -400,12 +390,10 @@
                             <constraint firstItem="7GL-EQ-bxY" firstAttribute="top" secondItem="gaQ-0a-GMf" secondAttribute="bottom" constant="8" id="0lj-bL-6vl"/>
                             <constraint firstItem="Oyo-de-uCq" firstAttribute="width" secondItem="sO5-U9-wAW" secondAttribute="width" id="16E-x4-dcE"/>
                             <constraint firstItem="m2H-dc-NO0" firstAttribute="leading" secondItem="Y3M-25-NgJ" secondAttribute="trailing" constant="17" id="1Og-sn-WTa"/>
-                            <constraint firstAttribute="trailing" secondItem="AC7-bZ-Sgi" secondAttribute="trailing" constant="37" id="1PF-Lr-Ziu"/>
                             <constraint firstItem="dyi-gw-hlR" firstAttribute="top" secondItem="WHS-Og-ltD" secondAttribute="top" constant="72" id="1e6-Zm-C0X"/>
                             <constraint firstAttribute="bottom" secondItem="0YA-Cl-sgy" secondAttribute="bottom" constant="186" id="1jC-i0-jCz"/>
                             <constraint firstItem="Oyo-de-uCq" firstAttribute="leading" secondItem="vsc-Wj-n9H" secondAttribute="trailing" constant="17" id="2No-kI-MRT"/>
                             <constraint firstAttribute="bottom" secondItem="CeU-DB-36J" secondAttribute="bottom" id="2qt-nl-nGp"/>
-                            <constraint firstItem="caN-ts-mZt" firstAttribute="top" secondItem="AC7-bZ-Sgi" secondAttribute="bottom" constant="8" id="34q-5e-Ksq"/>
                             <constraint firstItem="2rj-Z1-ARI" firstAttribute="top" secondItem="HPd-zv-RSB" secondAttribute="bottom" constant="8" id="375-lI-LF0"/>
                             <constraint firstItem="4b2-U6-Zij" firstAttribute="leading" secondItem="m2H-dc-NO0" secondAttribute="trailing" constant="17" id="39e-fa-Nsg"/>
                             <constraint firstItem="Oyo-de-uCq" firstAttribute="width" secondItem="dU6-9c-sBv" secondAttribute="width" id="3NV-Pg-Oot"/>
@@ -420,7 +408,6 @@
                             <constraint firstItem="KAI-ZS-aJo" firstAttribute="leading" secondItem="WHS-Og-ltD" secondAttribute="leading" constant="9" id="60y-lM-n9i"/>
                             <constraint firstItem="Oyo-de-uCq" firstAttribute="height" secondItem="Jcf-HP-WVX" secondAttribute="height" id="6Ts-Cj-5Z1"/>
                             <constraint firstItem="Y3M-25-NgJ" firstAttribute="top" secondItem="and-8Q-EcR" secondAttribute="bottom" constant="8" id="76L-Xz-d3P"/>
-                            <constraint firstItem="AC7-bZ-Sgi" firstAttribute="leading" secondItem="0YA-Cl-sgy" secondAttribute="trailing" constant="36" id="7EN-TO-Mgi"/>
                             <constraint firstAttribute="trailing" secondItem="Lc0-D8-3BD" secondAttribute="trailing" constant="16" id="7iA-so-0IC"/>
                             <constraint firstItem="5p3-Ns-dfP" firstAttribute="leading" secondItem="W2T-Og-66A" secondAttribute="trailing" constant="17" id="8bg-px-2PD"/>
                             <constraint firstItem="Oyo-de-uCq" firstAttribute="width" secondItem="vsc-Wj-n9H" secondAttribute="width" id="9Qz-EO-Npd"/>
@@ -441,7 +428,7 @@
                             <constraint firstItem="cf4-vj-IhB" firstAttribute="top" secondItem="Alb-iH-CTg" secondAttribute="bottom" constant="8" id="Cf2-dx-cAk"/>
                             <constraint firstItem="Jcf-HP-WVX" firstAttribute="top" secondItem="hBX-f1-BiL" secondAttribute="bottom" constant="8" id="Ch4-uE-Fqj"/>
                             <constraint firstItem="Oyo-de-uCq" firstAttribute="width" secondItem="Skt-Ml-AXi" secondAttribute="width" id="D4s-mb-xld"/>
-                            <constraint firstItem="caN-ts-mZt" firstAttribute="centerY" secondItem="TjZ-sO-j6c" secondAttribute="centerY" constant="1" id="DwM-32-MU2"/>
+                            <constraint firstItem="caN-ts-mZt" firstAttribute="centerY" secondItem="TjZ-sO-j6c" secondAttribute="centerY" constant="-39" id="DwM-32-MU2"/>
                             <constraint firstItem="Alb-iH-CTg" firstAttribute="top" secondItem="Lc0-D8-3BD" secondAttribute="bottom" constant="8" id="EeZ-3G-04Q"/>
                             <constraint firstItem="Oyo-de-uCq" firstAttribute="height" secondItem="v4t-pt-lcj" secondAttribute="height" id="FRq-kk-iOM"/>
                             <constraint firstItem="m2H-dc-NO0" firstAttribute="top" secondItem="W2T-Og-66A" secondAttribute="bottom" constant="8" id="Ffn-sf-wgO"/>
@@ -464,7 +451,6 @@
                             <constraint firstItem="W2T-Og-66A" firstAttribute="top" secondItem="WHS-Og-ltD" secondAttribute="top" constant="72" id="LdC-zO-iIh"/>
                             <constraint firstItem="Oyo-de-uCq" firstAttribute="width" secondItem="U4C-oU-GPo" secondAttribute="width" id="Lze-JF-ejf"/>
                             <constraint firstItem="Oyo-de-uCq" firstAttribute="width" secondItem="7GL-EQ-bxY" secondAttribute="width" id="MJU-ee-iWu"/>
-                            <constraint firstItem="caN-ts-mZt" firstAttribute="centerX" secondItem="AC7-bZ-Sgi" secondAttribute="centerX" id="MdX-dU-LvS"/>
                             <constraint firstAttribute="trailing" secondItem="hKc-ez-pdl" secondAttribute="trailing" constant="16" id="MeD-0P-T5u"/>
                             <constraint firstItem="vsc-Wj-n9H" firstAttribute="leading" secondItem="KAI-ZS-aJo" secondAttribute="trailing" constant="17" id="N7s-Ql-QtG"/>
                             <constraint firstItem="sO5-U9-wAW" firstAttribute="leading" secondItem="v4t-pt-lcj" secondAttribute="trailing" constant="17" id="OH7-vk-58C"/>
@@ -506,14 +492,12 @@
                             <constraint firstItem="AJs-1R-ypI" firstAttribute="top" secondItem="KAI-ZS-aJo" secondAttribute="bottom" constant="8" id="cpm-3W-zK1"/>
                             <constraint firstItem="Oyo-de-uCq" firstAttribute="width" secondItem="Jcf-HP-WVX" secondAttribute="width" id="dLA-4t-quS"/>
                             <constraint firstItem="Oyo-de-uCq" firstAttribute="width" secondItem="KAI-ZS-aJo" secondAttribute="width" id="do5-4e-zhK"/>
-                            <constraint firstItem="caN-ts-mZt" firstAttribute="leading" secondItem="TjZ-sO-j6c" secondAttribute="trailing" constant="182" id="eZU-qH-UxS"/>
                             <constraint firstItem="Oyo-de-uCq" firstAttribute="top" secondItem="sO5-U9-wAW" secondAttribute="bottom" constant="8" id="eqr-M3-i5p"/>
                             <constraint firstItem="Oyo-de-uCq" firstAttribute="height" secondItem="Lj8-R6-rOf" secondAttribute="height" id="fRP-TY-9Ro"/>
                             <constraint firstItem="Oyo-de-uCq" firstAttribute="width" secondItem="hBX-f1-BiL" secondAttribute="width" id="fRj-L8-62s"/>
                             <constraint firstItem="Oyo-de-uCq" firstAttribute="width" secondItem="and-8Q-EcR" secondAttribute="width" id="fW8-Ca-OhL"/>
                             <constraint firstItem="Lj8-R6-rOf" firstAttribute="top" secondItem="2rj-Z1-ARI" secondAttribute="bottom" constant="8" id="gCy-ar-fP5"/>
                             <constraint firstItem="7GL-EQ-bxY" firstAttribute="leading" secondItem="Oyo-de-uCq" secondAttribute="trailing" constant="17" id="gFm-3b-15v"/>
-                            <constraint firstItem="AC7-bZ-Sgi" firstAttribute="top" secondItem="Jcf-HP-WVX" secondAttribute="bottom" constant="16" id="gzV-HY-SuZ"/>
                             <constraint firstItem="Oyo-de-uCq" firstAttribute="width" secondItem="HTV-Rz-1cT" secondAttribute="width" id="iP4-7x-3GW"/>
                             <constraint firstItem="0YA-Cl-sgy" firstAttribute="top" secondItem="phO-Xp-Lg3" secondAttribute="bottom" constant="8" id="iaK-bm-5Cl"/>
                             <constraint firstItem="Lc0-D8-3BD" firstAttribute="top" secondItem="hKc-ez-pdl" secondAttribute="bottom" constant="8" id="itd-iT-imO"/>
@@ -533,10 +517,8 @@
                             <constraint firstItem="W2T-Og-66A" firstAttribute="leading" secondItem="and-8Q-EcR" secondAttribute="trailing" constant="17" id="nC8-Wj-R5d"/>
                             <constraint firstItem="Oyo-de-uCq" firstAttribute="height" secondItem="gaQ-0a-GMf" secondAttribute="height" id="nGX-To-o9d"/>
                             <constraint firstItem="HTV-Rz-1cT" firstAttribute="top" secondItem="Cfc-dC-oTk" secondAttribute="bottom" constant="9" id="niX-Zu-yzw"/>
-                            <constraint firstItem="0YA-Cl-sgy" firstAttribute="centerY" secondItem="AC7-bZ-Sgi" secondAttribute="centerY" constant="-2" id="oV9-HD-5uL"/>
                             <constraint firstItem="phO-Xp-Lg3" firstAttribute="top" secondItem="7GL-EQ-bxY" secondAttribute="bottom" constant="8" id="pER-ul-PvG"/>
                             <constraint firstItem="CeU-DB-36J" firstAttribute="leading" secondItem="WHS-Og-ltD" secondAttribute="leading" id="qEo-GN-Tdo"/>
-                            <constraint firstItem="AC7-bZ-Sgi" firstAttribute="top" secondItem="Skt-Ml-AXi" secondAttribute="bottom" constant="16" id="qN8-1U-U6V"/>
                             <constraint firstAttribute="trailing" secondItem="cf4-vj-IhB" secondAttribute="trailing" constant="16" id="qbc-bI-PCp"/>
                             <constraint firstItem="Oyo-de-uCq" firstAttribute="height" secondItem="Lc0-D8-3BD" secondAttribute="height" id="r36-Ug-ZzM"/>
                             <constraint firstItem="Oyo-de-uCq" firstAttribute="height" secondItem="vsc-Wj-n9H" secondAttribute="height" id="rL8-ai-UjM"/>
@@ -565,7 +547,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="ClearButton" destination="caN-ts-mZt" id="oRg-Bl-jao"/>
-                        <outlet property="DeleteButton" destination="AC7-bZ-Sgi" id="GO1-Bk-7G0"/>
                         <outlet property="HandImages" destination="CeU-DB-36J" id="5sZ-vY-0bk"/>
                         <outlet property="NextButton" destination="3Sr-W7-e7M" id="vBs-gP-faw"/>
                     </connections>
@@ -1631,16 +1612,6 @@
                                     <outletCollection property="gestureRecognizers" destination="LH3-MO-Exr" appends="YES" id="g5d-Mx-lCg"/>
                                 </connections>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tn0-Rg-n3d">
-                                <rect key="frame" x="238" y="344" width="47" height="32"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="Undo">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="deleteTapped:" destination="jaO-2r-Zlo" eventType="touchUpInside" id="Jh8-Fm-plm"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ibh-pK-C8M">
                                 <rect key="frame" x="9" y="420" width="303" height="128"/>
                             </imageView>
@@ -1650,16 +1621,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tE-m0-WJc">
-                                <rect key="frame" x="240" y="375" width="43" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="Clear">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="clearTapped:" destination="jaO-2r-Zlo" eventType="touchUpInside" id="UET-Mp-fj2"/>
-                                </connections>
-                            </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJf4.png" translatesAutoresizingMaskIntoConstraints="NO" id="sRc-2D-Dk1">
                                 <rect key="frame" x="165" y="337" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="North">
@@ -1670,6 +1631,16 @@
                                     <outletCollection property="gestureRecognizers" destination="oWV-Bc-zkI" appends="YES" id="M6T-Sc-jBg"/>
                                 </connections>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tE-m0-WJc">
+                                <rect key="frame" x="240" y="345" width="43" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearTapped:" destination="jaO-2r-Zlo" eventType="touchUpInside" id="UET-Mp-fj2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1688,7 +1659,6 @@
                     <connections>
                         <outlet property="BackButton" destination="ZaL-U1-X8K" id="JZX-mM-aAN"/>
                         <outlet property="ClearButton" destination="5tE-m0-WJc" id="s0F-C9-fT4"/>
-                        <outlet property="DeleteButton" destination="tn0-Rg-n3d" id="oSE-cr-rqF"/>
                         <outlet property="HandImages" destination="ibh-pK-C8M" id="Xgp-R2-Trh"/>
                         <outlet property="NextButton" destination="iSk-k9-jJp" id="o9D-4k-WAQ"/>
                     </connections>

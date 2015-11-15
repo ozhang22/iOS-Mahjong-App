@@ -11,7 +11,6 @@ import Foundation
 public class Hand {
     
     var tiles:[Tile]
-    private var insertedTiles:[Tile]
     var melds:[Meld]
     var pair:Pair!
     var han:Double
@@ -22,7 +21,6 @@ public class Hand {
     
     init() {
         tiles = []
-        insertedTiles = []
         han = 0
         fu = 0
         conditions = Conditions()
@@ -35,30 +33,30 @@ public class Hand {
         if (currentTileCount(tile) < 4) {
             if tiles.count < 14 {
                 tiles.append(tile)
-                insertedTiles.append(tile)
                 sortTiles()
             }
             if tiles.count == 14 && pair == nil {
+                tile.setWait(true)
                 validateHand()
             }
         }
     }
     
-    func removeTile() {
+    func removeTile(index:Int) {
         if tiles.count > 0 {
-            let toRemove:Tile = insertedTiles.removeLast()
-            for (var ii:Int = 0; ii < tiles.count; ii++) {
-                if tiles[ii].isEqual(toRemove) {
-                    tiles.removeAtIndex(ii)
-                    return
-                }
+            for tile in tiles {
+                tile.setWait(false)
             }
+            tiles.removeAtIndex(index)
         }
         sortTiles()
         invalidateHand()
     }
     
     func removeAllTiles() {
+        for tile in tiles {
+            tile.setWait(false)
+        }
         tiles.removeAll(keepCapacity: true)
         invalidateHand()
     }
@@ -83,7 +81,6 @@ public class Hand {
     }
     
     func validateHand() {
-        
         var tempTiles:[Tile] = []
         var tempMelds:[Meld] = []
         
@@ -277,7 +274,6 @@ public class Hand {
     }
     
     func isValid() -> Bool {
-
         if tiles.count < 14 {
             return false
         }
@@ -296,7 +292,6 @@ public class Hand {
     }
     
     func sevenPairs() -> Bool {
-        
         if tiles.count < 14 {
             return false
         }
@@ -336,8 +331,6 @@ public class Hand {
     
     func calculateBasicPoints() {
         var points:Double
-        println("han: \(han)")
-        println("fu: \(fu)")
         
         switch han {
         case 0:

@@ -219,7 +219,7 @@ class ConditionsViewController: UITableViewController {
                     "Player 3: \(score.other2) \nPlayer 4: \(score.other3) \n",
                 preferredStyle: .Alert)
         }
-            
+
         let cancelAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
         alertController.addAction(cancelAction)
         

@@ -70,7 +70,7 @@ public class Tile {
         return (value.rawValue == wind1.rawValue)
     }
     
-    func changeWait() {
-        self.wait = !self.wait
+    func setWait(bool:Bool) {
+        self.wait = bool
     }
 }

@@ -36,7 +36,7 @@ class iOSMahjongCalculatorTests: XCTestCase {
     func testStraight() {
         let winningHand = Hand()
         
-        winningHand.addTile(Tile(value: Value.One, suit: Suit.Sou))
+
         winningHand.addTile(Tile(value: Value.Two, suit: Suit.Sou))
         winningHand.addTile(Tile(value: Value.Three, suit: Suit.Sou))
         winningHand.addTile(Tile(value: Value.Seven, suit: Suit.Sou))
@@ -50,7 +50,7 @@ class iOSMahjongCalculatorTests: XCTestCase {
         winningHand.addTile(Tile(value: Value.Six, suit: Suit.Sou))
         winningHand.addTile(Tile(value: Value.White, suit: Suit.Dragon))
         winningHand.addTile(Tile(value: Value.White, suit: Suit.Dragon))
-        winningHand.tiles[0].changeWait()
+        winningHand.addTile(Tile(value: Value.One, suit: Suit.Sou)) // wait
         winningHand.melds[0].setClosed(true)
         winningHand.conditions.addDoraTile(Tile(value: Value.Nine, suit: Suit.Sou))
         winningHand.calculateScore()
@@ -62,7 +62,6 @@ class iOSMahjongCalculatorTests: XCTestCase {
         let winningHand = Hand()
         
         winningHand.addTile(Tile(value: Value.One, suit: Suit.Sou))
-        winningHand.addTile(Tile(value: Value.Two, suit: Suit.Sou))
         winningHand.addTile(Tile(value: Value.Three, suit: Suit.Sou))
         winningHand.addTile(Tile(value: Value.Four, suit: Suit.Sou))
         winningHand.addTile(Tile(value: Value.Four, suit: Suit.Sou))
@@ -75,7 +74,7 @@ class iOSMahjongCalculatorTests: XCTestCase {
         winningHand.addTile(Tile(value: Value.Nine, suit: Suit.Sou))
         winningHand.addTile(Tile(value: Value.Five, suit: Suit.Sou))
         winningHand.addTile(Tile(value: Value.Five, suit: Suit.Sou))
-        winningHand.tiles[1].changeWait()
+        winningHand.addTile(Tile(value: Value.Two, suit: Suit.Sou)) // wait
         winningHand.melds[0].setClosed(true)
         winningHand.melds[1].setClosed(true)
         winningHand.melds[2].setClosed(true)
@@ -119,7 +118,6 @@ class iOSMahjongCalculatorTests: XCTestCase {
         let winningHand = Hand()
         
         winningHand.addTile(Tile(value: Value.Five, suit: Suit.Pin))
-        winningHand.addTile(Tile(value: Value.Six, suit: Suit.Pin))
         winningHand.addTile(Tile(value: Value.Seven, suit: Suit.Pin))
         winningHand.addTile(Tile(value: Value.One, suit: Suit.Wan))
         winningHand.addTile(Tile(value: Value.One, suit: Suit.Wan))
@@ -132,7 +130,7 @@ class iOSMahjongCalculatorTests: XCTestCase {
         winningHand.addTile(Tile(value: Value.Nine, suit: Suit.Sou))
         winningHand.addTile(Tile(value: Value.Green, suit: Suit.Dragon))
         winningHand.addTile(Tile(value: Value.Green, suit: Suit.Dragon))
-        winningHand.tiles[1].changeWait()
+        winningHand.addTile(Tile(value: Value.Six, suit: Suit.Pin)) // wait
         winningHand.melds[0].setClosed(true)
         winningHand.melds[2].setClosed(true)
         winningHand.melds[3].setClosed(true)
@@ -154,13 +152,12 @@ class iOSMahjongCalculatorTests: XCTestCase {
         winningHand.addTile(Tile(value: Value.Two, suit: Suit.Wan))
         winningHand.addTile(Tile(value: Value.Four, suit: Suit.Wan))
         winningHand.addTile(Tile(value: Value.Four, suit: Suit.Wan))
-        winningHand.addTile(Tile(value: Value.Four, suit: Suit.Wan))
         winningHand.addTile(Tile(value: Value.Eight, suit: Suit.Sou))
         winningHand.addTile(Tile(value: Value.Eight, suit: Suit.Sou))
         winningHand.addTile(Tile(value: Value.Eight, suit: Suit.Sou))
         winningHand.addTile(Tile(value: Value.Six, suit: Suit.Wan))
         winningHand.addTile(Tile(value: Value.Six, suit: Suit.Wan))
-        winningHand.tiles[7].changeWait()
+        winningHand.addTile(Tile(value: Value.Four, suit: Suit.Wan)) // wait
         winningHand.melds[0].setKan(true)
         winningHand.melds[3].setKan(true)
         winningHand.melds[0].setClosed(true)
@@ -184,14 +181,13 @@ class iOSMahjongCalculatorTests: XCTestCase {
         winningHand.addTile(Tile(value: Value.Six, suit: Suit.Wan))
         winningHand.addTile(Tile(value: Value.Seven, suit: Suit.Wan))
         winningHand.addTile(Tile(value: Value.Two, suit: Suit.Wan))
-        winningHand.addTile(Tile(value: Value.Three, suit: Suit.Wan))
         winningHand.addTile(Tile(value: Value.Four, suit: Suit.Wan))
         winningHand.addTile(Tile(value: Value.Two, suit: Suit.Sou))
         winningHand.addTile(Tile(value: Value.Three, suit: Suit.Sou))
         winningHand.addTile(Tile(value: Value.Four, suit: Suit.Sou))
         winningHand.addTile(Tile(value: Value.Eight, suit: Suit.Wan))
         winningHand.addTile(Tile(value: Value.Eight, suit: Suit.Wan))
-        winningHand.tiles[6].changeWait()
+        winningHand.addTile(Tile(value: Value.Three, suit: Suit.Wan)) // wait
         winningHand.melds[2].setClosed(true)
         winningHand.melds[3].setClosed(true)
         winningHand.conditions.addDoraTile(Tile(value: Value.North, suit: Suit.Wind))
@@ -216,8 +212,7 @@ class iOSMahjongCalculatorTests: XCTestCase {
         winningHand.addTile(Tile(value: Value.Eight, suit: Suit.Wan))
         winningHand.addTile(Tile(value: Value.Nine, suit: Suit.Wan))
         winningHand.addTile(Tile(value: Value.East, suit: Suit.Wind))
-        winningHand.addTile(Tile(value: Value.East, suit: Suit.Wind))
-        winningHand.tiles[13].changeWait()
+        winningHand.addTile(Tile(value: Value.East, suit: Suit.Wind)) // wait
         winningHand.conditions.addDoraTile(Tile(value: Value.North, suit: Suit.Wind))
         winningHand.calculateScore()
         
@@ -241,7 +236,6 @@ class iOSMahjongCalculatorTests: XCTestCase {
         winningHand.addTile(Tile(value: Value.Nine, suit: Suit.Sou))
         winningHand.addTile(Tile(value: Value.East, suit: Suit.Wind))
         winningHand.addTile(Tile(value: Value.East, suit: Suit.Wind))
-        winningHand.tiles[13].changeWait()
         winningHand.melds[0].setClosed(true)
         winningHand.melds[1].setClosed(true)
         winningHand.conditions.setTsumo(true)
@@ -262,13 +256,12 @@ class iOSMahjongCalculatorTests: XCTestCase {
         winningHand.addTile(Tile(value: Value.Nine, suit: Suit.Wan))
         winningHand.addTile(Tile(value: Value.One, suit: Suit.Wan))
         winningHand.addTile(Tile(value: Value.One, suit: Suit.Wan))
-        winningHand.addTile(Tile(value: Value.Three, suit: Suit.Sou))
-        winningHand.addTile(Tile(value: Value.Three, suit: Suit.Sou))
         winningHand.addTile(Tile(value: Value.Eight, suit: Suit.Sou))
         winningHand.addTile(Tile(value: Value.Eight, suit: Suit.Sou))
         winningHand.addTile(Tile(value: Value.Red, suit: Suit.Dragon))
         winningHand.addTile(Tile(value: Value.Red, suit: Suit.Dragon))
-        winningHand.tiles[9].changeWait()
+        winningHand.addTile(Tile(value: Value.Three, suit: Suit.Sou))
+        winningHand.addTile(Tile(value: Value.Three, suit: Suit.Sou))
         winningHand.conditions.setRiichi(true, hand: winningHand)
         winningHand.conditions.setTsumo(true)
         winningHand.conditions.addDoraTile(Tile(value: Value.South, suit: Suit.Wind))

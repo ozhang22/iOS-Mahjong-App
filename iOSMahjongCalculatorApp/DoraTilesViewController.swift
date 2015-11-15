@@ -8,9 +8,8 @@
 
 import UIKit
 
-class DoraTilesViewController: UIViewController {
+class DoraTilesViewController: UIViewController, UIGestureRecognizerDelegate {
     
-    @IBOutlet weak var DeleteButton: UIButton!
     @IBOutlet weak var ClearButton: UIButton!
     @IBOutlet weak var NextButton: UIBarButtonItem!
     @IBOutlet weak var BackButton: UIBarButtonItem!
@@ -22,6 +21,7 @@ class DoraTilesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        HandImages.userInteractionEnabled = true
         updateHandImage()
     }
 
@@ -68,13 +68,6 @@ class DoraTilesViewController: UIViewController {
         }
     }
     
-    // When delete button is tapped, delete the last dora tile from hand
-    @IBAction func deleteTapped(button:UIButton) {
-        winningHand.conditions.removeDoraTile()
-        clearAllSubViews()
-        updateHandImage()
-    }
-    
     // When clear button is tapped, remove all dora tiles from hand
     @IBAction func clearTapped(button:UIButton) {
         winningHand.conditions.removeAllDoraTiles()
@@ -88,8 +81,9 @@ class DoraTilesViewController: UIViewController {
     
     // Adds images of all dora tiles at the bottom of the screen
     func updateHandImage() {
+        clearAllSubViews()
+        
         if winningHand.conditions.doraTiles.count > 0 {
-            clearAllSubViews()
             for var i:Int = 0; i < winningHand.conditions.doraTiles.count; i++ {
                 updateHandImageAtIndex(i)
             }
@@ -108,6 +102,14 @@ class DoraTilesViewController: UIViewController {
             let newImage = rescaleImage(image!)
             let imageView = UIImageView(image: newImage)
             imageView.center = CGPoint(x:(25 + xOffset*(index%7)), y:(30 + yOffset*(index/7)))
+            imageView.userInteractionEnabled = true
+            
+            // Add tap handler to listen for deletes
+            let recognizer = UITapGestureRecognizer(target: self, action:Selector("doraTileTapped:"))
+            recognizer.delegate = self
+            imageView.addGestureRecognizer(recognizer)
+            imageView.accessibilityLabel = "\(index)"
+            
             HandImages.addSubview(imageView)
         }
     }
@@ -132,5 +134,15 @@ class DoraTilesViewController: UIViewController {
         UIGraphicsEndImageContext()
         
         return newImage
+    }
+    
+    // Deletes dora tile
+    func doraTileTapped(sender: UITapGestureRecognizer) {
+        if let message:String = sender.view?.accessibilityLabel {
+            if let index:Int = message.toInt() {
+                winningHand.conditions.removeDoraTile(index)
+                updateHandImage()
+            }
+        }
     }
 }
