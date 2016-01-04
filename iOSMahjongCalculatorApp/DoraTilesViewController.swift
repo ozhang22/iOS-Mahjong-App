@@ -61,7 +61,8 @@ class DoraTilesViewController: UIViewController, UIGestureRecognizerDelegate {
     // on bottom of screen
     @IBAction func tileTapped(sender:UITapGestureRecognizer) {
         if let message:String = sender.view?.accessibilityLabel {
-            if let tile:Tile = values[message] {
+            if let (value: Value, suit: Suit) = values[message] {
+                let tile:Tile = Tile(value: value, suit: suit)
                 winningHand.conditions.addDoraTile(tile)
                 updateHandImage()
             }
@@ -97,7 +98,7 @@ class DoraTilesViewController: UIViewController, UIGestureRecognizerDelegate {
         let yOffset = 60
         
         let tile = winningHand.conditions.doraTiles[index]
-        let key = "\(tile.getRawValue())"
+        let key = "\(tile.getRawValue() % 100)"
         if let image = imageDictionary[key] {
             let newImage = rescaleImage(image!)
             let imageView = UIImageView(image: newImage)

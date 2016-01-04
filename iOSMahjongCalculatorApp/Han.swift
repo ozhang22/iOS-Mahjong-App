@@ -242,7 +242,7 @@ public class Han {
         
         for meld in melds {
             if (meld.isKan()) { ++kanAcc }
-            if (meld.isClosed()) { ++closedAcc }
+            if (meld.isClosed() && (!meld.containsWait() || wh.conditions.isTsumo())) { ++closedAcc }
             if (meld.tile1.isEqualValueOnly(tile1)) { ++value1Acc }
             if (meld.tile1.isEqualValueOnly(tile2)) { ++value2Acc }
         }

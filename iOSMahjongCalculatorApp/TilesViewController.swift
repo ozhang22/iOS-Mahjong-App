@@ -13,11 +13,15 @@ class TilesViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var ClearButton: UIButton!
     @IBOutlet weak var NextButton: UIBarButtonItem!
     @IBOutlet weak var HandImages: UIImageView!
-
+    @IBOutlet weak var ChiButton: UIButton!
+    @IBOutlet weak var PonButton: UIButton!
+    @IBOutlet weak var KanButton: UIButton!
+    @IBOutlet weak var ClosedKanButton: UIButton!
 
     var winningHand:Hand!
     var values = lookUp
     var images = imageDictionary
+    var status = Status.None
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,22 +65,99 @@ class TilesViewController: UIViewController, UIGestureRecognizerDelegate {
     // on bottom of screen
     @IBAction func tileTapped(sender:UITapGestureRecognizer) {
         if let message:String = sender.view?.accessibilityLabel {
-            if let tile:Tile = values[message] {
-                winningHand.addTile(tile)
+            if let (value:Value, suit:Suit) = values[message] {
+                // This is a problem: how can we make it so each instantiation of tile
+                // gets a different wait and status?
+                let tile:Tile = Tile(value: value, suit: suit)
+                if status == .None {
+                    winningHand.addTile(tile)
+                    status = .None
+                } else {
+                    winningHand.addMeld(tile, status:status)
+                    status = .None
+                }
                 updateHandImage()
+                setButtonColors()
             }
         }
     }
+    
+    @IBAction func chiTapped(sender: UIButton) {
+        status = (status != .Chi) ? .Chi : .None
+        setButtonColors()
+    }
+    
+    @IBAction func ponTapped(sender: UIButton) {
+        status = (status != .Pon) ? .Pon : .None
+        setButtonColors()
+    }
 
+    @IBAction func kanTapped(sender: UIButton) {
+        status = (status != .Kan) ? .Kan : .None
+        setButtonColors()
+    }
+    
+    @IBAction func closedKanTapped(sender: UIButton) {
+        status = (status != .ClosedKan) ? .ClosedKan : .None
+        setButtonColors()
+    }
+    
+    func setButtonColors() {
+        if status == .Chi {
+            ChiButton.setTitleColor(UIColor.purpleColor(), forState: UIControlState.Normal)
+        } else {
+            ChiButton.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
+        }
+        
+        if status == .Pon {
+            PonButton.setTitleColor(UIColor.purpleColor(), forState: UIControlState.Normal)
+        } else {
+            PonButton.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
+        }
+        
+        if status == .Kan {
+            KanButton.setTitleColor(UIColor.purpleColor(), forState: UIControlState.Normal)
+        } else {
+            KanButton.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
+        }
+        
+        if status == .ClosedKan {
+            ClosedKanButton.setTitleColor(UIColor.purpleColor(), forState: UIControlState.Normal)
+        } else {
+            ClosedKanButton.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
+        }
+    }
+    
     // When clear button is tapped, remove all dora tiles from hand
     @IBAction func clearTapped(button:UIButton) {
         winningHand.removeAllTiles()
         clearAllSubViews()
+        status = Status.None
+        setButtonColors()
     }
 
     // Dismisses view controller to return to this controller
     @IBAction func cancelToTilesViewController(segue:UIStoryboardSegue) {
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func getSecondaryImage(tile:Tile) -> UIImage {
+        if tile.wait {
+            return UIImage(named: "RedDot.png")!
+        }
+        
+        switch tile.status {
+        case Status.Chi:
+            return UIImage(named: "C.png")!
+        case Status.Pon:
+            return UIImage(named: "P.png")!
+        case Status.Kan:
+            return UIImage(named: "K.png")!
+        case Status.ClosedKan:
+            return UIImage(named: "CK.png")!
+        default:
+            return UIImage(named: "Default.png")!
+        }
     }
 
     // Adds images of all tiles of hand at the bottom of the screen iteratively
@@ -92,8 +173,8 @@ class TilesViewController: UIViewController, UIGestureRecognizerDelegate {
         // Using screen dimensions to determine x,y offset of first tile from UI view
         let xOffset:Double = screenWidth/7.11
         let yOffset:Double = screenHeight/9
-        let xRedOffset:Double = screenWidth/1600
-        let yRedOffset:Double = screenHeight/400
+        let xImageOffset:Double = screenWidth/1600
+        let yImageOffset:Double = screenHeight/400
 
         // Some constants about the size of the image to be created
         let imageWidth:Double = screenWidth/9.14
@@ -112,11 +193,19 @@ class TilesViewController: UIViewController, UIGestureRecognizerDelegate {
 
             // Get the tile from the hand
             let tile = winningHand.tiles[index]
-            let key = "\(tile.getRawValue())"
+            let key = "\(tile.getRawValue() % 100)"
 
             if let image = imageDictionary[key] {
                 // Get the image from the dictionary, and create the image
-                let newImage = rescaleImage(image!, width: imageWidth, height: imageHeight)
+                var newImage = rescaleImage(image!, width: imageWidth, height: imageHeight)
+                
+//                // Tint the image depending on its status
+//                if tile.wait {
+//                    newImage = tint(newImage, color: UIColor.redColor().colorWithAlphaComponent(0.3))
+//                } else if tile.status != Status.None {
+//                    newImage = tint(newImage, color: UIColor.blueColor().colorWithAlphaComponent(0.3))
+//                }
+                
                 let imageView = UIImageView(image: newImage)
                 imageView.center = CGPoint(x: xImageCenter, y: yImageCenter)
                 imageView.userInteractionEnabled = true
@@ -129,21 +218,22 @@ class TilesViewController: UIViewController, UIGestureRecognizerDelegate {
 
                 HandImages.addSubview(imageView)
 
-                if tile.wait {
+                if tile.wait || tile.status != Status.None {
                     // Add red dot above tile to represent a wait
-                    let redDot = UIImage(named: "RedDot.png")
-                    let redView = UIImageView(image: redDot)
+                    let image = getSecondaryImage(tile)
+                    let view = UIImageView(image: image)
 
-                    let xRedCenter:Double = screenWidth/29 + xRedOffset*xRelIndex
-                    let yRedCenter:Double = yRedOffset*yRelIndex - screenHeight/37.87
+                    let xCenter:Double = screenWidth/29 + xImageOffset*xRelIndex
+                    let yCenter:Double = yImageOffset*yRelIndex - screenHeight/37.87
 
-                    redView.frame = CGRect(x:xRedCenter, y:yRedCenter, width: 12, height: 12)
+                    view.frame = CGRect(x:xCenter, y:yCenter, width: 12, height: 12)
 
-                    imageView.addSubview(redView)
+                    imageView.addSubview(view)
                 }
             }
         }
     }
+
 
     // Clear all images of the tiles in hand added from the view
     func clearAllSubViews() {
@@ -166,6 +256,24 @@ class TilesViewController: UIViewController, UIGestureRecognizerDelegate {
 
         return newImage
     }
+    
+    // Helper function to tile image to correct colour.
+    // Adapted from: https://gist.github.com/alexruperez/90f44545b57c25b977c4
+    func tint(image: UIImage, color: UIColor) -> UIImage {
+        let ciImage = CIImage(image: image)
+        let filter = CIFilter(name: "CIMultiplyCompositing")
+        
+        let colorFilter = CIFilter(name: "CIConstantColorGenerator")
+        
+        let ciColor = CIColor(color: color)
+        colorFilter.setValue(ciColor, forKey: kCIInputColorKey)
+        let colorImage = colorFilter.outputImage
+        
+        filter.setValue(colorImage, forKey: kCIInputImageKey)
+        filter.setValue(ciImage, forKey: kCIInputBackgroundImageKey)
+        
+        return UIImage(CIImage: filter.outputImage)!
+    }
 
     // Deletes hand tile when tapped on
     func handTileTapped(sender: UITapGestureRecognizer) {
@@ -173,6 +281,7 @@ class TilesViewController: UIViewController, UIGestureRecognizerDelegate {
             if let index:Int = message.toInt() {
                 winningHand.removeTile(index)
                 updateHandImage()
+                setButtonColors()
             }
         }
     }

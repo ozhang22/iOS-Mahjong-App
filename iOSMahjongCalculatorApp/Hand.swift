@@ -18,7 +18,7 @@ public class Hand {
     var conditions:Conditions
     var basicPoints:Double
     var dictionary:[String:Double]
-    
+
     init() {
         tiles = []
         han = 0
@@ -29,7 +29,8 @@ public class Hand {
         dictionary = [:]
     }
     
-    func addTile(tile:Tile) {
+    func addTile(tile:Tile,status:Status=Status.None) {
+        tile.status = status
         if (currentTileCount(tile) < 4) {
             if tiles.count < 14 {
                 tiles.append(tile)
@@ -42,11 +43,40 @@ public class Hand {
         }
     }
     
+    func addMeld(tile:Tile, status:Status) {
+        switch status {
+            case .Chi:
+            var rawvalue = tile.value.rawValue
+            if rawvalue <= 7 {
+                let tile2 = Tile(value:Value(rawValue:rawvalue+1)!, suit:tile.suit)
+                let tile3 = Tile(value:Value(rawValue:rawvalue+2)!, suit:tile.suit)
+                if (currentTileCount(tile) < 4 && currentTileCount(tile2) < 4 &&
+                    currentTileCount(tile3) < 4) {
+                        addTile(tile,status:status)
+                        addTile(tile2,status:status)
+                        addTile(tile3,status:status)
+                }
+            }
+            case .Pon:
+            if currentTileCount(tile) < 2 {
+                addTile(tile,status:status)
+                addTile(tile,status:status)
+                addTile(tile,status:status)
+            }
+            case .Kan, .ClosedKan:
+            if currentTileCount(tile) == 0 {
+                addTile(tile,status:status)
+                addTile(tile,status:status)
+                addTile(tile,status:status)
+            }
+            default:
+            return
+        }
+    }
+    
     func removeTile(index:Int) {
         if tiles.count > 0 {
-            for tile in tiles {
-                tile.setWait(false)
-            }
+            clearWaits()
             tiles.removeAtIndex(index)
         }
         sortTiles()
@@ -109,8 +139,7 @@ public class Hand {
                 }
             }
             
-            melds = tempMelds
-            pair = tempPair
+            setMeldsAndPairs(tempMelds, tempPair: tempPair)
             return
         }
         
@@ -145,8 +174,7 @@ public class Hand {
                 }
             }
             
-            melds = tempMelds
-            pair = tempPair
+            setMeldsAndPairs(tempMelds, tempPair: tempPair)
             return
         }
         
@@ -181,8 +209,7 @@ public class Hand {
                 }
             }
             
-            melds = tempMelds
-            pair = tempPair
+            setMeldsAndPairs(tempMelds, tempPair: tempPair)
             return
         }
         
@@ -217,8 +244,7 @@ public class Hand {
                 }
             }
             
-            melds = tempMelds
-            pair = tempPair
+            setMeldsAndPairs(tempMelds, tempPair: tempPair)
             return
         }
         
@@ -253,10 +279,24 @@ public class Hand {
                 }
             }
             
-            melds = tempMelds
-            pair = tempPair
+            setMeldsAndPairs(tempMelds, tempPair: tempPair)
             return
         }
+    }
+
+    func setMeldsAndPairs(tempMelds:[Meld], tempPair:Pair) {
+        for meld in tempMelds {
+            if meld.tile1.status == Status.None || meld.tile1.status == Status.ClosedKan {
+                meld.setClosed()
+            }
+            
+            if meld.tile1.status == Status.Kan || meld.tile1.status == Status.ClosedKan {
+                meld.setKan()
+            }
+        }
+        
+        melds = tempMelds
+        pair = tempPair
     }
     
     func invalidateHand() {
@@ -390,7 +430,7 @@ public class Hand {
     func sortTiles() {
         for var i:Int = 1; i < tiles.count; i++ {
             var tileToSort:Tile = tiles[i]
-            var newIndex:Int = binarySearch(tileToSort.getRawValue(), left: 0, right: i)
+            var newIndex:Int = binarySearch(tileToSort, left: 0, right: i)
             for var j:Int = i; j > newIndex; j-- {
                 tiles[j] = tiles [j-1]
             }
@@ -398,26 +438,23 @@ public class Hand {
         }
     }
     
-    func binarySearch(value:Int, left:Int, right:Int) -> Int {
+    func binarySearch(tile:Tile, left:Int, right:Int) -> Int {
         if (right < left) {
             return left
         }
         
         let mid:Int = (left + right) / 2
         
-        if (value <= tiles[mid].getRawValue()) {
-            return binarySearch(value, left: left, right: mid-1)
+        if tile.isGreaterThan(tiles[mid]) {
+            return binarySearch(tile, left: mid+1, right: right)
         } else {
-            return binarySearch(value, left: mid+1, right: right)
+            return binarySearch(tile, left: left, right: mid-1)
         }
     }
     
-    func clearConditions() {
-        if !sevenPairs() {
-            for i in 0...3 {
-                melds[i].setClosed(false)
-            }
+    func clearWaits() {
+        for tile in tiles {
+            tile.setWait(false)
         }
-        conditions.clearConditions()
     }
 }

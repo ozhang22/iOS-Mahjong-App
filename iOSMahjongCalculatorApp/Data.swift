@@ -9,45 +9,60 @@
 import Foundation
 import UIKit
 
+// https://gist.github.com/alexruperez/90f44545b57c25b977c4
+extension UIImage {
+    func tint(color: UIColor, blendMode: CGBlendMode) -> UIImage {
+        let drawRect = CGRectMake(0.0, 0.0, size.width, size.height)
+        UIGraphicsBeginImageContextWithOptions(size, false, scale)
+        let context = UIGraphicsGetCurrentContext()
+        CGContextClipToMask(context, drawRect, CGImage)
+        color.setFill()
+        UIRectFill(drawRect)
+        drawInRect(drawRect, blendMode: blendMode, alpha: 1.0)
+        let tintedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return tintedImage
+    }
+}
 
 // Lookup table to associate a description of an image with a tile
 
-let lookUp:[String:Tile] =
+let lookUp:Dictionary<String, (value: Value, suit: Suit)> =
 [
-    "Wan1": Tile(value: Value.One, suit: Suit.Wan),
-    "Wan2": Tile(value: Value.Two, suit: Suit.Wan),
-    "Wan3": Tile(value: Value.Three, suit: Suit.Wan),
-    "Wan4": Tile(value: Value.Four, suit: Suit.Wan),
-    "Wan5": Tile(value: Value.Five, suit: Suit.Wan),
-    "Wan6": Tile(value: Value.Six, suit: Suit.Wan),
-    "Wan7": Tile(value: Value.Seven, suit: Suit.Wan),
-    "Wan8": Tile(value: Value.Eight, suit: Suit.Wan),
-    "Wan9": Tile(value: Value.Nine, suit: Suit.Wan),
-    "Pin1": Tile(value: Value.One, suit: Suit.Pin),
-    "Pin2": Tile(value: Value.Two, suit: Suit.Pin),
-    "Pin3": Tile(value: Value.Three, suit: Suit.Pin),
-    "Pin4": Tile(value: Value.Four, suit: Suit.Pin),
-    "Pin5": Tile(value: Value.Five, suit: Suit.Pin),
-    "Pin6": Tile(value: Value.Six, suit: Suit.Pin),
-    "Pin7": Tile(value: Value.Seven, suit: Suit.Pin),
-    "Pin8": Tile(value: Value.Eight, suit: Suit.Pin),
-    "Pin9": Tile(value: Value.Nine, suit: Suit.Pin),
-    "Sou1": Tile(value: Value.One, suit: Suit.Sou),
-    "Sou2": Tile(value: Value.Two, suit: Suit.Sou),
-    "Sou3": Tile(value: Value.Three, suit: Suit.Sou),
-    "Sou4": Tile(value: Value.Four, suit: Suit.Sou),
-    "Sou5": Tile(value: Value.Five, suit: Suit.Sou),
-    "Sou6": Tile(value: Value.Six, suit: Suit.Sou),
-    "Sou7": Tile(value: Value.Seven, suit: Suit.Sou),
-    "Sou8": Tile(value: Value.Eight, suit: Suit.Sou),
-    "Sou9": Tile(value: Value.Nine, suit: Suit.Sou),
-    "East": Tile(value: Value.East, suit: Suit.Wind),
-    "South": Tile(value: Value.South, suit: Suit.Wind),
-    "West": Tile(value: Value.West, suit: Suit.Wind),
-    "North": Tile(value: Value.North, suit: Suit.Wind),
-    "Red": Tile(value: Value.Red, suit: Suit.Dragon),
-    "Green": Tile(value: Value.Green, suit: Suit.Dragon),
-    "White": Tile(value: Value.White, suit: Suit.Dragon)
+    "Wan1": (value: Value.One, suit: Suit.Wan),
+    "Wan2": (value: Value.Two, suit: Suit.Wan),
+    "Wan3": (value: Value.Three, suit: Suit.Wan),
+    "Wan4": (value: Value.Four, suit: Suit.Wan),
+    "Wan5": (value: Value.Five, suit: Suit.Wan),
+    "Wan6": (value: Value.Six, suit: Suit.Wan),
+    "Wan7": (value: Value.Seven, suit: Suit.Wan),
+    "Wan8": (value: Value.Eight, suit: Suit.Wan),
+    "Wan9": (value: Value.Nine, suit: Suit.Wan),
+    "Pin1": (value: Value.One, suit: Suit.Pin),
+    "Pin2": (value: Value.Two, suit: Suit.Pin),
+    "Pin3": (value: Value.Three, suit: Suit.Pin),
+    "Pin4": (value: Value.Four, suit: Suit.Pin),
+    "Pin5": (value: Value.Five, suit: Suit.Pin),
+    "Pin6": (value: Value.Six, suit: Suit.Pin),
+    "Pin7": (value: Value.Seven, suit: Suit.Pin),
+    "Pin8": (value: Value.Eight, suit: Suit.Pin),
+    "Pin9": (value: Value.Nine, suit: Suit.Pin),
+    "Sou1": (value: Value.One, suit: Suit.Sou),
+    "Sou2": (value: Value.Two, suit: Suit.Sou),
+    "Sou3": (value: Value.Three, suit: Suit.Sou),
+    "Sou4": (value: Value.Four, suit: Suit.Sou),
+    "Sou5": (value: Value.Five, suit: Suit.Sou),
+    "Sou6": (value: Value.Six, suit: Suit.Sou),
+    "Sou7": (value: Value.Seven, suit: Suit.Sou),
+    "Sou8": (value: Value.Eight, suit: Suit.Sou),
+    "Sou9": (value: Value.Nine, suit: Suit.Sou),
+    "East": (value: Value.East, suit: Suit.Wind),
+    "South": (value: Value.South, suit: Suit.Wind),
+    "West": (value: Value.West, suit: Suit.Wind),
+    "North": (value: Value.North, suit: Suit.Wind),
+    "Red": (value: Value.Red, suit: Suit.Dragon),
+    "Green": (value: Value.Green, suit: Suit.Dragon),
+    "White": (value: Value.White, suit: Suit.Dragon)
 ]
 
 // Lookup table to associate a tile (in raw value) with an image

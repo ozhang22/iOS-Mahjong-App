@@ -192,24 +192,26 @@ public class Conditions {
     
     func sortTiles() {
         for var i:Int = 1; i < doraTiles.count; i++ {
-            var value:Tile = doraTiles[i]
-            var newIndex:Int = bSearch(value.getRawValue(), left: 0, right: i)
+            var tileToSort:Tile = doraTiles[i]
+            var newIndex:Int = binarySearch(tileToSort, left: 0, right: i)
             for var j:Int = i; j > newIndex; j-- {
-                doraTiles[j] = doraTiles[j-1]
+                doraTiles[j] = doraTiles [j-1]
             }
-            doraTiles[newIndex] = value
+            doraTiles[newIndex] = tileToSort
         }
     }
     
-    func bSearch(value:Int, left:Int, right:Int) -> Int {
+    func binarySearch(tile:Tile, left:Int, right:Int) -> Int {
         if (right < left) {
             return left
         }
+        
         let mid:Int = (left + right) / 2
-        if (value <= doraTiles[mid].getRawValue()) {
-            return bSearch(value, left: left, right: mid-1)
+        
+        if tile.isGreaterThan(doraTiles[mid]) {
+            return binarySearch(tile, left: mid+1, right: right)
         } else {
-            return bSearch(value, left: mid+1, right: right)
+            return binarySearch(tile, left: left, right: mid-1)
         }
     }
 }

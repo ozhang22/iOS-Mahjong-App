@@ -16,10 +16,6 @@ class ConditionsViewController: UITableViewController {
     @IBOutlet weak var calculateButton: UIBarButtonItem!
     @IBOutlet weak var RiichiSwitch: UISwitch!
     @IBOutlet weak var DoubleRiichiSwitch: UISwitch!
-    @IBOutlet weak var Meld1Switch: UISwitch!
-    @IBOutlet weak var Meld2Switch: UISwitch!
-    @IBOutlet weak var Meld3Switch: UISwitch!
-    @IBOutlet weak var Meld4Switch: UISwitch!
     
     var winningHand:Hand!
     
@@ -27,22 +23,11 @@ class ConditionsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        winningHand.clearConditions()
+        winningHand.conditions.clearConditions()
         roundLabel.text = "East"
         seatLabel.text = "East"
-        RiichiSwitch.enabled = false
-        DoubleRiichiSwitch.enabled = false
-        
-        if winningHand.sevenPairs() {
-            Meld1Switch.enabled = false
-            Meld1Switch.setOn(false, animated: false)
-            Meld2Switch.enabled = false
-            Meld2Switch.setOn(false, animated: false)
-            Meld3Switch.enabled = false
-            Meld3Switch.setOn(false, animated: false)
-            Meld4Switch.enabled = false
-            Meld4Switch.setOn(false, animated: false)
-        }
+        RiichiSwitch.enabled = winningHand.isClosed()
+        DoubleRiichiSwitch.enabled = winningHand.isClosed()
     }
     
     override func didReceiveMemoryWarning() {
@@ -68,49 +53,8 @@ class ConditionsViewController: UITableViewController {
     // Alters conditions of hand depending on switch that is activated
     @IBAction func tapSwitch(sender:UISwitch) {
         
-        func enableRiichi() {
-            if !winningHand.isClosed() {
-                winningHand.conditions.setRiichi(false, hand: winningHand)
-                RiichiSwitch.setOn(false, animated: true)
-                RiichiSwitch.enabled = false
-            } else {
-                RiichiSwitch.enabled = true
-            }
-        }
-        
-        func enableDoubleRiichi() {
-            if !winningHand.isClosed() {
-                winningHand.conditions.setDoubleRiichi(false, hand: winningHand)
-                DoubleRiichiSwitch.setOn(false, animated: true)
-                DoubleRiichiSwitch.enabled = false
-            } else {
-                DoubleRiichiSwitch.enabled = true
-            }
-        }
-        
         if let switchName:String = sender.accessibilityLabel {
-            
             switch switchName {
-            case "Meld1":
-                winningHand.melds[0].setClosed(sender.on)
-                enableRiichi()
-                enableDoubleRiichi()
-                break
-            case "Meld2":
-                winningHand.melds[1].setClosed(sender.on)
-                enableRiichi()
-                enableDoubleRiichi()
-                break
-            case "Meld3":
-                winningHand.melds[2].setClosed(sender.on)
-                enableRiichi()
-                enableDoubleRiichi()
-                break
-            case "Meld4":
-                winningHand.melds[3].setClosed(sender.on)
-                enableRiichi()
-                enableDoubleRiichi()
-                break
             case "Riichi":
                 winningHand.conditions.setRiichi(sender.on, hand: winningHand)
                 DoubleRiichiSwitch.setOn(false, animated:true)

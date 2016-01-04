@@ -18,28 +18,38 @@ public enum Value: Int {
     case White = 14, Green, Red
 }
 
+public enum Status: Int {
+    case Chi = 1, Pon, Kan, ClosedKan, None
+}
+
 public class Tile {
     
     var value:Value
     var suit:Suit
+    var status:Status
     var wait:Bool
     
     init(value:Value, suit:Suit) {
         self.value = value
         self.suit = suit
-        wait = false
+        self.status = Status.None
+        self.wait = false
     }
     
     func getRawValue() -> Int {
-        return suit.rawValue*10 + value.rawValue
+        return status.rawValue*100 + suit.rawValue*10 + value.rawValue
     }
     
     func isEqual(other:Tile) -> Bool {
-        return getRawValue() == other.getRawValue()
+        return getRawValue() % 100 == other.getRawValue() % 100
     }
     
     func isEqualValueOnly(other:Tile) -> Bool {
         return value == other.value && suit != other.suit
+    }
+    
+    func isGreaterThan(other:Tile) -> Bool {
+        return getRawValue() > other.getRawValue()
     }
     
     func isOneValueGreaterThan(other:Tile) -> Bool {
@@ -48,6 +58,10 @@ public class Tile {
     
     func isSameSuit(other:Tile) -> Bool {
         return suit == other.suit
+    }
+    
+    func hasSameStatus(other:Tile) -> Bool {
+        return status == other.status
     }
     
     func isTerminal() -> Bool {
@@ -70,7 +84,12 @@ public class Tile {
         return (value.rawValue == wind1.rawValue)
     }
     
+    func setStatus(status:Status) {
+        self.status = status
+    }
+    
     func setWait(bool:Bool) {
         self.wait = bool
     }
+
 }

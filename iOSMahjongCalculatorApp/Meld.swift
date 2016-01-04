@@ -24,20 +24,24 @@ public class Meld {
         kan = false
     }
     
-    func setClosed(closed:Bool) {
-        self.closed = closed
+    func setClosed() {
+        self.closed = true
     }
     
     func isClosed() -> Bool {
         return closed
     }
     
-    func setKan(kan:Bool) {
-        self.kan = kan
+    func setKan() {
+        self.kan = true
     }
     
     func isKan() -> Bool {
         return kan
+    }
+    
+    func containsWait() -> Bool {
+        return tile1.wait || tile2.wait || tile3.wait
     }
 
     func isTriplet() -> Bool {
@@ -51,8 +55,12 @@ public class Meld {
         && tile2.isOneValueGreaterThan(tile3)
     }
     
+    func sameStatus() -> Bool {
+        return tile1.hasSameStatus(tile2) && tile1.hasSameStatus(tile3)
+    }
+    
     func isValid() -> Bool {
-        return isTriplet() || isSequence()
+        return sameStatus() && (isTriplet() || isSequence())
     }
     
     func isEqual(meld:Meld) -> Bool {
