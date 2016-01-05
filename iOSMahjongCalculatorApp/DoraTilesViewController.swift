@@ -98,7 +98,7 @@ class DoraTilesViewController: UIViewController, UIGestureRecognizerDelegate {
         let yOffset = 60
         
         let tile = winningHand.conditions.doraTiles[index]
-        let key = "\(tile.getRawValue() % 100)"
+        let key = "\(tile.getRawValue())"
         if let image = imageDictionary[key] {
             let newImage = rescaleImage(image!)
             let imageView = UIImageView(image: newImage)

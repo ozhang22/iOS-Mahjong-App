@@ -9,7 +9,7 @@
 import Foundation
 
 public class Hand {
-    
+
     var tiles:[Tile]
     var melds:[Meld]
     var pair:Pair!
@@ -28,7 +28,7 @@ public class Hand {
         melds = []
         dictionary = [:]
     }
-    
+
     func addTile(tile:Tile,status:Status=Status.None) {
         tile.status = status
         if (currentTileCount(tile) < 4) {
@@ -42,7 +42,7 @@ public class Hand {
             }
         }
     }
-    
+
     func addMeld(tile:Tile, status:Status) {
         switch status {
             case .Chi:
@@ -73,8 +73,8 @@ public class Hand {
             return
         }
     }
-    
-    func removeTile(index:Int) {
+
+    func removeTileAtIndex(index:Int) {
         if tiles.count > 0 {
             clearWaits()
             tiles.removeAtIndex(index)
@@ -82,7 +82,16 @@ public class Hand {
         sortTiles()
         invalidateHand()
     }
-    
+
+    func removeAllOfTile(tile:Tile) {
+        for var i=0; i<tiles.count; i++ {
+            if (tile.isEqual(tiles[i]) && tile.status == tiles[i].status) {
+                tiles.removeAtIndex(i)
+                i--
+            }
+        }
+    }
+
     func removeAllTiles() {
         for tile in tiles {
             tile.setWait(false)
@@ -90,7 +99,7 @@ public class Hand {
         tiles.removeAll(keepCapacity: true)
         invalidateHand()
     }
-    
+
     func containsTile(tile:Tile) -> Bool {
         for t in tiles {
             if tile.isEqual(t) {
@@ -99,7 +108,7 @@ public class Hand {
         }
         return false
     }
-    
+
     func currentTileCount(tile:Tile) -> Int {
         var count:Int = 0
         for var i:Int = 0; i < tiles.count; i++ {
@@ -109,54 +118,54 @@ public class Hand {
         }
         return count
     }
-    
+
     func validateHand() {
         var tempTiles:[Tile] = []
         var tempMelds:[Meld] = []
-        
+
         // 012 345 678 91011
         check: for ii in 0...12 {
-            
+
             let tempPair = Pair(tile1: tiles[ii], tile2: tiles[ii+1])
             if !tempPair.isValidPair() {
                 continue check
             }
-            
+
             for var jj:Int = 0; jj < tiles.count; jj++ {
                 if jj != ii && jj != ii+1 {
                     tempTiles.append(tiles[jj])
                 }
             }
-            
+
             for kk in 0...3 {
                 tempMelds.append(Meld(tile1: tempTiles[3*kk],
                     tile2: tempTiles[3*kk + 1], tile3: tempTiles[3*kk + 2]))
-                
+
                 if !tempMelds[kk].isValid() {
                     tempTiles.removeAll(keepCapacity: true)
                     tempMelds.removeAll(keepCapacity: true)
                     continue check
                 }
             }
-            
+
             setMeldsAndPairs(tempMelds, tempPair: tempPair)
             return
         }
-        
+
         // 024 135 678 91011
         check: for ii in 0...12 {
-            
+
             let tempPair = Pair(tile1: tiles[ii], tile2: tiles[ii+1])
             if !tempPair.isValidPair() {
                 continue check
             }
-            
+
             for var jj:Int = 0; jj < tiles.count; jj++ {
                 if jj != ii && jj != ii+1 {
                     tempTiles.append(tiles[jj])
                 }
             }
-            
+
             tempMelds.append(Meld(tile1: tempTiles[0], tile2: tempTiles[2],
                 tile3: tempTiles[4]))
             tempMelds.append(Meld(tile1: tempTiles[1], tile2: tempTiles[3],
@@ -165,7 +174,7 @@ public class Hand {
                 tile3: tempTiles[8]))
             tempMelds.append(Meld(tile1: tempTiles[9], tile2: tempTiles[10],
                 tile3: tempTiles[11]))
-            
+
             for kk in 0...3 {
                 if !tempMelds[kk].isValid() {
                     tempTiles.removeAll(keepCapacity: true)
@@ -173,25 +182,25 @@ public class Hand {
                     continue check
                 }
             }
-            
+
             setMeldsAndPairs(tempMelds, tempPair: tempPair)
             return
         }
-        
+
         // 012 345 6810 7911
         check: for ii in 0...12 {
-            
+
             let tempPair = Pair(tile1: tiles[ii], tile2: tiles[ii+1])
             if !tempPair.isValidPair() {
                 continue check
             }
-            
+
             for var jj:Int = 0; jj < tiles.count; jj++ {
                 if jj != ii && jj != ii+1 {
                     tempTiles.append(tiles[jj])
                 }
             }
-            
+
             tempMelds.append(Meld(tile1: tempTiles[0], tile2: tempTiles[1],
                 tile3: tempTiles[2]))
             tempMelds.append(Meld(tile1: tempTiles[3], tile2: tempTiles[4],
@@ -200,7 +209,7 @@ public class Hand {
                 tile3: tempTiles[10]))
             tempMelds.append(Meld(tile1: tempTiles[7], tile2: tempTiles[9],
                 tile3: tempTiles[11]))
-            
+
             for kk in 0...3 {
                 if !tempMelds[kk].isValid() {
                     tempTiles.removeAll(keepCapacity: true)
@@ -208,25 +217,25 @@ public class Hand {
                     continue check
                 }
             }
-            
+
             setMeldsAndPairs(tempMelds, tempPair: tempPair)
             return
         }
-        
+
         // 024 135 678 91011
         check: for ii in 0...12 {
-            
+
             let tempPair = Pair(tile1: tiles[ii], tile2: tiles[ii+1])
             if !tempPair.isValidPair() {
                 continue check
             }
-            
+
             for var jj:Int = 0; jj < tiles.count; jj++ {
                 if jj != ii && jj != ii+1 {
                     tempTiles.append(tiles[jj])
                 }
             }
-            
+
             tempMelds.append(Meld(tile1: tempTiles[0], tile2: tempTiles[2],
                 tile3: tempTiles[4]))
             tempMelds.append(Meld(tile1: tempTiles[1], tile2: tempTiles[3],
@@ -235,7 +244,7 @@ public class Hand {
                 tile3: tempTiles[10]))
             tempMelds.append(Meld(tile1: tempTiles[7], tile2: tempTiles[9],
                 tile3: tempTiles[11]))
-            
+
             for kk in 0...3 {
                 if !tempMelds[kk].isValid() {
                     tempTiles.removeAll(keepCapacity: true)
@@ -243,25 +252,25 @@ public class Hand {
                     continue check
                 }
             }
-            
+
             setMeldsAndPairs(tempMelds, tempPair: tempPair)
             return
         }
-        
+
         // 012 357 468 91011
         check: for ii in 0...12 {
-            
+
             let tempPair = Pair(tile1: tiles[ii], tile2: tiles[ii+1])
             if !tempPair.isValidPair() {
                 continue check
             }
-            
+
             for var jj:Int = 0; jj < tiles.count; jj++ {
                 if jj != ii && jj != ii+1 {
                     tempTiles.append(tiles[jj])
                 }
             }
-            
+
             tempMelds.append(Meld(tile1: tempTiles[0], tile2: tempTiles[1],
                 tile3: tempTiles[2]))
             tempMelds.append(Meld(tile1: tempTiles[3], tile2: tempTiles[5],
@@ -270,7 +279,7 @@ public class Hand {
                 tile3: tempTiles[8]))
             tempMelds.append(Meld(tile1: tempTiles[9], tile2: tempTiles[10],
                 tile3: tempTiles[11]))
-            
+
             for kk in 0...3 {
                 if !tempMelds[kk].isValid() {
                     tempTiles.removeAll(keepCapacity: true)
@@ -278,7 +287,7 @@ public class Hand {
                     continue check
                 }
             }
-            
+
             setMeldsAndPairs(tempMelds, tempPair: tempPair)
             return
         }
@@ -289,21 +298,21 @@ public class Hand {
             if meld.tile1.status == Status.None || meld.tile1.status == Status.ClosedKan {
                 meld.setClosed()
             }
-            
+
             if meld.tile1.status == Status.Kan || meld.tile1.status == Status.ClosedKan {
                 meld.setKan()
             }
         }
-        
+
         melds = tempMelds
         pair = tempPair
     }
-    
+
     func invalidateHand() {
         melds = [];
         pair = nil;
     }
-    
+
     func isClosed() -> Bool {
         for m in melds {
             if !(m.isClosed()) {
@@ -312,46 +321,45 @@ public class Hand {
         }
         return true
     }
-    
+
     func isValid() -> Bool {
         if tiles.count < 14 {
             return false
         }
-        
+
         if sevenPairs() {
             return true
         }
-        
+
         for meld in melds {
             if !meld.isValid() {
                 return false
             }
         }
-        
+
         return pair != nil && pair.isValidPair()
     }
-    
+
     func sevenPairs() -> Bool {
         if tiles.count < 14 {
             return false
         }
-        
+
         for i in 0...(tiles.count/2 - 1) {
-            let pair = Pair(tile1: tiles[2*i], tile2: tiles[2*i + 1])
-            if !(pair.isValidPair()) {
+            if !tiles[2*i].isEqual(tiles[2*i+1]) {
                 return false
             }
         }
-        
+
         return true
     }
-    
+
     func calculateScore() -> (winner:Double, other1:Double, other2:Double, other3:Double) {
         dictionary = [:]
         fu = Fu(wh: self).calculateFu()
         han = Han(wh: self).calculateHan()
         calculateBasicPoints()
-        
+
         if conditions.isDealer() {
             if conditions.isTsumo() {
                 return (roundPoints(basicPoints*6), roundPoints(basicPoints*(-2)),
@@ -368,10 +376,10 @@ public class Hand {
             }
         }
     }
-    
+
     func calculateBasicPoints() {
         var points:Double
-        
+
         switch han {
         case 0:
             points = 0
@@ -400,10 +408,10 @@ public class Hand {
         default:
             points = 8000
         }
-        
+
         basicPoints = points
     }
-    
+
     func roundPoints(count:Double) -> Double {
         if count >= 0 {
             if round(count/100)*100 < count/100*100 {
@@ -418,7 +426,7 @@ public class Hand {
             return round(count/100)*100
         }
     }
-    
+
     func displayDictionary() -> String {
         var message:String = ""
         for (key, value) in dictionary {
@@ -426,32 +434,32 @@ public class Hand {
         }
         return message
     }
-    
+
     func sortTiles() {
         for var i:Int = 1; i < tiles.count; i++ {
             var tileToSort:Tile = tiles[i]
             var newIndex:Int = binarySearch(tileToSort, left: 0, right: i)
             for var j:Int = i; j > newIndex; j-- {
-                tiles[j] = tiles [j-1]
+                tiles[j] = tiles[j-1]
             }
             tiles[newIndex] = tileToSort
         }
     }
-    
+
     func binarySearch(tile:Tile, left:Int, right:Int) -> Int {
         if (right < left) {
             return left
         }
-        
+
         let mid:Int = (left + right) / 2
-        
+
         if tile.isGreaterThan(tiles[mid]) {
             return binarySearch(tile, left: mid+1, right: right)
         } else {
             return binarySearch(tile, left: left, right: mid-1)
         }
     }
-    
+
     func clearWaits() {
         for tile in tiles {
             tile.setWait(false)

@@ -13,7 +13,7 @@ public enum Wind: Int {
 }
 
 public class Conditions {
-    
+
     var seat:Wind
     var round:Wind
     private var tsumo:Bool
@@ -25,7 +25,7 @@ public class Conditions {
     private var robKan:Bool
     private var doubleRiichi:Bool
     var doraTiles:[Tile]
-    
+
     init() {
         seat = Wind.East
         round = Wind.East
@@ -39,7 +39,7 @@ public class Conditions {
         doubleRiichi = false
         doraTiles = []
     }
-    
+
     func clearConditions() {
         seat = Wind.East
         round = Wind.East
@@ -52,23 +52,23 @@ public class Conditions {
         robKan = false
         doubleRiichi = false
     }
-    
+
     func isDealer() -> Bool {
-        return self.seat == Wind.East
+        return seat == .East
     }
-    
+
     func setSeat(wind:Wind) {
         seat = wind
     }
-    
+
     func getSeat() -> Wind {
         return seat
     }
-    
+
     func setRound(wind:Wind) {
         round = wind
     }
-    
+
     func getRound() -> Wind {
         return round
     }
@@ -81,64 +81,63 @@ public class Conditions {
             if (self.riichi && doubleRiichi) {
                 doubleRiichi = false
             }
-        
         } else {
             self.riichi = riichi
         }
     }
-    
+
     func isRiichi() -> Bool {
         return riichi
     }
-    
+
     func setTsumo(tsumo:Bool) {
         self.tsumo = tsumo
     }
-    
+
     func isTsumo() -> Bool {
         return tsumo
     }
-    
+
     func setIppatsu(ippatsu:Bool) {
         self.ippatsu = ippatsu
     }
-    
+
     func isIppatsu() -> Bool {
         return ippatsu
     }
-    
+
     func setLastTileFromWall(bool:Bool) {
         lastTileFromWall = bool
     }
-    
+
     func isLastTileFromWall() -> Bool {
         return lastTileFromWall
     }
-    
+
     func setLastDiscard(bool:Bool) {
         lastDiscard = bool
     }
-    
+
     func isLastDiscard() -> Bool {
         return lastDiscard
     }
-    
+
     func setDeadWallDraw(bool:Bool) {
         deadWallDraw = bool
     }
-    
+
     func isDeadWallDraw() -> Bool {
         return deadWallDraw
     }
-    
+
     func setRobKan(kan:Bool) {
         robKan = kan
     }
-    
+
     func isRobKan() -> Bool {
         return robKan
     }
-    
+
     func setDoubleRiichi(riichi:Bool, hand:Hand) {
         if riichi {
             if (hand.isClosed() || hand.sevenPairs()) {
@@ -151,11 +150,11 @@ public class Conditions {
             self.doubleRiichi = riichi
         }
     }
-    
+
     func isDoubleRiichi() -> Bool {
         return doubleRiichi
     }
-    
+
     func addDoraTile(tile:Tile) {
         if (currentTileCount(tile) < 4) {
             if doraTiles.count < 10 {
@@ -171,15 +170,15 @@ public class Conditions {
         }
         sortTiles()
     }
-    
+
     func removeAllDoraTiles() {
         doraTiles.removeAll(keepCapacity: true)
     }
-    
+
     func getDoraTiles() -> [Tile] {
         return doraTiles
     }
-    
+
     func currentTileCount(tile:Tile) -> Int {
         var count:Int = 0
         for var i:Int = 0; i < doraTiles.count; i++ {
@@ -189,18 +188,18 @@ public class Conditions {
         }
         return count
     }
-    
+
     func sortTiles() {
         for var i:Int = 1; i < doraTiles.count; i++ {
             var tileToSort:Tile = doraTiles[i]
             var newIndex:Int = binarySearch(tileToSort, left: 0, right: i)
             for var j:Int = i; j > newIndex; j-- {
-                doraTiles[j] = doraTiles [j-1]
+                doraTiles[j] = doraTiles[j-1]
             }
             doraTiles[newIndex] = tileToSort
         }
     }
-    
+
     func binarySearch(tile:Tile, left:Int, right:Int) -> Int {
         if (right < left) {
             return left

@@ -9,24 +9,7 @@
 import Foundation
 import UIKit
 
-// https://gist.github.com/alexruperez/90f44545b57c25b977c4
-extension UIImage {
-    func tint(color: UIColor, blendMode: CGBlendMode) -> UIImage {
-        let drawRect = CGRectMake(0.0, 0.0, size.width, size.height)
-        UIGraphicsBeginImageContextWithOptions(size, false, scale)
-        let context = UIGraphicsGetCurrentContext()
-        CGContextClipToMask(context, drawRect, CGImage)
-        color.setFill()
-        UIRectFill(drawRect)
-        drawInRect(drawRect, blendMode: blendMode, alpha: 1.0)
-        let tintedImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return tintedImage
-    }
-}
-
 // Lookup table to associate a description of an image with a tile
-
 let lookUp:Dictionary<String, (value: Value, suit: Suit)> =
 [
     "Wan1": (value: Value.One, suit: Suit.Wan),

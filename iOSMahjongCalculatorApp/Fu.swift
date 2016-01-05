@@ -9,7 +9,7 @@
 import Foundation
 
 public class Fu {
-    
+
     var count:Double
     var wh:Hand
 
@@ -17,11 +17,11 @@ public class Fu {
         self.count = 0
         self.wh = wh
     }
-    
+
     func calculateFu() -> Double {
         self.count = 0
         var pinfu:Bool = false
-        
+
         func calculateClosedHand() {
             if !(wh.conditions.isTsumo()) {
                 for meld in wh.melds {
@@ -34,12 +34,12 @@ public class Fu {
                 println("closed hand fu +10")
             }
         }
-        
+
         func calculateFuMelds() {
             for meld in wh.melds {
                 if (meld.isTriplet()) {
                     var acc:Double = 2
-                    
+
                     if (meld.isClosed()) { acc = acc*2 }
                     if (meld.isKan()) { acc = acc*4 }
                     if (meld.tile1.isTerminalOrHonor()) { acc = acc*2 }
@@ -56,7 +56,7 @@ public class Fu {
                     println("wind/dragon fu +2")
             }
         }
-        
+
         func calculateFuWaits() {
             if (wh.pair.tile1.wait || wh.pair.tile2.wait) {
                 println("wait fu +2")
@@ -76,7 +76,7 @@ public class Fu {
                 }
             }
         }
-        
+
         func calculateFuTsumo() {
             if (wh.conditions.isTsumo()) {
                 count = count + 2
@@ -84,31 +84,31 @@ public class Fu {
                 println("tsumo fu +2")
             }
         }
-        
+
         func roundFu() {
             if round(count/10)*10 < count/10*10 {
                 count = round((count+10)/10)*10
             }
             count = round(count/10)*10
         }
-        
+
         count = 20
         if wh.sevenPairs() {
             println("sevenPairs fu = 25")
             return 25
         }
-        
+
         calculateFuTsumo()
         calculateClosedHand()
         calculateFuMelds()
         calculateFuWaits()
-        
+
         if pinfu {
             count = 20
         } else {
             roundFu()
         }
-        
+
         return count
     }
 

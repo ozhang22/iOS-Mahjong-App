@@ -9,38 +9,38 @@
 import UIKit
 
 class ConditionsViewController: UITableViewController {
-    
+
     @IBOutlet weak var roundLabel: UILabel!
     @IBOutlet weak var seatLabel: UILabel!
     @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var calculateButton: UIBarButtonItem!
     @IBOutlet weak var RiichiSwitch: UISwitch!
     @IBOutlet weak var DoubleRiichiSwitch: UISwitch!
-    
+
     var winningHand:Hand!
-    
+
     // Load default conditions of hand, load pre-conditions
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         winningHand.conditions.clearConditions()
         roundLabel.text = "East"
         seatLabel.text = "East"
         RiichiSwitch.enabled = winningHand.isClosed()
         DoubleRiichiSwitch.enabled = winningHand.isClosed()
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Move back to dora tiles controller to reselect dora tiles
         if segue.identifier == "BackDora" {
             let doraController = segue.destinationViewController as! DoraTilesViewController
             doraController.winningHand = winningHand
         }
-        
+
         // Reset to tile select view controller, resetting hand in the process
         else if segue.identifier == "Reset" {
             let tilesController = segue.destinationViewController as! TilesViewController
@@ -49,10 +49,10 @@ class ConditionsViewController: UITableViewController {
             tilesController.updateHandImage()
         }
     }
-    
+
     // Alters conditions of hand depending on switch that is activated
     @IBAction func tapSwitch(sender:UISwitch) {
-        
+
         if let switchName:String = sender.accessibilityLabel {
             switch switchName {
             case "Riichi":
@@ -85,12 +85,11 @@ class ConditionsViewController: UITableViewController {
             }
         }
     }
-    
+
     // Pulls up Table View Controller to select round
     @IBAction func selectedRound(segue:UIStoryboardSegue) {
         let roundPickerViewController = segue.sourceViewController as! RoundTableViewController
         if let selectedRound = roundPickerViewController.selectedRound {
-            
             switch selectedRound {
             case "East":
                 roundLabel.text = "East"
@@ -115,12 +114,11 @@ class ConditionsViewController: UITableViewController {
         }
         self.navigationController?.popViewControllerAnimated(true)
     }
-    
+
     // Pulls up Table View Controller to select seat
     @IBAction func selectedSeat(segue:UIStoryboardSegue) {
         let seatPickerViewController = segue.sourceViewController as! SeatTableViewController
         if let selectedSeat = seatPickerViewController.selectedSeat {
-            
             switch selectedSeat {
             case "East":
                 seatLabel.text = "East"
@@ -145,7 +143,7 @@ class ConditionsViewController: UITableViewController {
         }
         self.navigationController?.popViewControllerAnimated(true)
     }
-    
+
     // Calculates points of the winning hand when calculate button is pressed
     @IBAction func calculate() {
         let score = winningHand.calculateScore()
@@ -166,14 +164,14 @@ class ConditionsViewController: UITableViewController {
 
         let cancelAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
         alertController.addAction(cancelAction)
-        
+
         func resetToStart(action:UIAlertAction!) {
             performSegueWithIdentifier("Reset", sender: action)
         }
-        
+
         let resetAction = UIAlertAction (title: "Reset", style: .Cancel, handler: resetToStart)
         alertController.addAction(resetAction)
-        
+
         presentViewController(alertController, animated: true, completion: nil)
     }
 }

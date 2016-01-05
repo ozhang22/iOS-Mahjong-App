@@ -9,15 +9,15 @@
 import Foundation
 
 public class Han {
-    
+
     var count:Double
     var wh:Hand
-    
+
     init(wh:Hand) {
         self.count = 0
         self.wh = wh
     }
-    
+
     func calculateHan() -> Double {
         self.count = 0
         if wh.sevenPairs() {
@@ -33,16 +33,16 @@ public class Han {
         calculateHanLuck()
         return self.count
     }
-    
+
     func calculateHanLuck() {
-        
+
         func calculateDora() {
             if count == 0 {
                 return
             }
-            
+
             var tilesToCheck:[Tile] = []
-            
+
             for tile in wh.conditions.doraTiles {
                 if (tile.value == Value.Nine) {
                     let tile = Tile(value: Value.One, suit: tile.suit)
@@ -58,7 +58,7 @@ public class Han {
                     tilesToCheck.append(tile)
                 }
             }
-            
+
             var i:Double = 0
             for tileTC in tilesToCheck {
                 for tileWH in wh.tiles {
@@ -67,13 +67,13 @@ public class Han {
                     }
                 }
             }
-            
+
             if i > 0 {
                 count += i
                 wh.dictionary["Dora"] = i
             }
         }
-        
+
         if wh.conditions.isRiichi() {
             count++
             wh.dictionary["Riichi"] = 1
@@ -106,10 +106,10 @@ public class Han {
             count++
             wh.dictionary["Closed tsumo"] = 1
         }
-        
+
         calculateDora()
     }
-    
+
     func calculateHanSequence() {
         var melds:[Meld] = []
         for meld in wh.melds {
@@ -117,33 +117,33 @@ public class Han {
                 melds.append(meld)
             }
         }
-        
+
         if melds.count < 3 {
             return
         }
-        
+
         func allSequence() {
             if (wh.isClosed() && (melds.count == 4)) {
                 count++
                 wh.dictionary["All sequence"] = 1
             }
         }
-        
+
         func doubleSequence() {
-            
+
             func doubleDoubleSequence(i:Int, j:Int) {
                 if melds.count < 4 {
                     wh.dictionary["One set of identical sequences"] = 1
                     return
                 }
-                
+
                 var otherMelds:[Meld] = []
                 for k in 0...(melds.count - 1) {
                     if k != i && k != j {
                         otherMelds.append(melds[k])
                     }
                 }
-                
+
                 if otherMelds[0].isEqual(otherMelds[1]) {
                     count += 2
                     wh.dictionary["Two sets of identical sequences"] = 3
@@ -151,11 +151,11 @@ public class Han {
                     wh.dictionary["One set of identical sequences"] = 1
                 }
             }
-            
+
             if !wh.isClosed() {
                 return
             }
-            
+
             for i in 0...(melds.count - 2){
                 if melds[i].isEqual(melds[i+1]) {
                     count++
@@ -164,12 +164,12 @@ public class Han {
                 }
             }
         }
-        
+
         func straight() {
             var pinAcc = 0
             var souAcc = 0
             var wanAcc = 0
-            
+
             for i in 1...9 {
                 if wh.containsTile(Tile(value: Value(rawValue: i)!, suit: Suit.Pin)) {
                     pinAcc++
@@ -181,7 +181,7 @@ public class Han {
                     wanAcc++
                 }
             }
-            
+
             if (pinAcc == 9 || souAcc == 9 || wanAcc == 9) {
                 var i:Double = 1
                 if wh.isClosed() {
@@ -191,13 +191,13 @@ public class Han {
                 wh.dictionary["Straight"] = i
             }
         }
-        
+
         func colourStraight() {
             var meldAcc1 = melds[0]
             var meldAcc2 = melds[1]
             var meldAcc3 = 0
             var meldAcc4 = 0
-            
+
             for meld in melds {
                 if (meld.tile1.isEqualValueOnly(meldAcc1.tile1)) {
                     ++meldAcc3
@@ -215,13 +215,13 @@ public class Han {
                 wh.dictionary["Three colour straight"] = i
             }
         }
-        
+
         allSequence()
         doubleSequence()
         straight()
         colourStraight()
     }
-    
+
     func calculateHanTriplets() {
         var melds:[Meld] = []
         for meld in wh.melds {
@@ -232,21 +232,21 @@ public class Han {
         if melds.count <= 2 {
             return
         }
-        
+
         var kanAcc = 0
         var closedAcc = 0
         var value1Acc = 0
         var value2Acc = 0
         var tile1 = melds[0].tile1
         var tile2 = melds[1].tile1
-        
+
         for meld in melds {
             if (meld.isKan()) { ++kanAcc }
             if (meld.isClosed() && (!meld.containsWait() || wh.conditions.isTsumo())) { ++closedAcc }
             if (meld.tile1.isEqualValueOnly(tile1)) { ++value1Acc }
             if (meld.tile1.isEqualValueOnly(tile2)) { ++value2Acc }
         }
-        
+
         if kanAcc >= 3 {
             count += 2
             wh.dictionary["Three kans"] = 2
@@ -264,7 +264,7 @@ public class Han {
             wh.dictionary["All triplets or kans"] = 2
         }
     }
-    
+
     func calculateHanTerminals() {
         func allTerminalAndHonor() {
             for meld in wh.melds {
@@ -278,7 +278,7 @@ public class Han {
                 wh.dictionary["All terminals and honours"] = 2
             }
         }
-        
+
         func allNonTerminalOrHonor() {
             for meld in wh.melds {
                 if (meld.tile1.isTerminalOrHonor() || meld.tile2.isTerminalOrHonor() ||
@@ -331,7 +331,7 @@ public class Han {
                     return
                 }
             }
-            
+
             var i:Double = 0
             if wh.isClosed() {
                 i++
@@ -355,13 +355,13 @@ public class Han {
                 wh.dictionary["Terminal in each set"] = i
             }
         }
-        
+
         allTerminalAndHonor()
         allNonTerminalOrHonor()
         honourTriplets()
         terminalOrHonorInEachSet()
     }
-    
+
     func calculateHanSuit() {
         var acc = wh.tiles[0].suit
         for tile in wh.tiles {
@@ -369,12 +369,12 @@ public class Han {
                 return
             }
         }
-        
+
         var i:Double = 0
         if (wh.isClosed()) {
             i++
         }
-        
+
         for tile in wh.tiles {
             if !(tile.suit == acc) {
                 i += 2
@@ -383,12 +383,12 @@ public class Han {
                 return
             }
         }
-        
+
         i += 5
         count += i
         wh.dictionary["Flush"] = i
     }
-    
+
     func calculateOtherHanSevenPairs() {
         func sevenPairsAllTerminalAndHonor() {
             for tile in wh.tiles {
@@ -396,22 +396,22 @@ public class Han {
                     return
                 }
             }
-            
+
             count += 2
             wh.dictionary["All terminals and honours"] = 2
         }
-        
+
         func sevenPairsAllNonTerminalOrHonor() {
             for tile in wh.tiles {
                 if (tile.isTerminalOrHonor()) {
                     return
                 }
             }
-            
+
             count += 1
             wh.dictionary["All simples"] = 1
         }
-        
+
         calculateHanSuit()
         calculateHanLuck()
         sevenPairsAllTerminalAndHonor()

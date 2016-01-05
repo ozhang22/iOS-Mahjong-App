@@ -10,29 +10,29 @@ import UIKit
 import XCTest
 
 class iOSMahjongCalculatorTests: XCTestCase {
-    
+
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-    
+
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
+
     func testExample() {
         // This is an example of a functional test case.
         XCTAssert(true, "Pass")
     }
-    
+
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measureBlock() {
             // Put the code you want to measure the time of here.
         }
     }
-    
+
     func testStraight() {
         let winningHand = Hand()
 
@@ -51,7 +51,7 @@ class iOSMahjongCalculatorTests: XCTestCase {
         
         XCTAssertEqual(winningHand.basicPoints, 480, "fail")
     }
-    
+
     func testFlush() {
         let winningHand = Hand()
         
@@ -75,7 +75,7 @@ class iOSMahjongCalculatorTests: XCTestCase {
         
         XCTAssertEqual(winningHand.basicPoints, 3000, "fail")
     }
-    
+
     func testDoubleSequence() {
         let winningHand = Hand()
         
@@ -99,7 +99,7 @@ class iOSMahjongCalculatorTests: XCTestCase {
 
         XCTAssertEqual(winningHand.basicPoints, 2000, "fail")
     }
-    
+
     func testInvalidTriplets() {
         let winningHand = Hand()
         
@@ -121,7 +121,7 @@ class iOSMahjongCalculatorTests: XCTestCase {
         
         XCTAssertEqual(winningHand.basicPoints, 0, "fail")
     }
-    
+
     func testclosedTripletsTwoKan() {
         let winningHand = Hand()
         
@@ -139,11 +139,10 @@ class iOSMahjongCalculatorTests: XCTestCase {
         winningHand.conditions.addDoraTile(Tile(value: Value.Three, suit: Suit.Wan))
         winningHand.conditions.addDoraTile(Tile(value: Value.Five, suit: Suit.Wan))
         winningHand.calculateScore()
-        print(winningHand.displayDictionary())
         
         XCTAssertEqual(winningHand.basicPoints, 3000, "fail")
     }
-    
+
     func testThreeColourStraightandNonTerminal() {
         let winningHand = Hand()
         
@@ -162,7 +161,7 @@ class iOSMahjongCalculatorTests: XCTestCase {
         
         XCTAssertEqual(winningHand.basicPoints, 480, "fail")
     }
-    
+
     func testNotStraightNoHan() {
         let winningHand = Hand()
         
@@ -177,7 +176,7 @@ class iOSMahjongCalculatorTests: XCTestCase {
         
         XCTAssertEqual(winningHand.basicPoints, 0, "fail")
     }
-    
+
     func testAllTerminal() {
         let winningHand = Hand()
         
@@ -197,7 +196,7 @@ class iOSMahjongCalculatorTests: XCTestCase {
         
         XCTAssertEqual(winningHand.basicPoints, 640, "fail")
     }
-    
+
     func testSevenPairs() {
         let winningHand = Hand()
         
