@@ -66,8 +66,6 @@ class TilesViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBAction func tileTapped(sender:UITapGestureRecognizer) {
         if let message:String = sender.view?.accessibilityLabel {
             if let (value:Value, suit:Suit) = values[message] {
-                // This is a problem: how can we make it so each instantiation of tile
-                // gets a different wait and status?
                 let tile:Tile = Tile(value: value, suit: suit)
                 if status == .None {
                     winningHand.addTile(tile)

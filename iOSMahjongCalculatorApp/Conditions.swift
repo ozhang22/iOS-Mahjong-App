@@ -155,12 +155,10 @@ public class Conditions {
         return doubleRiichi
     }
 
-    func addDoraTile(tile:Tile) {
-        if (currentTileCount(tile) < 4) {
-            if doraTiles.count < 10 {
-                doraTiles.append(tile)
-                sortTiles()
-            }
+    func addDoraTile(tile:Tile, hand:Hand) {
+        if canAddTile(tile, hand: hand) {
+            doraTiles.append(tile)
+            sortTiles()
         }
     }
 
@@ -179,14 +177,35 @@ public class Conditions {
         return doraTiles
     }
 
-    func currentTileCount(tile:Tile) -> Int {
+    func currentTileCount(tile:Tile, hand:Hand) -> Int {
         var count:Int = 0
+        for var i:Int = 0; i < hand.tiles.count; i++ {
+            if (hand.tiles[i].isEqual(tile)) {
+                count++
+            }
+        }
         for var i:Int = 0; i < doraTiles.count; i++ {
             if (doraTiles[i].isEqual(tile)) {
                 count++
             }
         }
         return count
+    }
+
+    func canAddTile(tile:Tile, hand:Hand) -> Bool {
+        if doraTiles.count > 10 {
+            return false
+        }
+
+        for var i:Int = 0; i < hand.tiles.count; i++ {
+            if hand.tiles[i].isEqual(tile) {
+                if (hand.tiles[i].status == Status.Kan || hand.tiles[i].status == Status.ClosedKan) {
+                    return currentTileCount(tile, hand: hand) < 3
+                }
+            }
+        }
+
+        return currentTileCount(tile, hand: hand) < 4
     }
 
     func sortTiles() {

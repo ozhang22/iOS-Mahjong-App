@@ -368,16 +368,6 @@
                                     <outletCollection property="gestureRecognizers" destination="qiW-E9-C3y" appends="YES" id="Wwl-lu-UoX"/>
                                 </connections>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caN-ts-mZt">
-                                <rect key="frame" x="265" y="384" width="39" height="32"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="Clear">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="clearTapped:" destination="TVD-dx-g0F" eventType="touchUpInside" id="wQC-e2-Yme"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ad-0B-H4i">
                                 <rect key="frame" x="139" y="385" width="30" height="30"/>
                                 <state key="normal" title="Kan">
@@ -416,6 +406,16 @@
                                 </state>
                                 <connections>
                                     <action selector="closedKanTapped:" destination="TVD-dx-g0F" eventType="touchUpInside" id="Tcw-Ep-zzF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caN-ts-mZt">
+                                <rect key="frame" x="265" y="384" width="39" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearTapped:" destination="TVD-dx-g0F" eventType="touchUpInside" id="wQC-e2-Yme"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1228,367 +1228,522 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJw1.png" translatesAutoresizingMaskIntoConstraints="NO" id="e2u-j1-mci">
-                                <rect key="frame" x="9" y="72" width="35" height="45"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ibh-pK-C8M">
+                                <rect key="frame" x="0.0" y="417" width="320" height="151"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dora Tiles:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2OP-VW-pQA">
+                                <rect key="frame" x="9" y="391" width="82" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw1.png" translatesAutoresizingMaskIntoConstraints="NO" id="lml-ew-Glc">
+                                <rect key="frame" x="13" y="72" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="Wan1">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="b0c-js-mg2" appends="YES" id="vDn-XM-GOR"/>
+                                    <outletCollection property="gestureRecognizers" destination="b0c-js-mg2" appends="YES" id="V8s-D7-3fF"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJw2.png" translatesAutoresizingMaskIntoConstraints="NO" id="aup-4p-YXq">
-                                <rect key="frame" x="61" y="72" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw2.png" translatesAutoresizingMaskIntoConstraints="NO" id="rNq-Vr-Wnn">
+                                <rect key="frame" x="65" y="72" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="Wan2">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="YTw-Rp-h67" appends="YES" id="NzW-Pf-j5t"/>
+                                    <outletCollection property="gestureRecognizers" destination="YTw-Rp-h67" appends="YES" id="DRs-n9-tKk"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJw3.png" translatesAutoresizingMaskIntoConstraints="NO" id="Iwj-1t-aJD">
-                                <rect key="frame" x="113" y="72" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw3.png" translatesAutoresizingMaskIntoConstraints="NO" id="yme-pR-HGX">
+                                <rect key="frame" x="117" y="72" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="Wan3">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="ec0-LH-gQY" appends="YES" id="5kT-Ee-iKJ"/>
+                                    <outletCollection property="gestureRecognizers" destination="ec0-LH-gQY" appends="YES" id="9qd-0r-jBJ"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJw4.png" translatesAutoresizingMaskIntoConstraints="NO" id="gbm-N7-xP1">
-                                <rect key="frame" x="9" y="125" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw4.png" translatesAutoresizingMaskIntoConstraints="NO" id="hv0-1f-buj">
+                                <rect key="frame" x="13" y="125" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="Wan4">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="uqq-xI-Edf" appends="YES" id="b4c-Ps-GbP"/>
+                                    <outletCollection property="gestureRecognizers" destination="uqq-xI-Edf" appends="YES" id="f8D-mu-vBg"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJw5.png" translatesAutoresizingMaskIntoConstraints="NO" id="IYB-xY-oX2">
-                                <rect key="frame" x="61" y="125" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw5.png" translatesAutoresizingMaskIntoConstraints="NO" id="4bD-IP-XlP">
+                                <rect key="frame" x="65" y="125" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="Wan5">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="ex0-Rz-pgO" appends="YES" id="a9N-be-fM9"/>
+                                    <outletCollection property="gestureRecognizers" destination="ex0-Rz-pgO" appends="YES" id="Yhp-of-ifi"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJw6.png" translatesAutoresizingMaskIntoConstraints="NO" id="S28-3K-4Km">
-                                <rect key="frame" x="113" y="125" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw6.png" translatesAutoresizingMaskIntoConstraints="NO" id="LUe-ey-zA0">
+                                <rect key="frame" x="117" y="125" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="Wan6">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="jQS-Lb-UWr" appends="YES" id="Z9H-rb-yW9"/>
+                                    <outletCollection property="gestureRecognizers" destination="jQS-Lb-UWr" appends="YES" id="233-AI-eeQ"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJw7.png" translatesAutoresizingMaskIntoConstraints="NO" id="KQ0-k8-Dsn">
-                                <rect key="frame" x="9" y="178" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw7.png" translatesAutoresizingMaskIntoConstraints="NO" id="ROW-Bq-S3K">
+                                <rect key="frame" x="13" y="178" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="Wan7">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="wXE-MV-iK8" appends="YES" id="rLo-Fv-S9j"/>
+                                    <outletCollection property="gestureRecognizers" destination="wXE-MV-iK8" appends="YES" id="aSh-h1-TL0"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJw8.png" translatesAutoresizingMaskIntoConstraints="NO" id="xzL-Du-f7w">
-                                <rect key="frame" x="61" y="178" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw8.png" translatesAutoresizingMaskIntoConstraints="NO" id="2c1-D8-0Va">
+                                <rect key="frame" x="65" y="178" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="Wan8">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="04E-Jr-nPl" appends="YES" id="oJX-x6-OtL"/>
+                                    <outletCollection property="gestureRecognizers" destination="04E-Jr-nPl" appends="YES" id="jsT-aV-xzO"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJw9.png" translatesAutoresizingMaskIntoConstraints="NO" id="03U-De-A0U">
-                                <rect key="frame" x="113" y="178" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJw9.png" translatesAutoresizingMaskIntoConstraints="NO" id="lCV-Af-DKF">
+                                <rect key="frame" x="117" y="178" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="Wan9">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="flV-ZU-JQV" appends="YES" id="RDd-pM-zzu"/>
+                                    <outletCollection property="gestureRecognizers" destination="flV-ZU-JQV" appends="YES" id="q4E-GU-MBA"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJt1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ccd-lg-fk3">
-                                <rect key="frame" x="165" y="72" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt1.png" translatesAutoresizingMaskIntoConstraints="NO" id="L6A-UU-4oS">
+                                <rect key="frame" x="169" y="72" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="Pin1">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="CG8-Qu-a2t" appends="YES" id="dOI-TO-Gzo"/>
+                                    <outletCollection property="gestureRecognizers" destination="CG8-Qu-a2t" appends="YES" id="7zx-FK-YLN"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJt2.png" translatesAutoresizingMaskIntoConstraints="NO" id="IoU-IX-QzH">
-                                <rect key="frame" x="217" y="72" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt2.png" translatesAutoresizingMaskIntoConstraints="NO" id="LNI-b5-fsQ">
+                                <rect key="frame" x="221" y="72" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="Pin2">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="INd-WA-66d" appends="YES" id="Lm4-NV-hIO"/>
+                                    <outletCollection property="gestureRecognizers" destination="INd-WA-66d" appends="YES" id="qvB-bd-7Fh"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJt3.png" translatesAutoresizingMaskIntoConstraints="NO" id="zWJ-Qn-uxK">
-                                <rect key="frame" x="269" y="72" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt3.png" translatesAutoresizingMaskIntoConstraints="NO" id="l58-3h-WDK">
+                                <rect key="frame" x="273" y="72" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="Pin3">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="SFb-Y7-4he" appends="YES" id="WJl-wl-Q63"/>
+                                    <outletCollection property="gestureRecognizers" destination="SFb-Y7-4he" appends="YES" id="LEc-kO-7Q6"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJt4.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vvz-Ke-TN3">
-                                <rect key="frame" x="165" y="125" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt4.png" translatesAutoresizingMaskIntoConstraints="NO" id="IzD-bC-AWw">
+                                <rect key="frame" x="169" y="125" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="Pin4">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="2vw-1W-iEx" appends="YES" id="ewn-f5-J19"/>
+                                    <outletCollection property="gestureRecognizers" destination="2vw-1W-iEx" appends="YES" id="Koc-QX-BW7"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJt5.png" translatesAutoresizingMaskIntoConstraints="NO" id="lAZ-xI-cH8">
-                                <rect key="frame" x="217" y="125" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt5.png" translatesAutoresizingMaskIntoConstraints="NO" id="pru-DC-JFq">
+                                <rect key="frame" x="221" y="125" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="Pin5">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="jbP-mJ-mpc" appends="YES" id="EQw-yQ-2BQ"/>
+                                    <outletCollection property="gestureRecognizers" destination="jbP-mJ-mpc" appends="YES" id="nkc-Q4-jxg"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJt6.png" translatesAutoresizingMaskIntoConstraints="NO" id="l1C-OE-87t">
-                                <rect key="frame" x="269" y="125" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt6.png" translatesAutoresizingMaskIntoConstraints="NO" id="AMt-Bv-5A3">
+                                <rect key="frame" x="273" y="125" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="Pin6">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="gFS-zd-egs" appends="YES" id="7Rr-2B-Aaf"/>
+                                    <outletCollection property="gestureRecognizers" destination="gFS-zd-egs" appends="YES" id="p8C-jl-uv0"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJt7.png" translatesAutoresizingMaskIntoConstraints="NO" id="EJT-pH-KgS">
-                                <rect key="frame" x="165" y="178" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt7.png" translatesAutoresizingMaskIntoConstraints="NO" id="R8I-Vr-j7y">
+                                <rect key="frame" x="169" y="178" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="Pin7">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="1nG-dj-97u" appends="YES" id="2eo-tw-x54"/>
+                                    <outletCollection property="gestureRecognizers" destination="1nG-dj-97u" appends="YES" id="3xb-G3-7Ad"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJt8.png" translatesAutoresizingMaskIntoConstraints="NO" id="4yA-3D-rFr">
-                                <rect key="frame" x="217" y="178" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt8.png" translatesAutoresizingMaskIntoConstraints="NO" id="KmS-Gw-x6B">
+                                <rect key="frame" x="221" y="178" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="Pin8">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="5K4-DH-Bc4" appends="YES" id="hdA-fh-wUd"/>
+                                    <outletCollection property="gestureRecognizers" destination="5K4-DH-Bc4" appends="YES" id="dUV-8L-ti0"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJt9.png" translatesAutoresizingMaskIntoConstraints="NO" id="nQG-WU-RWE">
-                                <rect key="frame" x="269" y="178" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJt9.png" translatesAutoresizingMaskIntoConstraints="NO" id="Pi1-yE-yjw">
+                                <rect key="frame" x="273" y="178" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="Pin9">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="gj5-px-ptB" appends="YES" id="tWe-mq-Hai"/>
+                                    <outletCollection property="gestureRecognizers" destination="gj5-px-ptB" appends="YES" id="cCt-WW-xZ3"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJs1bird.png" translatesAutoresizingMaskIntoConstraints="NO" id="dCW-hA-dXJ">
-                                <rect key="frame" x="9" y="231" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs1bird.png" translatesAutoresizingMaskIntoConstraints="NO" id="aRX-rl-Sbu">
+                                <rect key="frame" x="13" y="231" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="Sou1">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="5KZ-Nq-m8R" appends="YES" id="7gM-ew-ABN"/>
+                                    <outletCollection property="gestureRecognizers" destination="5KZ-Nq-m8R" appends="YES" id="mGb-Kf-UMe"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJs2.png" translatesAutoresizingMaskIntoConstraints="NO" id="eHF-Tv-9LP">
-                                <rect key="frame" x="61" y="231" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs2.png" translatesAutoresizingMaskIntoConstraints="NO" id="WJa-3E-Xu7">
+                                <rect key="frame" x="65" y="231" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="Sou2">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="AFF-hZ-2QV" appends="YES" id="nlg-c1-Ugb"/>
+                                    <outletCollection property="gestureRecognizers" destination="AFF-hZ-2QV" appends="YES" id="Q9i-ea-wIg"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJs3.png" translatesAutoresizingMaskIntoConstraints="NO" id="ege-F0-y2C">
-                                <rect key="frame" x="113" y="231" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs3.png" translatesAutoresizingMaskIntoConstraints="NO" id="BE3-hF-lz7">
+                                <rect key="frame" x="117" y="231" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="Sou3">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="FjB-hB-Evf" appends="YES" id="GnI-Kw-W0I"/>
+                                    <outletCollection property="gestureRecognizers" destination="FjB-hB-Evf" appends="YES" id="QQg-iN-TAC"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJs4.png" translatesAutoresizingMaskIntoConstraints="NO" id="2db-yT-nC7">
-                                <rect key="frame" x="9" y="284" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs4.png" translatesAutoresizingMaskIntoConstraints="NO" id="q12-3c-xMW">
+                                <rect key="frame" x="13" y="284" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="Sou4">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Hs2-4y-tMu" appends="YES" id="sja-rp-tXR"/>
+                                    <outletCollection property="gestureRecognizers" destination="Hs2-4y-tMu" appends="YES" id="2G4-xz-eTQ"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJs5.png" translatesAutoresizingMaskIntoConstraints="NO" id="3pS-RL-lP7">
-                                <rect key="frame" x="61" y="284" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs5.png" translatesAutoresizingMaskIntoConstraints="NO" id="dT2-qF-Tti">
+                                <rect key="frame" x="65" y="284" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="Sou5">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="2gi-t7-Qdc" appends="YES" id="lvS-Ot-dN5"/>
+                                    <outletCollection property="gestureRecognizers" destination="2gi-t7-Qdc" appends="YES" id="fYW-15-Qxi"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJs6.png" translatesAutoresizingMaskIntoConstraints="NO" id="tQB-Yn-5vT">
-                                <rect key="frame" x="113" y="284" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs6.png" translatesAutoresizingMaskIntoConstraints="NO" id="pX4-yU-HYu">
+                                <rect key="frame" x="117" y="284" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="Sou6">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="1C2-rM-rzy" appends="YES" id="WkA-zp-vrM"/>
+                                    <outletCollection property="gestureRecognizers" destination="1C2-rM-rzy" appends="YES" id="led-DX-Q2p"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJs7.png" translatesAutoresizingMaskIntoConstraints="NO" id="rgt-h0-RG3">
-                                <rect key="frame" x="9" y="337" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs7.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZiY-hf-VfQ">
+                                <rect key="frame" x="13" y="338" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="Sou7">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="crs-hG-3Yg" appends="YES" id="ax9-wm-Vd7"/>
+                                    <outletCollection property="gestureRecognizers" destination="crs-hG-3Yg" appends="YES" id="78K-4v-ICF"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJs8.png" translatesAutoresizingMaskIntoConstraints="NO" id="ei2-hh-Fhh">
-                                <rect key="frame" x="61" y="338" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs8.png" translatesAutoresizingMaskIntoConstraints="NO" id="TR1-OE-BKt">
+                                <rect key="frame" x="65" y="338" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="Sou8">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="GpD-2S-1Za" appends="YES" id="7Xb-h6-fM4"/>
+                                    <outletCollection property="gestureRecognizers" destination="GpD-2S-1Za" appends="YES" id="qpk-f5-saw"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJs9.png" translatesAutoresizingMaskIntoConstraints="NO" id="OiO-Lw-fCd">
-                                <rect key="frame" x="113" y="338" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJs9.png" translatesAutoresizingMaskIntoConstraints="NO" id="h5c-vW-uyA">
+                                <rect key="frame" x="117" y="337" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="Sou9">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="18o-Zy-1fJ" appends="YES" id="Tea-Wj-VHy"/>
+                                    <outletCollection property="gestureRecognizers" destination="18o-Zy-1fJ" appends="YES" id="j9x-Lb-0VS"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJd1.png" translatesAutoresizingMaskIntoConstraints="NO" id="hBT-U2-5QU">
-                                <rect key="frame" x="165" y="231" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJd1.png" translatesAutoresizingMaskIntoConstraints="NO" id="6w9-cc-zjo">
+                                <rect key="frame" x="169" y="231" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="White">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="FOo-Rn-Cn5" appends="YES" id="JRh-vT-qFn"/>
+                                    <outletCollection property="gestureRecognizers" destination="3ht-c4-IK7" appends="YES" id="6ag-DW-YFQ"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJd2.png" translatesAutoresizingMaskIntoConstraints="NO" id="OCi-zb-bi2">
-                                <rect key="frame" x="217" y="231" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJd2.png" translatesAutoresizingMaskIntoConstraints="NO" id="2c0-LG-0Yw">
+                                <rect key="frame" x="221" y="231" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="Green">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="dcp-aL-7O8" appends="YES" id="w6P-f2-y1w"/>
+                                    <outletCollection property="gestureRecognizers" destination="dcp-aL-7O8" appends="YES" id="tQA-24-MYt"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJd3.png" translatesAutoresizingMaskIntoConstraints="NO" id="VuE-Fy-ecs">
-                                <rect key="frame" x="269" y="231" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJd3.png" translatesAutoresizingMaskIntoConstraints="NO" id="tZ4-ol-oAC">
+                                <rect key="frame" x="273" y="231" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="Red">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="3ht-c4-IK7" appends="YES" id="dwL-OR-r7F"/>
+                                    <outletCollection property="gestureRecognizers" destination="FOo-Rn-Cn5" appends="YES" id="zhV-Ne-Vat"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJf1.png" translatesAutoresizingMaskIntoConstraints="NO" id="xfN-aX-Qq9">
-                                <rect key="frame" x="165" y="284" width="35" height="45"/>
-                                <accessibility key="accessibilityConfiguration" label="East">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="P6E-P9-iys" appends="YES" id="RSZ-dT-UUX"/>
-                                </connections>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJf2.png" translatesAutoresizingMaskIntoConstraints="NO" id="jt9-qx-5d2">
-                                <rect key="frame" x="217" y="284" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJf2.png" translatesAutoresizingMaskIntoConstraints="NO" id="g95-bP-AKm">
+                                <rect key="frame" x="221" y="284" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="South">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="OW6-Z8-O4g" appends="YES" id="xYT-4Q-sts"/>
+                                    <outletCollection property="gestureRecognizers" destination="OW6-Z8-O4g" appends="YES" id="cno-DJ-cd3"/>
                                 </connections>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJf3.png" translatesAutoresizingMaskIntoConstraints="NO" id="mg6-Bb-t0d">
-                                <rect key="frame" x="269" y="284" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJf3.png" translatesAutoresizingMaskIntoConstraints="NO" id="1uK-T9-IrR">
+                                <rect key="frame" x="273" y="284" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="West">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="LH3-MO-Exr" appends="YES" id="g5d-Mx-lCg"/>
+                                    <outletCollection property="gestureRecognizers" destination="LH3-MO-Exr" appends="YES" id="pYe-Mz-uqr"/>
                                 </connections>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ibh-pK-C8M">
-                                <rect key="frame" x="9" y="420" width="303" height="128"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJf1.png" translatesAutoresizingMaskIntoConstraints="NO" id="9PP-GW-QMB">
+                                <rect key="frame" x="169" y="284" width="35" height="45"/>
+                                <accessibility key="accessibilityConfiguration" label="East">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="P6E-P9-iys" appends="YES" id="fxf-5z-ahD"/>
+                                </connections>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dora Tiles:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2OP-VW-pQA">
-                                <rect key="frame" x="9" y="391" width="82" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="MJf4.png" translatesAutoresizingMaskIntoConstraints="NO" id="sRc-2D-Dk1">
-                                <rect key="frame" x="165" y="337" width="35" height="45"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="MJf4.png" translatesAutoresizingMaskIntoConstraints="NO" id="OcX-9x-2jF">
+                                <rect key="frame" x="169" y="337" width="35" height="45"/>
                                 <accessibility key="accessibilityConfiguration" label="North">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="oWV-Bc-zkI" appends="YES" id="M6T-Sc-jBg"/>
+                                    <outletCollection property="gestureRecognizers" destination="oWV-Bc-zkI" appends="YES" id="5h3-qn-yUz"/>
                                 </connections>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tE-m0-WJc">
-                                <rect key="frame" x="240" y="345" width="43" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tE0-zy-DvK">
+                                <rect key="frame" x="258" y="385" width="37" height="30"/>
                                 <state key="normal" title="Clear">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="clearTapped:" destination="jaO-2r-Zlo" eventType="touchUpInside" id="UET-Mp-fj2"/>
+                                    <action selector="clearTapped:" destination="jaO-2r-Zlo" eventType="touchUpInside" id="8Eh-Dx-paG"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="9PP-GW-QMB" firstAttribute="top" secondItem="6w9-cc-zjo" secondAttribute="bottom" constant="8" id="0fN-1v-4Yc"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="height" secondItem="pru-DC-JFq" secondAttribute="height" id="11M-0P-VIW"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="width" secondItem="pru-DC-JFq" secondAttribute="width" id="1Q7-RU-lh0"/>
+                            <constraint firstItem="ROW-Bq-S3K" firstAttribute="leading" secondItem="KqE-FA-P9Y" secondAttribute="leading" constant="13" id="21a-as-2SH"/>
+                            <constraint firstAttribute="trailing" secondItem="tE0-zy-DvK" secondAttribute="trailing" constant="25" id="2lF-iJ-VGS"/>
+                            <constraint firstItem="TR1-OE-BKt" firstAttribute="leading" secondItem="ZiY-hf-VfQ" secondAttribute="trailing" constant="17" id="2mT-xl-xn6"/>
+                            <constraint firstItem="lml-ew-Glc" firstAttribute="leading" secondItem="KqE-FA-P9Y" secondAttribute="leading" constant="13" id="4VM-WV-amK"/>
+                            <constraint firstItem="h5c-vW-uyA" firstAttribute="leading" secondItem="TR1-OE-BKt" secondAttribute="trailing" constant="17" id="5WF-OV-HD7"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="height" secondItem="TR1-OE-BKt" secondAttribute="height" id="5lL-KH-nbo"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="height" secondItem="l58-3h-WDK" secondAttribute="height" id="5tb-3t-iUM"/>
+                            <constraint firstItem="ibh-pK-C8M" firstAttribute="top" secondItem="2OP-VW-pQA" secondAttribute="bottom" constant="8" id="62k-Cd-xi0"/>
+                            <constraint firstItem="pX4-yU-HYu" firstAttribute="top" secondItem="BE3-hF-lz7" secondAttribute="bottom" constant="8" id="6M6-kY-ZgQ"/>
+                            <constraint firstItem="dT2-qF-Tti" firstAttribute="top" secondItem="WJa-3E-Xu7" secondAttribute="bottom" constant="8" id="6Pc-xJ-Qpz"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="height" secondItem="lCV-Af-DKF" secondAttribute="height" id="6Sd-Bx-9TG"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="width" secondItem="ROW-Bq-S3K" secondAttribute="width" id="8WP-uf-7TN"/>
+                            <constraint firstItem="lCV-Af-DKF" firstAttribute="leading" secondItem="2c1-D8-0Va" secondAttribute="trailing" constant="17" id="8kG-n0-Mxa"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="width" secondItem="9PP-GW-QMB" secondAttribute="width" id="93o-CK-daB"/>
+                            <constraint firstItem="q12-3c-xMW" firstAttribute="leading" secondItem="KqE-FA-P9Y" secondAttribute="leading" constant="13" id="93z-hM-utu"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="height" secondItem="L6A-UU-4oS" secondAttribute="height" id="99Y-Ld-iKh"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="width" secondItem="q12-3c-xMW" secondAttribute="width" id="9VT-iF-vKk"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="height" secondItem="2c0-LG-0Yw" secondAttribute="height" id="A0J-l8-w3n"/>
+                            <constraint firstItem="Pi1-yE-yjw" firstAttribute="leading" secondItem="KmS-Gw-x6B" secondAttribute="trailing" constant="17" id="AZp-O2-vlJ"/>
+                            <constraint firstItem="2OP-VW-pQA" firstAttribute="top" secondItem="ZiY-hf-VfQ" secondAttribute="bottom" constant="8" id="AgX-Gn-uj4"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="width" secondItem="R8I-Vr-j7y" secondAttribute="width" id="Bcy-kl-B74"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="height" secondItem="LNI-b5-fsQ" secondAttribute="height" id="Bsx-eh-MWF"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="leading" secondItem="WJa-3E-Xu7" secondAttribute="trailing" constant="17" id="DX6-pW-V15"/>
+                            <constraint firstAttribute="trailing" secondItem="AMt-Bv-5A3" secondAttribute="trailing" constant="12" id="Dfy-D1-i4v"/>
+                            <constraint firstItem="pru-DC-JFq" firstAttribute="top" secondItem="LNI-b5-fsQ" secondAttribute="bottom" constant="8" id="DlN-yy-skX"/>
+                            <constraint firstItem="L6A-UU-4oS" firstAttribute="leading" secondItem="yme-pR-HGX" secondAttribute="trailing" constant="17" id="ESN-3J-Sx7"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="width" secondItem="2c0-LG-0Yw" secondAttribute="width" id="Ei9-Qi-hJY"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="width" secondItem="WJa-3E-Xu7" secondAttribute="width" id="Er1-NE-EQ9"/>
+                            <constraint firstItem="rNq-Vr-Wnn" firstAttribute="leading" secondItem="lml-ew-Glc" secondAttribute="trailing" constant="17" id="G1L-J0-gyt"/>
+                            <constraint firstItem="pru-DC-JFq" firstAttribute="leading" secondItem="IzD-bC-AWw" secondAttribute="trailing" constant="17" id="GEi-gK-wqL"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="height" secondItem="WJa-3E-Xu7" secondAttribute="height" id="HCz-UH-xvf"/>
+                            <constraint firstItem="2c1-D8-0Va" firstAttribute="leading" secondItem="ROW-Bq-S3K" secondAttribute="trailing" constant="17" id="HIf-Sw-Yf9"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="height" secondItem="KmS-Gw-x6B" secondAttribute="height" id="Hem-pX-lYL"/>
+                            <constraint firstItem="tZ4-ol-oAC" firstAttribute="leading" secondItem="2c0-LG-0Yw" secondAttribute="trailing" constant="17" id="I3Q-sP-XEP"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="height" secondItem="h5c-vW-uyA" secondAttribute="height" id="IdX-1s-E4P"/>
+                            <constraint firstItem="ZiY-hf-VfQ" firstAttribute="leading" secondItem="KqE-FA-P9Y" secondAttribute="leading" constant="13" id="JyC-Oj-6mu"/>
+                            <constraint firstItem="Pi1-yE-yjw" firstAttribute="top" secondItem="AMt-Bv-5A3" secondAttribute="bottom" constant="8" id="KBD-Kg-dnp"/>
+                            <constraint firstItem="WJa-3E-Xu7" firstAttribute="leading" secondItem="aRX-rl-Sbu" secondAttribute="trailing" constant="17" id="LAZ-7v-V1U"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="height" secondItem="Pi1-yE-yjw" secondAttribute="height" id="M0T-1q-wAf"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="width" secondItem="IzD-bC-AWw" secondAttribute="width" id="MTA-XF-7LO"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="width" secondItem="AMt-Bv-5A3" secondAttribute="width" id="Mev-UO-fVY"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="width" secondItem="Pi1-yE-yjw" secondAttribute="width" id="Mo8-eZ-rrn"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="height" secondItem="aRX-rl-Sbu" secondAttribute="height" id="Mus-sD-0Cu"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="height" secondItem="g95-bP-AKm" secondAttribute="height" id="NIY-6e-oA5"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="width" secondItem="6w9-cc-zjo" secondAttribute="width" id="NTI-uK-ITu"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="width" secondItem="1uK-T9-IrR" secondAttribute="width" id="OS0-di-1XM"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="width" secondItem="KmS-Gw-x6B" secondAttribute="width" id="Oau-lf-t7V"/>
+                            <constraint firstItem="q12-3c-xMW" firstAttribute="top" secondItem="aRX-rl-Sbu" secondAttribute="bottom" constant="8" id="Pmt-ZD-LP9"/>
+                            <constraint firstItem="IzD-bC-AWw" firstAttribute="top" secondItem="L6A-UU-4oS" secondAttribute="bottom" constant="8" id="QJi-Ne-u92"/>
+                            <constraint firstItem="6w9-cc-zjo" firstAttribute="top" secondItem="R8I-Vr-j7y" secondAttribute="bottom" constant="8" id="Ra9-uc-TYu"/>
+                            <constraint firstItem="h5c-vW-uyA" firstAttribute="top" secondItem="pX4-yU-HYu" secondAttribute="bottom" constant="8" id="Rmb-ow-qgV"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="height" secondItem="OcX-9x-2jF" secondAttribute="height" id="SJE-uo-KDO"/>
+                            <constraint firstItem="pX4-yU-HYu" firstAttribute="leading" secondItem="dT2-qF-Tti" secondAttribute="trailing" constant="17" id="STc-DS-522"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="width" secondItem="TR1-OE-BKt" secondAttribute="width" id="Skq-gK-Zpa"/>
+                            <constraint firstItem="1uK-T9-IrR" firstAttribute="top" secondItem="tZ4-ol-oAC" secondAttribute="bottom" constant="8" id="TA6-f7-EdW"/>
+                            <constraint firstItem="yme-pR-HGX" firstAttribute="top" secondItem="KqE-FA-P9Y" secondAttribute="top" constant="72" id="TTY-QG-Cjm"/>
+                            <constraint firstItem="tZ4-ol-oAC" firstAttribute="top" secondItem="Pi1-yE-yjw" secondAttribute="bottom" constant="8" id="TXs-kE-RAX"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="height" secondItem="ZiY-hf-VfQ" secondAttribute="height" id="Tct-OG-GLH"/>
+                            <constraint firstItem="Pi1-yE-yjw" firstAttribute="top" secondItem="AMt-Bv-5A3" secondAttribute="bottom" constant="8" id="Trq-Dd-RBv"/>
+                            <constraint firstItem="AMt-Bv-5A3" firstAttribute="leading" secondItem="pru-DC-JFq" secondAttribute="trailing" constant="17" id="U1D-WR-Wqn"/>
+                            <constraint firstAttribute="bottom" secondItem="ibh-pK-C8M" secondAttribute="bottom" id="UdR-Ra-crr"/>
+                            <constraint firstItem="lCV-Af-DKF" firstAttribute="top" secondItem="LUe-ey-zA0" secondAttribute="bottom" constant="8" id="W4w-hA-uFa"/>
+                            <constraint firstAttribute="bottom" secondItem="OcX-9x-2jF" secondAttribute="bottom" constant="186" id="W6s-dR-24o"/>
+                            <constraint firstItem="ibh-pK-C8M" firstAttribute="leading" secondItem="KqE-FA-P9Y" secondAttribute="leading" id="YYm-zV-L4M"/>
+                            <constraint firstItem="hv0-1f-buj" firstAttribute="leading" secondItem="KqE-FA-P9Y" secondAttribute="leading" constant="13" id="Ynk-tC-cS1"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="width" secondItem="4bD-IP-XlP" secondAttribute="width" id="Ytg-xb-51p"/>
+                            <constraint firstItem="2c0-LG-0Yw" firstAttribute="leading" secondItem="6w9-cc-zjo" secondAttribute="trailing" constant="17" id="Z2T-YC-jsz"/>
+                            <constraint firstAttribute="bottom" secondItem="TR1-OE-BKt" secondAttribute="bottom" constant="185" id="ZJm-R5-YvV"/>
+                            <constraint firstItem="TR1-OE-BKt" firstAttribute="top" secondItem="dT2-qF-Tti" secondAttribute="bottom" constant="9" id="ZNd-Rj-j8m"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="height" secondItem="9PP-GW-QMB" secondAttribute="height" id="alW-uv-Zv0"/>
+                            <constraint firstItem="aRX-rl-Sbu" firstAttribute="top" secondItem="ROW-Bq-S3K" secondAttribute="bottom" constant="8" id="b8v-uP-j8t"/>
+                            <constraint firstItem="AMt-Bv-5A3" firstAttribute="top" secondItem="l58-3h-WDK" secondAttribute="bottom" constant="8" id="b9c-v5-2Xy"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="height" secondItem="lml-ew-Glc" secondAttribute="height" id="bdZ-Ht-bpT"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="height" secondItem="pX4-yU-HYu" secondAttribute="height" id="byd-bS-JgW"/>
+                            <constraint firstItem="LUe-ey-zA0" firstAttribute="top" secondItem="yme-pR-HGX" secondAttribute="bottom" constant="8" id="cOM-Mn-PHP"/>
+                            <constraint firstItem="IzD-bC-AWw" firstAttribute="leading" secondItem="LUe-ey-zA0" secondAttribute="trailing" constant="17" id="cdC-jB-mGO"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="width" secondItem="rNq-Vr-Wnn" secondAttribute="width" id="ctD-b9-0Ws"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="height" secondItem="AMt-Bv-5A3" secondAttribute="height" id="d3A-1P-9HB"/>
+                            <constraint firstItem="g95-bP-AKm" firstAttribute="top" secondItem="2c0-LG-0Yw" secondAttribute="bottom" constant="8" id="dWC-vn-40f"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="height" secondItem="4bD-IP-XlP" secondAttribute="height" id="dfl-Ft-5HC"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="width" secondItem="tZ4-ol-oAC" secondAttribute="width" id="dw9-6D-aWA"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="height" secondItem="IzD-bC-AWw" secondAttribute="height" id="e4E-4Z-F18"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="width" secondItem="dT2-qF-Tti" secondAttribute="width" id="fJi-Xm-l90"/>
+                            <constraint firstItem="1uK-T9-IrR" firstAttribute="leading" secondItem="g95-bP-AKm" secondAttribute="trailing" constant="17" id="fKH-qZ-eoW"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="width" secondItem="h5c-vW-uyA" secondAttribute="width" id="fma-pG-uiL"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="height" secondItem="1uK-T9-IrR" secondAttribute="height" id="fn3-A1-p9t"/>
+                            <constraint firstItem="ROW-Bq-S3K" firstAttribute="top" secondItem="hv0-1f-buj" secondAttribute="bottom" constant="8" id="g5b-th-Rxb"/>
+                            <constraint firstItem="2OP-VW-pQA" firstAttribute="centerY" secondItem="tE0-zy-DvK" secondAttribute="centerY" id="gHH-hm-M2S"/>
+                            <constraint firstAttribute="bottom" secondItem="h5c-vW-uyA" secondAttribute="bottom" constant="186" id="h3e-vx-Ifo"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="width" secondItem="L6A-UU-4oS" secondAttribute="width" id="h3o-b2-6Ef"/>
+                            <constraint firstItem="LNI-b5-fsQ" firstAttribute="top" secondItem="KqE-FA-P9Y" secondAttribute="top" constant="72" id="h4F-BI-8b9"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="width" secondItem="pX4-yU-HYu" secondAttribute="width" id="hCn-xf-wTk"/>
+                            <constraint firstItem="ZiY-hf-VfQ" firstAttribute="top" secondItem="q12-3c-xMW" secondAttribute="bottom" constant="9" id="hGF-PJ-pB5"/>
+                            <constraint firstItem="dT2-qF-Tti" firstAttribute="leading" secondItem="q12-3c-xMW" secondAttribute="trailing" constant="17" id="hIf-kY-FMU"/>
+                            <constraint firstItem="R8I-Vr-j7y" firstAttribute="top" secondItem="IzD-bC-AWw" secondAttribute="bottom" constant="8" id="hMM-xr-YYc"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="height" secondItem="LUe-ey-zA0" secondAttribute="height" id="hYE-3m-cAR"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="height" secondItem="hv0-1f-buj" secondAttribute="height" id="i2Q-RL-HmB"/>
+                            <constraint firstItem="OcX-9x-2jF" firstAttribute="top" secondItem="9PP-GW-QMB" secondAttribute="bottom" constant="8" id="i4r-iK-e0Z"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="height" secondItem="ROW-Bq-S3K" secondAttribute="height" id="iMU-il-vdD"/>
+                            <constraint firstItem="4bD-IP-XlP" firstAttribute="leading" secondItem="hv0-1f-buj" secondAttribute="trailing" constant="17" id="ibu-xo-Txr"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="width" secondItem="lCV-Af-DKF" secondAttribute="width" id="j2v-9N-uOW"/>
+                            <constraint firstAttribute="bottom" secondItem="ZiY-hf-VfQ" secondAttribute="bottom" constant="185" id="jA3-AY-SMA"/>
+                            <constraint firstItem="L6A-UU-4oS" firstAttribute="top" secondItem="KqE-FA-P9Y" secondAttribute="top" constant="72" id="kuh-DE-OEL"/>
+                            <constraint firstItem="R8I-Vr-j7y" firstAttribute="leading" secondItem="lCV-Af-DKF" secondAttribute="trailing" constant="17" id="l8B-uQ-GUw"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="width" secondItem="l58-3h-WDK" secondAttribute="width" id="lJ2-1W-tXV"/>
+                            <constraint firstItem="2c1-D8-0Va" firstAttribute="top" secondItem="4bD-IP-XlP" secondAttribute="bottom" constant="8" id="lR7-sG-c68"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="width" secondItem="hv0-1f-buj" secondAttribute="width" id="mVY-FD-CeQ"/>
+                            <constraint firstItem="WJa-3E-Xu7" firstAttribute="top" secondItem="2c1-D8-0Va" secondAttribute="bottom" constant="8" id="mg6-9v-5Yd"/>
+                            <constraint firstItem="4bD-IP-XlP" firstAttribute="top" secondItem="rNq-Vr-Wnn" secondAttribute="bottom" constant="8" id="nGw-Gd-rPH"/>
+                            <constraint firstItem="OcX-9x-2jF" firstAttribute="leading" secondItem="h5c-vW-uyA" secondAttribute="trailing" constant="17" id="nO5-AJ-cCK"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="height" secondItem="R8I-Vr-j7y" secondAttribute="height" id="nb9-Ov-Nne"/>
+                            <constraint firstItem="6w9-cc-zjo" firstAttribute="leading" secondItem="BE3-hF-lz7" secondAttribute="trailing" constant="17" id="ncf-if-lQM"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="width" secondItem="LUe-ey-zA0" secondAttribute="width" id="o0f-L7-ejA"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="width" secondItem="ZiY-hf-VfQ" secondAttribute="width" id="oMQ-qv-uu7"/>
+                            <constraint firstAttribute="trailing" secondItem="1uK-T9-IrR" secondAttribute="trailing" constant="12" id="p2y-7n-Dj2"/>
+                            <constraint firstItem="l58-3h-WDK" firstAttribute="top" secondItem="KqE-FA-P9Y" secondAttribute="top" constant="72" id="pEP-dm-Ypi"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="height" secondItem="2c1-D8-0Va" secondAttribute="height" id="pQV-wa-G9o"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="width" secondItem="yme-pR-HGX" secondAttribute="width" id="qhe-bl-3L6"/>
+                            <constraint firstAttribute="trailing" secondItem="tZ4-ol-oAC" secondAttribute="trailing" constant="12" id="qkC-tU-4Le"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="height" secondItem="tZ4-ol-oAC" secondAttribute="height" id="qok-Ix-Mqs"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="height" secondItem="q12-3c-xMW" secondAttribute="height" id="qpn-Fc-fJV"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="height" secondItem="6w9-cc-zjo" secondAttribute="height" id="rSA-uv-iYp"/>
+                            <constraint firstItem="l58-3h-WDK" firstAttribute="leading" secondItem="LNI-b5-fsQ" secondAttribute="trailing" constant="17" id="rqx-fl-ldp"/>
+                            <constraint firstItem="rNq-Vr-Wnn" firstAttribute="top" secondItem="KqE-FA-P9Y" secondAttribute="top" constant="72" id="rxt-pz-Wsu"/>
+                            <constraint firstItem="hv0-1f-buj" firstAttribute="top" secondItem="lml-ew-Glc" secondAttribute="bottom" constant="8" id="s6f-gW-iCC"/>
+                            <constraint firstAttribute="trailing" secondItem="2OP-VW-pQA" secondAttribute="trailing" constant="229" id="sa0-PE-PaX"/>
+                            <constraint firstItem="aRX-rl-Sbu" firstAttribute="leading" secondItem="KqE-FA-P9Y" secondAttribute="leading" constant="13" id="sja-Gw-KCx"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="width" secondItem="LNI-b5-fsQ" secondAttribute="width" id="t0F-JC-LH8"/>
+                            <constraint firstItem="KmS-Gw-x6B" firstAttribute="leading" secondItem="R8I-Vr-j7y" secondAttribute="trailing" constant="17" id="tcL-Oj-oqd"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="width" secondItem="lml-ew-Glc" secondAttribute="width" id="tnN-gd-PGA"/>
+                            <constraint firstAttribute="trailing" secondItem="Pi1-yE-yjw" secondAttribute="trailing" constant="12" id="uGZ-nj-nYs"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="height" secondItem="yme-pR-HGX" secondAttribute="height" id="uan-7y-Iuq"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="width" secondItem="g95-bP-AKm" secondAttribute="width" id="v6Q-3x-LOi"/>
+                            <constraint firstItem="KmS-Gw-x6B" firstAttribute="top" secondItem="pru-DC-JFq" secondAttribute="bottom" constant="8" id="v8G-WV-uTT"/>
+                            <constraint firstItem="2OP-VW-pQA" firstAttribute="leading" secondItem="KqE-FA-P9Y" secondAttribute="leading" constant="9" id="vA3-Kt-D7G"/>
+                            <constraint firstItem="yme-pR-HGX" firstAttribute="leading" secondItem="rNq-Vr-Wnn" secondAttribute="trailing" constant="17" id="vW8-iB-6yW"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="height" secondItem="rNq-Vr-Wnn" secondAttribute="height" id="w8T-2t-ubo"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="width" secondItem="OcX-9x-2jF" secondAttribute="width" id="wAU-TR-vOO"/>
+                            <constraint firstItem="LNI-b5-fsQ" firstAttribute="leading" secondItem="L6A-UU-4oS" secondAttribute="trailing" constant="17" id="wbC-j6-lhC"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="height" secondItem="dT2-qF-Tti" secondAttribute="height" id="wke-As-o4Y"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="width" secondItem="aRX-rl-Sbu" secondAttribute="width" id="wwl-05-R1t"/>
+                            <constraint firstItem="lml-ew-Glc" firstAttribute="top" secondItem="KqE-FA-P9Y" secondAttribute="top" constant="72" id="wxl-er-Twz"/>
+                            <constraint firstAttribute="trailing" secondItem="l58-3h-WDK" secondAttribute="trailing" constant="12" id="x80-CL-uR2"/>
+                            <constraint firstItem="9PP-GW-QMB" firstAttribute="leading" secondItem="pX4-yU-HYu" secondAttribute="trailing" constant="17" id="xCB-00-bo4"/>
+                            <constraint firstAttribute="trailing" secondItem="ibh-pK-C8M" secondAttribute="trailing" id="xLJ-V1-BmF"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="width" secondItem="2c1-D8-0Va" secondAttribute="width" id="xfy-ow-R4s"/>
+                            <constraint firstItem="g95-bP-AKm" firstAttribute="leading" secondItem="9PP-GW-QMB" secondAttribute="trailing" constant="17" id="xsu-3P-geA"/>
+                            <constraint firstItem="LUe-ey-zA0" firstAttribute="leading" secondItem="4bD-IP-XlP" secondAttribute="trailing" constant="17" id="yTW-xa-1FU"/>
+                            <constraint firstItem="2c0-LG-0Yw" firstAttribute="top" secondItem="KmS-Gw-x6B" secondAttribute="bottom" constant="8" id="zct-II-Dzy"/>
+                            <constraint firstItem="BE3-hF-lz7" firstAttribute="top" secondItem="lCV-Af-DKF" secondAttribute="bottom" constant="8" id="zhS-Qc-rY0"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Dora Tiles" id="PIC-e6-G6L">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="ZaL-U1-X8K">
@@ -1604,219 +1759,185 @@
                     </navigationItem>
                     <connections>
                         <outlet property="BackButton" destination="ZaL-U1-X8K" id="JZX-mM-aAN"/>
-                        <outlet property="ClearButton" destination="5tE-m0-WJc" id="s0F-C9-fT4"/>
+                        <outlet property="ClearButton" destination="tE0-zy-DvK" id="cgV-F2-9dv"/>
                         <outlet property="HandImages" destination="ibh-pK-C8M" id="Xgp-R2-Trh"/>
                         <outlet property="NextButton" destination="iSk-k9-jJp" id="o9D-4k-WAQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JEs-gk-mXb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="miy-xc-TAu" userLabel="Exit" sceneMemberID="exit"/>
-                <tapGestureRecognizer id="5KZ-Nq-m8R" userLabel="MJs1bird">
-                    <connections>
-                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="OmE-Lc-CeC"/>
-                        <outlet property="delegate" destination="dCW-hA-dXJ" id="H9w-GP-t74"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="AFF-hZ-2QV" userLabel="MJs2">
-                    <connections>
-                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="xpW-BZ-Uzz"/>
-                        <outlet property="delegate" destination="eHF-Tv-9LP" id="dIC-Ei-O3N"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="FjB-hB-Evf" userLabel="MJs3">
-                    <connections>
-                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="HNu-Yd-arM"/>
-                        <outlet property="delegate" destination="ege-F0-y2C" id="Qgy-vU-y8O"/>
-                    </connections>
-                </tapGestureRecognizer>
                 <tapGestureRecognizer id="Hs2-4y-tMu" userLabel="MJs4">
                     <connections>
                         <action selector="tileTapped:" destination="jaO-2r-Zlo" id="Elv-OC-ivs"/>
-                        <outlet property="delegate" destination="2db-yT-nC7" id="4Mw-De-PTG"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="2gi-t7-Qdc" userLabel="MJs5">
                     <connections>
                         <action selector="tileTapped:" destination="jaO-2r-Zlo" id="MZ3-Il-rYq"/>
-                        <outlet property="delegate" destination="3pS-RL-lP7" id="gbX-fc-HRh"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="1C2-rM-rzy" userLabel="MJs6">
                     <connections>
                         <action selector="tileTapped:" destination="jaO-2r-Zlo" id="Dds-Ic-lcg"/>
-                        <outlet property="delegate" destination="tQB-Yn-5vT" id="A51-2J-Mu3"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="crs-hG-3Yg" userLabel="MJs7">
                     <connections>
                         <action selector="tileTapped:" destination="jaO-2r-Zlo" id="ZCW-x1-pyv"/>
-                        <outlet property="delegate" destination="rgt-h0-RG3" id="RsK-0I-5Sh"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="GpD-2S-1Za" userLabel="MJs8">
                     <connections>
                         <action selector="tileTapped:" destination="jaO-2r-Zlo" id="W9a-MK-HMv"/>
-                        <outlet property="delegate" destination="ei2-hh-Fhh" id="TvA-TH-CkD"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="18o-Zy-1fJ" userLabel="MJs9">
                     <connections>
                         <action selector="tileTapped:" destination="jaO-2r-Zlo" id="M7D-ot-2Ze"/>
-                        <outlet property="delegate" destination="OiO-Lw-fCd" id="oSu-On-4fA"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="CG8-Qu-a2t" userLabel="MJt1">
                     <connections>
                         <action selector="tileTapped:" destination="jaO-2r-Zlo" id="d97-Zw-uh7"/>
-                        <outlet property="delegate" destination="Ccd-lg-fk3" id="Omk-M9-g0I"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="INd-WA-66d" userLabel="MJt2">
                     <connections>
                         <action selector="tileTapped:" destination="jaO-2r-Zlo" id="zOX-Rd-tef"/>
-                        <outlet property="delegate" destination="IoU-IX-QzH" id="vvT-cz-s2V"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="SFb-Y7-4he" userLabel="MJt3">
                     <connections>
                         <action selector="tileTapped:" destination="jaO-2r-Zlo" id="kQ0-1w-Phg"/>
-                        <outlet property="delegate" destination="zWJ-Qn-uxK" id="jRK-j9-SJB"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="2vw-1W-iEx" userLabel="MJt4">
                     <connections>
                         <action selector="tileTapped:" destination="jaO-2r-Zlo" id="8R5-NT-LIi"/>
-                        <outlet property="delegate" destination="Vvz-Ke-TN3" id="Lr5-uE-F2B"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="jbP-mJ-mpc" userLabel="MJt5">
                     <connections>
                         <action selector="tileTapped:" destination="jaO-2r-Zlo" id="5ou-TQ-X2h"/>
-                        <outlet property="delegate" destination="lAZ-xI-cH8" id="qMF-Wg-75n"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="gFS-zd-egs" userLabel="MJt6">
                     <connections>
                         <action selector="tileTapped:" destination="jaO-2r-Zlo" id="bQ2-hu-qfZ"/>
-                        <outlet property="delegate" destination="l1C-OE-87t" id="3rC-dS-XSV"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="1nG-dj-97u" userLabel="MJt7">
                     <connections>
                         <action selector="tileTapped:" destination="jaO-2r-Zlo" id="A3K-gP-mzF"/>
-                        <outlet property="delegate" destination="EJT-pH-KgS" id="4MZ-mY-hCb"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="5K4-DH-Bc4" userLabel="MJt8">
                     <connections>
                         <action selector="tileTapped:" destination="jaO-2r-Zlo" id="2AN-RL-dbI"/>
-                        <outlet property="delegate" destination="4yA-3D-rFr" id="LSk-JX-zqm"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="gj5-px-ptB" userLabel="MJt9">
                     <connections>
                         <action selector="tileTapped:" destination="jaO-2r-Zlo" id="sX4-FW-1vK"/>
-                        <outlet property="delegate" destination="nQG-WU-RWE" id="JR4-WI-pWZ"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="b0c-js-mg2" userLabel="MJw1">
                     <connections>
                         <action selector="tileTapped:" destination="jaO-2r-Zlo" id="pub-bx-mob"/>
-                        <outlet property="delegate" destination="e2u-j1-mci" id="ScE-Op-tES"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="YTw-Rp-h67" userLabel="MJw2">
                     <connections>
                         <action selector="tileTapped:" destination="jaO-2r-Zlo" id="Bd8-Jm-0af"/>
-                        <outlet property="delegate" destination="aup-4p-YXq" id="j8O-qk-ADU"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="ec0-LH-gQY" userLabel="MJw3">
                     <connections>
                         <action selector="tileTapped:" destination="jaO-2r-Zlo" id="dOE-sN-U0c"/>
-                        <outlet property="delegate" destination="Iwj-1t-aJD" id="KSl-LV-IxK"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="uqq-xI-Edf" userLabel="MJw4">
                     <connections>
                         <action selector="tileTapped:" destination="jaO-2r-Zlo" id="yKX-Sc-1FE"/>
-                        <outlet property="delegate" destination="gbm-N7-xP1" id="pxn-IB-jYG"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="ex0-Rz-pgO" userLabel="MJw5">
                     <connections>
                         <action selector="tileTapped:" destination="jaO-2r-Zlo" id="jFE-LF-PT3"/>
-                        <outlet property="delegate" destination="IYB-xY-oX2" id="m1B-zW-03k"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="jQS-Lb-UWr" userLabel="MJw6">
                     <connections>
                         <action selector="tileTapped:" destination="jaO-2r-Zlo" id="RKP-mL-5vB"/>
-                        <outlet property="delegate" destination="S28-3K-4Km" id="47i-dU-O8q"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="wXE-MV-iK8" userLabel="MJw7">
                     <connections>
                         <action selector="tileTapped:" destination="jaO-2r-Zlo" id="9vk-ea-UVU"/>
-                        <outlet property="delegate" destination="KQ0-k8-Dsn" id="G1r-vY-CaX"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="04E-Jr-nPl" userLabel="MJw8">
                     <connections>
                         <action selector="tileTapped:" destination="jaO-2r-Zlo" id="JDJ-BN-EQW"/>
-                        <outlet property="delegate" destination="xzL-Du-f7w" id="jtZ-aP-5aj"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="flV-ZU-JQV" userLabel="MJw9">
                     <connections>
                         <action selector="tileTapped:" destination="jaO-2r-Zlo" id="dic-S3-Lzb"/>
-                        <outlet property="delegate" destination="03U-De-A0U" id="auc-Pt-oCu"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="3ht-c4-IK7" userLabel="MJd1">
                     <connections>
                         <action selector="tileTapped:" destination="jaO-2r-Zlo" id="474-z9-ME3"/>
-                        <outlet property="delegate" destination="VuE-Fy-ecs" id="hjT-n7-9SG"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="dcp-aL-7O8" userLabel="MJd2">
                     <connections>
                         <action selector="tileTapped:" destination="jaO-2r-Zlo" id="ZtY-JI-g6f"/>
-                        <outlet property="delegate" destination="OCi-zb-bi2" id="HlH-ec-Bgv"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="FOo-Rn-Cn5" userLabel="MJd3">
                     <connections>
                         <action selector="tileTapped:" destination="jaO-2r-Zlo" id="7jO-Kl-NOj"/>
-                        <outlet property="delegate" destination="hBT-U2-5QU" id="4Az-zO-8UL"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="P6E-P9-iys" userLabel="MJf1">
                     <connections>
                         <action selector="tileTapped:" destination="jaO-2r-Zlo" id="bsm-Ba-JWQ"/>
-                        <outlet property="delegate" destination="xfN-aX-Qq9" id="r47-Vh-6Hi"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="OW6-Z8-O4g" userLabel="MJf2">
                     <connections>
                         <action selector="tileTapped:" destination="jaO-2r-Zlo" id="Kah-Uo-FTQ"/>
-                        <outlet property="delegate" destination="jt9-qx-5d2" id="9z2-nY-v0A"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="LH3-MO-Exr" userLabel="MJf3">
                     <connections>
                         <action selector="tileTapped:" destination="jaO-2r-Zlo" id="IkK-Ql-mXo"/>
-                        <outlet property="delegate" destination="mg6-Bb-t0d" id="bZU-lK-zJ9"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="oWV-Bc-zkI" userLabel="MJf4">
                     <connections>
                         <action selector="tileTapped:" destination="jaO-2r-Zlo" id="cyw-ZY-RBf"/>
-                        <outlet property="delegate" destination="sRc-2D-Dk1" id="UZi-9x-L0l"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="5KZ-Nq-m8R" userLabel="MJs1bird">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="OmE-Lc-CeC"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="AFF-hZ-2QV" userLabel="MJs2">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="xpW-BZ-Uzz"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="FjB-hB-Evf" userLabel="MJs3">
+                    <connections>
+                        <action selector="tileTapped:" destination="jaO-2r-Zlo" id="HNu-Yd-arM"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1207" y="-1625.9999999999998"/>
+            <point key="canvasLocation" x="1207" y="-1626"/>
         </scene>
     </scenes>
     <resources>

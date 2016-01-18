@@ -29,9 +29,9 @@ public class Hand {
         dictionary = [:]
     }
 
-    func addTile(tile:Tile,status:Status=Status.None) {
+    func addTile(tile:Tile, status:Status=Status.None) {
         tile.status = status
-        if (currentTileCount(tile) < 4) {
+        if canAddTile(tile) {
             if tiles.count < 14 {
                 tiles.append(tile)
                 sortTiles()
@@ -44,17 +44,20 @@ public class Hand {
     }
 
     func addMeld(tile:Tile, status:Status) {
+        if tiles.count > 11 {
+            return
+        }
+
         switch status {
             case .Chi:
             var rawvalue = tile.value.rawValue
             if rawvalue <= 7 {
                 let tile2 = Tile(value:Value(rawValue:rawvalue+1)!, suit:tile.suit)
                 let tile3 = Tile(value:Value(rawValue:rawvalue+2)!, suit:tile.suit)
-                if (currentTileCount(tile) < 4 && currentTileCount(tile2) < 4 &&
-                    currentTileCount(tile3) < 4) {
-                        addTile(tile,status:status)
-                        addTile(tile2,status:status)
-                        addTile(tile3,status:status)
+                if (canAddTile(tile) && canAddTile(tile2) && canAddTile(tile3)) {
+                    addTile(tile,status:status)
+                    addTile(tile2,status:status)
+                    addTile(tile3,status:status)
                 }
             }
             case .Pon:
@@ -72,6 +75,10 @@ public class Hand {
             default:
             return
         }
+    }
+
+    func addDoraTile(tile:Tile) {
+        conditions.addDoraTile(tile, hand: self)
     }
 
     func removeTileAtIndex(index:Int) {
@@ -117,6 +124,18 @@ public class Hand {
             }
         }
         return count
+    }
+
+    func canAddTile(tile:Tile) -> Bool {
+        for var i:Int = 0; i < tiles.count; i++ {
+            if tiles[i].isEqual(tile) {
+                if (tiles[i].status == .Kan || tiles[i].status == .ClosedKan) {
+                    return currentTileCount(tile) < 3
+                }
+            }
+        }
+
+        return currentTileCount(tile) < 4
     }
 
     func validateHand() {

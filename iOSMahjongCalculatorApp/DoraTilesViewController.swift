@@ -9,7 +9,7 @@
 import UIKit
 
 class DoraTilesViewController: UIViewController, UIGestureRecognizerDelegate {
-    
+
     @IBOutlet weak var ClearButton: UIButton!
     @IBOutlet weak var NextButton: UIBarButtonItem!
     @IBOutlet weak var BackButton: UIBarButtonItem!
@@ -63,7 +63,7 @@ class DoraTilesViewController: UIViewController, UIGestureRecognizerDelegate {
         if let message:String = sender.view?.accessibilityLabel {
             if let (value: Value, suit: Suit) = values[message] {
                 let tile:Tile = Tile(value: value, suit: suit)
-                winningHand.conditions.addDoraTile(tile)
+                winningHand.addDoraTile(tile)
                 updateHandImage()
             }
         }
@@ -79,39 +79,58 @@ class DoraTilesViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBAction func cancelToDoraTilesViewController(segue:UIStoryboardSegue) {
         dismissViewControllerAnimated(true, completion: nil)
     }
-    
-    // Adds images of all dora tiles at the bottom of the screen
+
+    // Adds images of all tiles of hand at the bottom of the screen iteratively
     func updateHandImage() {
+        // Clear all images of the tiles in hand added from the view
         clearAllSubViews()
-        
-        if winningHand.conditions.doraTiles.count > 0 {
-            for var i:Int = 0; i < winningHand.conditions.doraTiles.count; i++ {
-                updateHandImageAtIndex(i)
+
+        // Some constants about the screen size
+        let screenSize: CGRect = UIScreen.mainScreen().bounds
+        let screenWidth:Double = Double(screenSize.width)
+        let screenHeight:Double = Double(screenSize.height)
+
+        // Using screen dimensions to determine x,y offset of first tile from UI view
+        let xOffset:Double = screenWidth/7.11
+        let yOffset:Double = screenHeight/9
+        let xImageOffset:Double = screenWidth/1600
+        let yImageOffset:Double = screenHeight/400
+
+        // Some constants about the size of the image to be created
+        let imageWidth:Double = screenWidth/9.14
+        let imageHeight:Double = screenHeight/12.62
+
+        // Adds an image of each tile at a specific location, based on the number
+        // of tiles in the hand
+        for var index:Int = 0; index < winningHand.conditions.doraTiles.count; index++ {
+            // Get where the tile is supposed to be relative to other tiles
+            let xRelIndex:Double = Double(index%7)
+            let yRelIndex:Double = Double(index/7)
+
+            // Define the centre of the image to be created
+            let xImageCenter:Double = screenWidth/14.72 + xOffset*xRelIndex
+            let yImageCenter:Double = screenHeight/16.22 + yOffset*yRelIndex
+
+            // Get the tile from the hand
+            let tile = winningHand.conditions.doraTiles[index]
+            let key = "\(tile.getRawValue())"
+
+            if let image = imageDictionary[key] {
+                // Get the image from the dictionary, and create the image
+                var newImage = rescaleImage(image!, width: imageWidth, height: imageHeight)
+
+                let imageView = UIImageView(image: newImage)
+                imageView.center = CGPoint(x: xImageCenter, y: yImageCenter)
+                imageView.userInteractionEnabled = true
+
+                // Add tap handler to listen for deletes
+                let recognizer = UITapGestureRecognizer(target: self, action:Selector("doraTileTapped:"))
+                recognizer.delegate = self
+                imageView.addGestureRecognizer(recognizer)
+                imageView.accessibilityLabel = "\(index)"
+
+                HandImages.addSubview(imageView)
             }
-        }
-    }
-    
-    // Adds an image of a tile at a specific location, based on the number
-    // of dora tiles in the hand
-    func updateHandImageAtIndex(index:Int) {
-        let xOffset = 40
-        let yOffset = 60
-        
-        let tile = winningHand.conditions.doraTiles[index]
-        let key = "\(tile.getRawValue())"
-        if let image = imageDictionary[key] {
-            let newImage = rescaleImage(image!)
-            let imageView = UIImageView(image: newImage)
-            imageView.center = CGPoint(x:(25 + xOffset*(index%7)), y:(30 + yOffset*(index/7)))
-            imageView.userInteractionEnabled = true
-            
-            // Add tap handler to listen for deletes
-            let recognizer = UITapGestureRecognizer(target: self, action:Selector("doraTileTapped:"))
-            recognizer.delegate = self
-            imageView.addGestureRecognizer(recognizer)
-            imageView.accessibilityLabel = "\(index)"
-            
-            HandImages.addSubview(imageView)
         }
     }
     
@@ -124,16 +143,16 @@ class DoraTilesViewController: UIViewController, UIGestureRecognizerDelegate {
     
     // Helper function to rescale image to correct size.
     // Adapted from: https://gist.github.com/hcatlin/180e81cd961573e3c54d
-    func rescaleImage(image: UIImage) -> UIImage {
-        var newSize:CGSize = CGSize(width: 35,height: 45)
+    func rescaleImage(image: UIImage, width: Double, height: Double) -> UIImage {
+        var newSize:CGSize = CGSize(width: width, height: height)
         let rect = CGRectMake(0,0, newSize.width, newSize.height)
         UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
-        
+
         image.drawInRect(rect)
-        
+
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        
+
         return newImage
     }
     
